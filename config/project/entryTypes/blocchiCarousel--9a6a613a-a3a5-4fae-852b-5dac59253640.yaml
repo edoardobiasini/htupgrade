@@ -1,0 +1,25 @@
+fieldLayouts:
+  3fd5d06c-b135-4acc-a6f2-90b056d969e5:
+    tabs:
+      -
+        elements:
+          -
+            instructions: null
+            label: Titolo
+            type: craft\fieldlayoutelements\EntryTitleField
+          -
+            fieldUid: 849050c3-4fe8-468e-ab77-1cd2633cba3b
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+          -
+            fieldUid: a7cbdef6-e7fb-4670-9d70-c5a368061121
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+        name: 'Blocco carousel'
+        sortOrder: 1
+handle: blocchiCarousel
+hasTitleField: true
+name: 'Blocchi carousel'
+section: 363ff1db-4b49-4221-a790-89668f16597c
+sortOrder: 1
+titleFormat: null

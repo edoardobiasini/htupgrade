@@ -1,0 +1,53 @@
+fieldLayouts:
+  262f89b0-8d80-4ad5-beb1-9517c87d0072:
+    tabs:
+      -
+        elements:
+          -
+            instructions: null
+            label: Titolo
+            type: craft\fieldlayoutelements\EntryTitleField
+          -
+            fieldUid: fce263b4-c698-4d79-9071-76521b937000
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+          -
+            fieldUid: 59575f03-bfd4-48da-8f42-251d29c4382e
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+          -
+            fieldUid: eba89519-e384-43bb-8a62-94d21a24c1dd
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+          -
+            fieldUid: ea7e294a-b06c-47e4-8d5c-2c32fd1cfdf1
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+        name: 'CAMPI NEWS'
+        sortOrder: 1
+      -
+        elements:
+          -
+            fieldUid: 59b60c63-d0bf-4274-9421-b38c038ba954
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+          -
+            fieldUid: 23a0f0ce-5a47-47ba-8e95-2a08c5de4917
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+        name: IMMAGINI
+        sortOrder: 2
+      -
+        elements:
+          -
+            fieldUid: 8caedc5d-ad29-4e2a-ab8f-1e13f219501e
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+        name: 'Campi seo'
+        sortOrder: 3
+handle: news
+hasTitleField: true
+name: News
+section: 43d15cfd-8a83-4fdc-b08e-12bd1a4d630c
+sortOrder: 1
+titleFormat: null

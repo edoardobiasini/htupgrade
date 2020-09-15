@@ -1,0 +1,23 @@
+contentColumnType: string
+fieldGroup: 68742006-bce1-4401-8244-5a28698d129f
+handle: immagineLaterale
+instructions: ''
+name: 'Immagine laterale'
+searchable: true
+settings:
+  allowedKinds:
+    - image
+  defaultUploadLocationSource: 'volume:3ec8853a-a014-463e-848d-7da4f8a9bfac'
+  defaultUploadLocationSubpath: ''
+  limit: '1'
+  localizeRelations: false
+  restrictFiles: '1'
+  selectionLabel: ''
+  singleUploadLocationSource: 'volume:3ec8853a-a014-463e-848d-7da4f8a9bfac'
+  singleUploadLocationSubpath: ''
+  sources: '*'
+  useSingleFolder: ''
+  viewMode: list
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Assets

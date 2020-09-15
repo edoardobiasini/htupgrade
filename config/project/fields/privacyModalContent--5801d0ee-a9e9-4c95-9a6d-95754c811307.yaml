@@ -1,0 +1,17 @@
+contentColumnType: string
+fieldGroup: 2eed2783-3562-4c4c-8bee-a2933c182cd4
+handle: privacyModalContent
+instructions: ''
+name: 'Privacy modal content'
+searchable: true
+settings:
+  availableTransforms: '*'
+  availableVolumes: '*'
+  cleanupHtml: '1'
+  columnType: text
+  configFile: ''
+  purifierConfig: ''
+  purifyHtml: '1'
+translationKeyFormat: null
+translationMethod: none
+type: craft\redactor\Field

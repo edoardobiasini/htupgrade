@@ -1,0 +1,15 @@
+contentColumnType: text
+fieldGroup: 0ff95cd1-1e99-432e-ade8-27d1c222c95c
+handle: mappaEventoIntroduzione
+instructions: ''
+name: 'Introduzione Mappa'
+searchable: true
+settings:
+  charLimit: ''
+  columnType: text
+  initialRows: '4'
+  multiline: ''
+  placeholder: ''
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

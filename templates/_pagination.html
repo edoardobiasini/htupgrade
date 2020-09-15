@@ -1,0 +1,56 @@
+        {% if pageInfo.totalPages > 1 %}
+        <section class="section-content section-default section-pagination">
+          <div class="container">
+
+            <div class="row">
+              <div class="col-sm-8 col-sm-offset-2">
+
+                <div class="pagination">
+
+                {% if pageInfo.prevUrl %}
+                  <a class="pagination-page pagination-page-first" href="{{ pageInfo.prevUrl }}{% if query is defined %}?q={{ query }}{% endif %}"><i class="fa fa-chevron-left" aria-hidden="true"></i></a>
+                {% else %}
+                  <span class="pagination-page pagination-page-first"><i class="fa fa-chevron-left" aria-hidden="true"></i></span>
+                {% endif %}
+
+                {% if pageInfo.currentPage > 2 %}
+                    <a class='pagination-page' href='{{ pageInfo.firstUrl }}{% if query is defined %}?q={{ query }}{% endif %}'>{{ 1 }}</a>
+                {% endif %}
+
+                {% if pageInfo.currentPage > 3 %}
+                    <span class="pagination-page">...</span>
+                {% endif %}
+
+                {% for page, url in pageInfo.getPrevUrls(1) %}
+                    <a class='pagination-page' href='{{ url }}{% if query is defined %}?q={{ query }}{% endif %}'>{{ page }}</a>
+                {% endfor %}
+
+                <span class='pagination-page pagination-page-active'>{{ pageInfo.currentPage }}</span>
+
+                {% for page, url in pageInfo.getNextUrls(1) %}
+                    <a class='pagination-page' href='{{ url }}{% if query is defined %}?q={{ query }}{% endif %}'>{{ page }}</a>
+                {% endfor %}
+
+
+                {% if pageInfo.currentPage < pageInfo.totalPages-2 %}
+                    <span class="pagination-page">...</span>
+                {% endif %}
+
+                {% if pageInfo.currentPage < pageInfo.totalPages-1 %}
+                    <a class='pagination-page' href='{{ pageInfo.lastUrl }}{% if query is defined %}?q={{ query }}{% endif %}'>{{ pageInfo.totalPages }}</a>
+                {% endif %}
+
+                {% if pageInfo.nextUrl %}
+                  <a class="pagination-page pagination-page-last" href="{{ pageInfo.nextUrl }}{% if query is defined %}?q={{ query }}{% endif %}"><i class="fa fa-chevron-right" aria-hidden="true"></i></a>
+                {% else %}
+                  <span class="pagination-page pagination-page-last"><i class="fa fa-chevron-right" aria-hidden="true"></i></span>
+                {% endif %}
+
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+        </section>
+        {% endif %}

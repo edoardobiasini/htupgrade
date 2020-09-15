@@ -1,0 +1,27 @@
+fieldLayouts:
+  7fe15606-c112-4ba9-832c-32f79a4cac32:
+    tabs:
+      -
+        fields:
+          1024de79-7b12-4418-90c7-b83daeccaf7c:
+            required: false
+            sortOrder: 5
+          4dfd80b2-7d70-4e01-92c1-8bbde3f56419:
+            required: false
+            sortOrder: 2
+          60cec30d-67dc-4104-969c-0c3a2ab01d52:
+            required: false
+            sortOrder: 3
+          d44544c2-fe6b-42dd-8874-1d2befb36532:
+            required: false
+            sortOrder: 1
+          dec640a5-5306-486b-bc60-a459d8fa6d77:
+            required: false
+            sortOrder: 6
+          e5683e76-1c9e-4979-9cee-1e153e49a036:
+            required: false
+            sortOrder: 4
+        name: Contenuto
+        sortOrder: 1
+handle: newsletter
+name: Newsletter

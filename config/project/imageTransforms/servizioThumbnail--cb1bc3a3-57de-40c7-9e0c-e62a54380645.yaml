@@ -1,0 +1,9 @@
+format: null
+handle: servizioThumbnail
+height: 356
+interlace: none
+mode: crop
+name: 'Servizio thumbnail'
+position: center-center
+quality: 82
+width: 390

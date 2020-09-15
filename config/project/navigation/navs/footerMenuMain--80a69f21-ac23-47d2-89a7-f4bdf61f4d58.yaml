@@ -1,0 +1,9 @@
+handle: footerMenuMain
+instructions: null
+maxNodes: null
+name: 'Footer Menu Main'
+propagateNodes: false
+sortOrder: 5
+structure:
+  maxLevels: '1'
+  uid: a0862205-d9e3-4b28-80ed-afa295e617c1

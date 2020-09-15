@@ -1,0 +1,24 @@
+contentColumnType: string
+fieldGroup: c7d04f2d-dae7-4f28-abd7-de0466646eb4
+handle: loghiLanding
+instructions: ''
+name: 'Loghi landing'
+searchable: true
+settings:
+  allowedKinds:
+    - image
+  defaultUploadLocationSource: 'volume:3ec8853a-a014-463e-848d-7da4f8a9bfac'
+  defaultUploadLocationSubpath: ''
+  limit: '1'
+  localizeRelations: false
+  restrictFiles: '1'
+  selectionLabel: ''
+  singleUploadLocationSource: 'volume:3ec8853a-a014-463e-848d-7da4f8a9bfac'
+  singleUploadLocationSubpath: ''
+  sources:
+    - 'volume:3ec8853a-a014-463e-848d-7da4f8a9bfac'
+  useSingleFolder: ''
+  viewMode: list
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Assets

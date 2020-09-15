@@ -1,0 +1,9 @@
+contentColumnType: text
+fieldGroup: a6ad4146-aea7-4dc9-af27-04cf8ef80403
+handle: lavoraConNoi_email
+instructions: ''
+name: Email
+searchable: true
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

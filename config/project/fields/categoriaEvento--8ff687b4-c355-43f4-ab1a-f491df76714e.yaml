@@ -1,0 +1,14 @@
+contentColumnType: string
+fieldGroup: 0ff95cd1-1e99-432e-ade8-27d1c222c95c
+handle: categoriaEvento
+instructions: ''
+name: 'Categoria evento'
+searchable: true
+settings:
+  branchLimit: ''
+  localizeRelations: false
+  selectionLabel: ''
+  source: 'group:de2c3d1b-c95c-4192-823f-45729fb41554'
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Categories

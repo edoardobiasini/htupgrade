@@ -1,0 +1,14 @@
+contentColumnType: string
+fieldGroup: ef05658d-df64-4789-a6b0-f454568fe368
+handle: htAcademy
+instructions: ''
+name: 'HT Academy'
+searchable: true
+settings:
+  branchLimit: '1'
+  localizeRelations: false
+  selectionLabel: ''
+  source: 'group:de2c3d1b-c95c-4192-823f-45729fb41554'
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Categories

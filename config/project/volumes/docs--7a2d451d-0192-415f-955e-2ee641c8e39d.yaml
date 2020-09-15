@@ -1,0 +1,9 @@
+handle: docs
+hasUrls: true
+name: Docs
+settings:
+  path: docs/
+  url: /docs/
+sortOrder: 2
+type: craft\volumes\Local
+url: null

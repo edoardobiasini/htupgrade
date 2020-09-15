@@ -1,0 +1,125 @@
+field: 7270e6ce-46cf-4234-87f3-f2ebb87a5aa4
+fieldLayouts:
+  32888b1f-136f-468d-923c-6a71366a696f:
+    tabs:
+      -
+        fields:
+          155f17e9-bdc8-4c6f-975e-96317ced51e1:
+            required: false
+            sortOrder: 5
+          1b2d475b-e795-4376-bd8e-ecf9d1a808e3:
+            required: false
+            sortOrder: 1
+          34d80331-964f-467b-a0d9-825d9485a0ee:
+            required: false
+            sortOrder: 2
+          36835341-b97a-4dbd-a62a-2c5035305329:
+            required: false
+            sortOrder: 3
+          f5c77b56-a48d-4920-83de-f65f7bb67ff8:
+            required: false
+            sortOrder: 4
+        name: Content
+        sortOrder: 1
+fields:
+  155f17e9-bdc8-4c6f-975e-96317ced51e1:
+    contentColumnType: string
+    fieldGroup: null
+    handle: immagineMobile
+    instructions: ''
+    name: 'Immagine mobile'
+    searchable: true
+    settings:
+      allowedKinds:
+        - image
+      defaultUploadLocationSource: 'volume:3ec8853a-a014-463e-848d-7da4f8a9bfac'
+      defaultUploadLocationSubpath: ''
+      limit: '1'
+      localizeRelations: false
+      restrictFiles: '1'
+      selectionLabel: ''
+      singleUploadLocationSource: 'volume:3ec8853a-a014-463e-848d-7da4f8a9bfac'
+      singleUploadLocationSubpath: ''
+      sources: '*'
+      useSingleFolder: ''
+      viewMode: list
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Assets
+  1b2d475b-e795-4376-bd8e-ecf9d1a808e3:
+    contentColumnType: text
+    fieldGroup: null
+    handle: titoloSuperiore
+    instructions: ''
+    name: 'Titolo Superiore'
+    searchable: true
+    settings:
+      charLimit: ''
+      columnType: text
+      initialRows: '4'
+      multiline: ''
+      placeholder: ''
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\PlainText
+  34d80331-964f-467b-a0d9-825d9485a0ee:
+    contentColumnType: text
+    fieldGroup: null
+    handle: titolo
+    instructions: ''
+    name: Titolo
+    searchable: true
+    settings:
+      charLimit: ''
+      columnType: text
+      initialRows: '4'
+      multiline: ''
+      placeholder: ''
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\PlainText
+  36835341-b97a-4dbd-a62a-2c5035305329:
+    contentColumnType: string
+    fieldGroup: null
+    handle: descrizione
+    instructions: ''
+    name: Descrizione
+    searchable: true
+    settings:
+      availableTransforms: '*'
+      availableVolumes: '*'
+      cleanupHtml: '1'
+      columnType: text
+      configFile: Standard.json
+      purifierConfig: ''
+      purifyHtml: '1'
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\redactor\Field
+  f5c77b56-a48d-4920-83de-f65f7bb67ff8:
+    contentColumnType: string
+    fieldGroup: null
+    handle: immagine
+    instructions: ''
+    name: Immagine
+    searchable: true
+    settings:
+      allowedKinds:
+        - image
+      defaultUploadLocationSource: 'volume:3ec8853a-a014-463e-848d-7da4f8a9bfac'
+      defaultUploadLocationSubpath: ''
+      limit: '1'
+      localizeRelations: false
+      restrictFiles: '1'
+      selectionLabel: ''
+      singleUploadLocationSource: 'volume:3ec8853a-a014-463e-848d-7da4f8a9bfac'
+      singleUploadLocationSubpath: ''
+      sources: '*'
+      useSingleFolder: ''
+      viewMode: list
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Assets
+handle: slide
+name: Slide
+sortOrder: 1

@@ -1,0 +1,15 @@
+contentColumnType: text
+fieldGroup: 4da0781e-d870-4a31-b1f3-5651fc60ba83
+handle: autoreRuolo
+instructions: ''
+name: 'Autore ruolo'
+searchable: true
+settings:
+  charLimit: ''
+  columnType: text
+  initialRows: '4'
+  multiline: ''
+  placeholder: ''
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\PlainText

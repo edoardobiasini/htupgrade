@@ -1,0 +1,57 @@
+field: e87557eb-4ae9-40ff-b476-57d225d9a315
+fieldLayouts:
+  be274d64-fb66-4ca2-9ac0-3181796c2fd6:
+    tabs:
+      -
+        fields:
+          4394f1b4-b243-444d-a4e4-3523e84528d6:
+            required: false
+            sortOrder: 1
+          58569f72-9e41-487e-9e2c-185baccb5157:
+            required: false
+            sortOrder: 2
+        name: Content
+        sortOrder: 1
+fields:
+  4394f1b4-b243-444d-a4e4-3523e84528d6:
+    contentColumnType: text
+    fieldGroup: null
+    handle: titolo
+    instructions: ''
+    name: Titolo
+    searchable: true
+    settings:
+      charLimit: ''
+      columnType: text
+      initialRows: '4'
+      multiline: ''
+      placeholder: ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  58569f72-9e41-487e-9e2c-185baccb5157:
+    contentColumnType: string
+    fieldGroup: null
+    handle: file
+    instructions: ''
+    name: File
+    searchable: true
+    settings:
+      defaultUploadLocationSource: 'volume:7a2d451d-0192-415f-955e-2ee641c8e39d'
+      defaultUploadLocationSubpath: ''
+      limit: '1'
+      localizeRelations: false
+      restrictFiles: ''
+      selectionLabel: ''
+      singleUploadLocationSource: 'volume:3ec8853a-a014-463e-848d-7da4f8a9bfac'
+      singleUploadLocationSubpath: ''
+      sources:
+        - 'volume:7a2d451d-0192-415f-955e-2ee641c8e39d'
+      useSingleFolder: ''
+      viewMode: list
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Assets
+handle: documento
+name: Documento
+sortOrder: 1

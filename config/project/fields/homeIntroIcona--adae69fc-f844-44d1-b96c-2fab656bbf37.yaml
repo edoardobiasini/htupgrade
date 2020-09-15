@@ -1,0 +1,23 @@
+contentColumnType: string
+fieldGroup: ef05658d-df64-4789-a6b0-f454568fe368
+handle: homeIntroIcona
+instructions: ''
+name: Icona
+searchable: true
+settings:
+  allowedKinds:
+    - image
+  defaultUploadLocationSource: 'volume:3ec8853a-a014-463e-848d-7da4f8a9bfac'
+  defaultUploadLocationSubpath: ''
+  limit: '1'
+  localizeRelations: false
+  restrictFiles: '1'
+  selectionLabel: ''
+  singleUploadLocationSource: 'volume:3ec8853a-a014-463e-848d-7da4f8a9bfac'
+  singleUploadLocationSubpath: ''
+  sources: '*'
+  useSingleFolder: ''
+  viewMode: list
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Assets

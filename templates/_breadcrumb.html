@@ -1,0 +1,30 @@
+        <section class="section-content section-breadcrumb hidden-xs">
+          <div class="container">
+
+            <div class="row">
+              <div class="col-sm-8 col-sm-offset-2">
+                <ul class="breadcrumb">
+                  <li><a href="{{ siteUrl }}">Home</a></li>
+                  {% if craft.request.getSegment(1) == 'eventi' %}
+                  <li><a href="{{ siteUrl }}eventi">Eventi</a></li>
+                  {% elseif craft.request.getSegment(1) == 'blog' %}
+                  <li><a href="{{ siteUrl }}blog">Blog</a></li>
+                  {% elseif craft.request.getSegment(1) == 'servizi' %}
+                  <li><a href="{{ siteUrl }}servizi">Servizi</a></li>
+                  {% elseif craft.request.getSegment(1) == 'soluzioni' %}
+                  <li><a href="{{ siteUrl }}soluzioni">Soluzioni</a></li>
+                  {% else %}
+                    {% for crumb in entry.getAncestors() %}
+                      <li>{{ crumb.getLink() }}</li>
+                    {% endfor %}
+                  {% endif %}
+                  {# servizi-index is a single section used as servizi index page ("servizi" is already in the output, see above) #}
+                  {% if entry.slug != 'servizi-index' and entry.slug != 'soluzioni-index' %}
+                  <li>{{ entry.getLink() }}</li>
+                  {% endif %}
+                </ul>
+              </div>
+            </div>
+
+          </div>
+        </section>

@@ -1,0 +1,19 @@
+enableVersioning: true
+handle: blocchiCarousel
+name: 'Blocchi carousel'
+propagationMethod: all
+siteSettings:
+  5923a219-cdcb-4ce4-842e-f6e77f429764:
+    enabledByDefault: true
+    hasUrls: false
+    template: null
+    uriFormat: null
+  644656eb-2858-42a7-b937-c3c8abed971c:
+    enabledByDefault: true
+    hasUrls: false
+    template: null
+    uriFormat: null
+structure:
+  maxLevels: null
+  uid: 32d09399-370c-4312-ab04-cba3f3e9284f
+type: structure

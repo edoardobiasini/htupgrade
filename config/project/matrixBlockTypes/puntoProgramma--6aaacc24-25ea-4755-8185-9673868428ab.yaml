@@ -1,0 +1,107 @@
+field: 40093693-1d9d-49c8-b14c-95fe9f034d58
+fieldLayouts:
+  cd70e470-7d04-4cc1-84aa-bd8f6009cfdd:
+    tabs:
+      -
+        fields:
+          1ca5d11e-76e6-4b00-829c-6ba49513d163:
+            required: false
+            sortOrder: 4
+          39c8dbf6-df54-44ad-8908-8ff4baa647fd:
+            required: false
+            sortOrder: 2
+          5004b83c-d257-4d71-a149-3089c8877e40:
+            required: false
+            sortOrder: 5
+          898067ab-9991-49de-9050-284c21ff88d4:
+            required: false
+            sortOrder: 3
+          f8b58c6f-6d52-4d37-a443-8c2691e4f8fe:
+            required: false
+            sortOrder: 1
+        name: Content
+        sortOrder: 1
+fields:
+  1ca5d11e-76e6-4b00-829c-6ba49513d163:
+    contentColumnType: text
+    fieldGroup: null
+    handle: titolo
+    instructions: ''
+    name: Titolo
+    searchable: true
+    settings:
+      charLimit: ''
+      columnType: text
+      initialRows: '4'
+      multiline: ''
+      placeholder: ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  39c8dbf6-df54-44ad-8908-8ff4baa647fd:
+    contentColumnType: text
+    fieldGroup: null
+    handle: autoreNome
+    instructions: ''
+    name: 'Autore nome'
+    searchable: true
+    settings:
+      charLimit: ''
+      columnType: text
+      initialRows: '4'
+      multiline: ''
+      placeholder: ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  5004b83c-d257-4d71-a149-3089c8877e40:
+    contentColumnType: text
+    fieldGroup: null
+    handle: descrizione
+    instructions: ''
+    name: Descrizione
+    searchable: true
+    settings:
+      charLimit: ''
+      columnType: text
+      initialRows: '4'
+      multiline: ''
+      placeholder: ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  898067ab-9991-49de-9050-284c21ff88d4:
+    contentColumnType: text
+    fieldGroup: null
+    handle: autoreRuolo
+    instructions: ''
+    name: 'Autore ruolo'
+    searchable: true
+    settings:
+      charLimit: ''
+      columnType: text
+      initialRows: '4'
+      multiline: ''
+      placeholder: ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  f8b58c6f-6d52-4d37-a443-8c2691e4f8fe:
+    contentColumnType: text
+    fieldGroup: null
+    handle: orario
+    instructions: ''
+    name: Orario
+    searchable: true
+    settings:
+      charLimit: ''
+      columnType: text
+      initialRows: '4'
+      multiline: ''
+      placeholder: ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+handle: puntoProgramma
+name: 'Punto programma'
+sortOrder: 1

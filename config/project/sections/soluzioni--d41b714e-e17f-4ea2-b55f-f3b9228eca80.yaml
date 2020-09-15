@@ -1,0 +1,23 @@
+enableVersioning: true
+handle: soluzioni
+name: Soluzioni
+previewTargets:
+  -
+    label: 'Pagina articolo primaria'
+    urlFormat: '{url}'
+propagationMethod: all
+siteSettings:
+  5923a219-cdcb-4ce4-842e-f6e77f429764:
+    enabledByDefault: true
+    hasUrls: true
+    template: servizi/_entry
+    uriFormat: '{% if object.level == 1 %}soluzioni/{slug}{% else %}{parent.uri}/{slug}{% endif %}'
+  644656eb-2858-42a7-b937-c3c8abed971c:
+    enabledByDefault: true
+    hasUrls: true
+    template: servizi/_entry
+    uriFormat: '{% if object.level == 1 %}soluzioni/{slug}{% else %}{parent.uri}/{slug}{% endif %}'
+structure:
+  maxLevels: 2
+  uid: 2f42ef7e-1317-4116-b5a0-71c2b71fcfb1
+type: structure

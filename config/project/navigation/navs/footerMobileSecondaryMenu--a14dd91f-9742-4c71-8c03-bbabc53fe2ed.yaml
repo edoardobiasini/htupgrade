@@ -1,0 +1,9 @@
+handle: footerMobileSecondaryMenu
+instructions: null
+maxNodes: null
+name: 'Footer Mobile Secondary Menu'
+propagateNodes: false
+sortOrder: 6
+structure:
+  maxLevels: '1'
+  uid: 35ff7826-a2a3-4f91-afe7-cff2bd2ace9f

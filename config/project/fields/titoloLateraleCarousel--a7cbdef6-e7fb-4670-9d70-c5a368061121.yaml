@@ -1,0 +1,15 @@
+contentColumnType: text
+fieldGroup: 52200315-8cca-4ee2-8636-5d0cd7105de4
+handle: titoloLateraleCarousel
+instructions: ''
+name: 'Titolo laterale carousel'
+searchable: true
+settings:
+  charLimit: ''
+  columnType: text
+  initialRows: '4'
+  multiline: ''
+  placeholder: ''
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

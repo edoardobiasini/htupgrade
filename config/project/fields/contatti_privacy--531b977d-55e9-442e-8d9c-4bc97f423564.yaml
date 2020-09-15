@@ -1,0 +1,33 @@
+contentColumnType: text
+fieldGroup: 5c7bd7f1-5563-4380-8339-b42023e3b36b
+handle: contatti_privacy
+instructions: 'Presa visione delle informazioni sul trattamento dei dati consento al trattamento dei dati per '
+name: Privacy
+searchable: true
+settings:
+  options:
+    -
+      __assoc__:
+        -
+          - default
+          - 0
+        -
+          - label
+          - 'Dare riscontro a richieste dell’interessato, gestire la partecipazione dell’interessato alle attività svolte dal Titolare, dare esecuzione ad obblighi di legge.'
+        -
+          - value
+          - 'Dare riscontro a richieste dell’interessato, gestire la partecipazione dell’interessato alle attività svolte dal Titolare, dare esecuzione ad obblighi di legge.'
+    -
+      __assoc__:
+        -
+          - default
+          - 0
+        -
+          - label
+          - 'Ricevere la Newsletter e quindi autorizzare l’utilizzo dei dati a fini promozionali attraverso l’invio di comunicazioni commerciali.'
+        -
+          - value
+          - 'Ricevere la Newsletter e quindi autorizzare l’utilizzo dei dati a fini promozionali attraverso l’invio di comunicazioni commerciali.'
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Checkboxes

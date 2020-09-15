@@ -1,0 +1,9 @@
+handle: footerMenuLeft
+instructions: null
+maxNodes: null
+name: 'Footer Menu Left'
+propagateNodes: false
+sortOrder: 3
+structure:
+  maxLevels: '1'
+  uid: 7f1f8218-8232-412a-83f5-5e14342cf6e4

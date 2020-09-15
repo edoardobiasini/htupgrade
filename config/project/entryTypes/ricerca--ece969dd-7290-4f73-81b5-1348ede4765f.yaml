@@ -1,0 +1,29 @@
+fieldLayouts:
+  d0a58e35-aaea-4843-bcc6-445b5e5e4790:
+    tabs:
+      -
+        elements:
+          -
+            instructions: null
+            label: null
+            type: craft\fieldlayoutelements\EntryTitleField
+          -
+            fieldUid: 23a0f0ce-5a47-47ba-8e95-2a08c5de4917
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+        name: Generale
+        sortOrder: 1
+      -
+        elements:
+          -
+            fieldUid: 8caedc5d-ad29-4e2a-ab8f-1e13f219501e
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+        name: 'Campi seo'
+        sortOrder: 2
+handle: ricerca
+hasTitleField: false
+name: Ricerca
+section: c1a651ab-0533-4884-aeba-7bb582fa0fc5
+sortOrder: 1
+titleFormat: '{section.name|raw}'

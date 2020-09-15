@@ -1,0 +1,99 @@
+field: 65656b7b-fe74-4251-b282-8f4e9405c5f6
+fieldLayouts:
+  82a8b9c0-9e32-4b47-90ce-d8396edf2757:
+    tabs:
+      -
+        fields:
+          5728e58b-ec5f-404f-b834-ec632554ab04:
+            required: false
+            sortOrder: 1
+          ee74ce1c-e35d-4b23-916b-112017a1d360:
+            required: false
+            sortOrder: 3
+          fbcaf97b-2217-4c25-848e-bf2c04c069e4:
+            required: false
+            sortOrder: 4
+          fc88354d-1092-4c62-b1b2-e0509bec6ed0:
+            required: false
+            sortOrder: 2
+        name: Content
+        sortOrder: 1
+fields:
+  5728e58b-ec5f-404f-b834-ec632554ab04:
+    contentColumnType: text
+    fieldGroup: null
+    handle: titolo
+    instructions: ''
+    name: Titolo
+    searchable: true
+    settings:
+      charLimit: ''
+      columnType: text
+      initialRows: '4'
+      multiline: ''
+      placeholder: ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  ee74ce1c-e35d-4b23-916b-112017a1d360:
+    contentColumnType: string
+    fieldGroup: null
+    handle: contenuto
+    instructions: ''
+    name: Contenuto
+    searchable: true
+    settings:
+      availableTransforms: '*'
+      availableVolumes: '*'
+      cleanupHtml: '1'
+      columnType: text
+      configFile: Standard.json
+      purifierConfig: ''
+      purifyHtml: '1'
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\redactor\Field
+  fbcaf97b-2217-4c25-848e-bf2c04c069e4:
+    contentColumnType: string
+    fieldGroup: null
+    handle: immagine
+    instructions: ''
+    name: Immagine
+    searchable: true
+    settings:
+      allowedKinds:
+        - image
+      defaultUploadLocationSource: 'volume:3ec8853a-a014-463e-848d-7da4f8a9bfac'
+      defaultUploadLocationSubpath: ''
+      limit: '1'
+      localizeRelations: false
+      restrictFiles: '1'
+      selectionLabel: ''
+      singleUploadLocationSource: 'volume:3ec8853a-a014-463e-848d-7da4f8a9bfac'
+      singleUploadLocationSubpath: ''
+      sources:
+        - 'volume:3ec8853a-a014-463e-848d-7da4f8a9bfac'
+      useSingleFolder: ''
+      viewMode: list
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Assets
+  fc88354d-1092-4c62-b1b2-e0509bec6ed0:
+    contentColumnType: text
+    fieldGroup: null
+    handle: sottotitolo
+    instructions: ''
+    name: Sottotitolo
+    searchable: true
+    settings:
+      charLimit: ''
+      columnType: text
+      initialRows: '4'
+      multiline: ''
+      placeholder: ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+handle: bloccoImmagine
+name: 'Blocco immagine'
+sortOrder: 3

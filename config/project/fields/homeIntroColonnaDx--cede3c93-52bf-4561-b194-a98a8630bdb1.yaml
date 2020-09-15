@@ -1,0 +1,17 @@
+contentColumnType: string
+fieldGroup: ef05658d-df64-4789-a6b0-f454568fe368
+handle: homeIntroColonnaDx
+instructions: ''
+name: 'Colonna dx'
+searchable: true
+settings:
+  availableTransforms: '*'
+  availableVolumes: '*'
+  cleanupHtml: '1'
+  columnType: text
+  configFile: Standard.json
+  purifierConfig: ''
+  purifyHtml: '1'
+translationKeyFormat: null
+translationMethod: none
+type: craft\redactor\Field

@@ -1,0 +1,69 @@
+field: dd97a669-4017-4f48-9c0e-49235b8f0a94
+fieldLayouts:
+  ddc692e5-9f11-4bf7-aafb-c7f540bf0d3a:
+    tabs:
+      -
+        fields:
+          1dcacd4a-3ca6-4cac-8222-4d9d179fc8c4:
+            required: false
+            sortOrder: 3
+          a373a468-fa0c-4d1b-8af9-9f940ec5f7f3:
+            required: true
+            sortOrder: 1
+          d927fd4a-aff3-46c7-b07a-10367eb33537:
+            required: false
+            sortOrder: 2
+        name: Content
+        sortOrder: 1
+fields:
+  1dcacd4a-3ca6-4cac-8222-4d9d179fc8c4:
+    contentColumnType: text
+    fieldGroup: null
+    handle: iconaSocial
+    instructions: 'Classe dell''icona social (elenco disponibile qui: http://fontawesome.io/icons/)'
+    name: 'Icona social'
+    searchable: true
+    settings:
+      charLimit: ''
+      columnType: text
+      initialRows: '4'
+      multiline: ''
+      placeholder: ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  a373a468-fa0c-4d1b-8af9-9f940ec5f7f3:
+    contentColumnType: text
+    fieldGroup: null
+    handle: testoSocial
+    instructions: ''
+    name: Testo
+    searchable: true
+    settings:
+      charLimit: '300'
+      columnType: text
+      initialRows: '4'
+      multiline: ''
+      placeholder: 'Nome e icona'
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  d927fd4a-aff3-46c7-b07a-10367eb33537:
+    contentColumnType: text
+    fieldGroup: null
+    handle: urlSocial
+    instructions: ''
+    name: Url
+    searchable: true
+    settings:
+      charLimit: ''
+      columnType: text
+      initialRows: '4'
+      multiline: ''
+      placeholder: 'Url del profilo'
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+handle: profiloSocial
+name: 'Profilo social'
+sortOrder: 1

@@ -1,0 +1,15 @@
+contentColumnType: text
+fieldGroup: c7d04f2d-dae7-4f28-abd7-de0466646eb4
+handle: landingCtaBarTitle
+instructions: ''
+name: 'Landing Cta Bar Title'
+searchable: true
+settings:
+  charLimit: ''
+  columnType: text
+  initialRows: '4'
+  multiline: ''
+  placeholder: ''
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

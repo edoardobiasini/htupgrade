@@ -1,0 +1,15 @@
+{% cache %}
+	{% minify html %}
+
+      {% include '_header.html' %}
+
+      <main>
+
+        {% include '_bottom-content.html' %}
+
+      </main>
+
+      {% include '_footer.html' %}
+
+  {% endminify %}
+{% endcache %}

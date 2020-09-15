@@ -1,0 +1,33 @@
+contentColumnType: string
+fieldGroup: 4fb7ae08-4783-420e-bb59-19a70c9df682
+handle: digitalBreakfastConMitech_privacy
+instructions: ''
+name: Privacy
+searchable: true
+settings:
+  options:
+    -
+      __assoc__:
+        -
+          - default
+          - 0
+        -
+          - label
+          - 'Dare riscontro a richieste dell’interessato, gestire la partecipazione dell’interessato alle attività svolte dal Titolare, dare esecuzione ad obblighi di legge.'
+        -
+          - value
+          - Ricontatto
+    -
+      __assoc__:
+        -
+          - default
+          - 0
+        -
+          - label
+          - 'Ricevere la Newsletter e quindi autorizzare l’utilizzo dei dati a fini promozionali attraverso l’invio di comunicazioni commerciali.'
+        -
+          - value
+          - Marketing
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Checkboxes

@@ -1,0 +1,9 @@
+contentColumnType: text
+fieldGroup: 3b3cfe00-379b-4bd0-a76c-092983183125
+handle: landingWebinarHtBoardroom_email
+instructions: ''
+name: Email
+searchable: true
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

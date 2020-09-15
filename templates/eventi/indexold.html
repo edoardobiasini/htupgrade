@@ -1,0 +1,185 @@
+  {% cache %}
+    {% minify html %}
+      {% include '_header.html' %}
+
+      <main>
+
+        <!-- BLOG PAGE -->
+        <section class="section-content section-blog-main">
+          <div class="container carousel-blog-container">
+
+
+            <div class="carousel-blog">
+
+              {% if category is defined %}
+                {% set entry = craft.entries.section('eventi').relatedTo(category).first() %}
+              {% else %}
+                {% set entry = craft.entries.section('eventi').first() %}
+              {% endif %}
+
+              {% set image = entry.immaginePrincipale.first() %}
+              <article class="container">
+                {% if image %}
+                <div class="carousel-blog-main-bg has-img-cover">
+                  <picture>
+                    <source media="(max-width: 767px)"
+                            sizes="100vw"
+                            srcset="{{ image.getUrl('slideXs') }} 375w,
+                                    {{ image.getUrl('slideSm') }} 750w">
+                    <source media="(max-width: 991px)"
+                            sizes="750px"
+                            srcset="{{ image.getUrl('slideMd') }} 750w">
+                    <img src="{{ image.getUrl('slideLg') }}">
+                  </picture>
+                </div>
+                {% endif %}
+
+                <div class="row row-blog-main-top">
+                  <div class="col-sm-2">
+                  </div>
+                  <div class="col-sm-4">
+                  </div>
+                  <div class="col-sm-2 col-sm-offset-2">
+                    <div class="blog-meta">
+                      {% set categoryEvFirst = entry.categoriaEvento.first() %}
+                      {% if categoryEvFirst %}
+                      <a href="{{ categoryEvFirst.url }}" class="article-category">{{ categoryEvFirst.title }}</a>
+                      {% endif %}
+                    </div>
+                  </div>
+                </div>
+
+                <div class="blog-meta-2">
+                  <div>
+                  </div>
+                </div>
+
+                <div class="row row-blog-main-content">
+                  <div class="col-sm-5 col-sm-offset-2">
+                    <span class="border"></span>
+                    <h2>{% if entry.titoloFormattato %}{{ entry.titoloFormattato | raw }}{% else %}{{ entry.title }}{% endif %}</h2>
+                    {% if entry.abstract %}
+                    <div class="abstract">
+                      {{ entry.abstract | raw }}
+                    </div>
+                    {% endif %}
+                    <div class="text-center">
+                      <a class="btn" href="{{ entry.url }}">Scopri</a>
+                    </div>
+                  </div>
+                </div>
+
+              </article>
+
+            </div><!-- /.carousel-blog -->
+
+            <div class="container carousel-blog-fixed">
+              <div class="row row-blog-main-top">
+                <div class="col-xs-7 col-sm-4 col-sm-offset-2">
+                  <h1>Eventi</h1>
+                  <form id="blog-category-form" action="">
+                    <div class="blog-category-select-container">
+                      <select name="blog-category-select" class="blog-category-select">
+                        <option value="{{ siteUrl }}eventi"{% if category is not defined %} selected{% endif %}>Tutti gli eventi</option>
+                        {# grab all of the entry ids from the Section of content which we want to display categories for #}
+                        {% set entryIds = craft.entries.section('eventi').ids() %}
+                        {# only return categories that have a relationship with one of our entry ids #}
+                        {% set categories = craft.categories.group('categorieEventi').relatedTo({ sourceElement: entryIds }).order('title').find() %}
+
+                        {% for categorySingle in categories %}
+                        <option value="{{ categorySingle.url }}"{% if category is defined and categorySingle.id == category.id  %} selected{% endif %}>{{ categorySingle.title }}</option>
+                        {% endfor %}﻿
+                      </select>
+                    </div>
+                    <label for="blog-category-select" class="hidden-xs">Seleziona la categoria di tuo interesse dalla select qui in alto.</label>
+                  </form>
+                </div>
+                <div class="blog-meta-container col-xs-5 col-sm-2 col-sm-offset-2">
+                  <div class="blog-meta">
+                    {% if categoryEvFirst %}
+                    <a href="{{ categoryEvFirst.url }}" class="article-category">{{ categoryEvFirst.title }}</a>
+                    {% endif %}
+                  </div>
+                  <span class="border"></span>
+                </div>
+              </div>
+            </div><!-- /.container .carousel-blog-fixed-->
+
+          </div>
+
+          <div class="container">
+            <div class="row">
+              <div class="col-sm-6 col-sm-offset-6 blog-meta-2">
+                <div>
+                  {% if entry.eventoExtra %}
+                  <span class="author-name">{{ entry.eventoExtra | raw }}</span>
+                  {% endif %}
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </section>
+
+        <section class="section-content section-blog-list">
+          <div class="container">
+
+            <div class="row">
+              <div class="col-sm-2">
+                <h4 class="side-title">Altri <br><strong>eventi</strong></h4>
+              </div>
+              <div class="col-sm-8">
+
+                {% if category is defined %}
+                  {% paginate craft.entries.section('eventi').relatedTo(category).limit(10).offset(1) as pageInfo, pageEntries %}
+                {% else %}
+                  {% paginate craft.entries.section('eventi').limit(10).offset(1) as pageInfo, pageEntries %}
+                {% endif %}
+
+                {% for entry in pageEntries %}
+                    <article class="row">
+                      <a href="{{ entry.url }}">
+                        <div class="col-sm-3 col-md-5">
+                          {% set image = entry.immagineAnteprima.first() %}
+                          {% if image %}
+                          <div class="article-image has-img-cover">
+                          <picture>
+                            <source media="(max-width: 991px)"
+                                    sizes="70px"
+                                    srcset="{{ image.getUrl('squareThumbnail2x') }} 2x,
+                                            {{ image.getUrl('squareThumbnail') }} 1x">
+                            <img src="{{ image.getUrl('blogThumbnail') }}" alt="{{ image.title }}">
+                          </picture>
+                          </div>
+                          {% endif %}
+                        </div>
+                        <div class="col-sm-9 col-md-7 article-abstract">
+                          {% set category = entry.categoriaEvento.first() %}
+                          {% if category %}
+                          <span class="article-category">{{ category.title }}</span>
+                          {% endif %}
+                          <h2>{% if entry.titoloFormattato %}{{ entry.titoloFormattato | raw }}{% else %}{{ entry.title }}{% endif %}</h2>
+                        </div>
+                        <div class="col-xs-12">
+                          <span class="border border-full"></span>
+                        </div>
+                      </a>
+                    </article>
+                {% endfor %}
+
+
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+        {% include '_pagination.html' %}
+
+        {% include '_bottom-content.html' %}
+
+      </main>
+
+      {% include '_footer.html' %}
+    {% endminify %}
+  {% endcache %}

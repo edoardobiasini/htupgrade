@@ -1,0 +1,9 @@
+handle: mainMenu
+instructions: null
+maxNodes: null
+name: 'Main Menu'
+propagateNodes: false
+sortOrder: 2
+structure:
+  maxLevels: '2'
+  uid: c4a631e0-be0a-406d-a9cb-615344ed363c

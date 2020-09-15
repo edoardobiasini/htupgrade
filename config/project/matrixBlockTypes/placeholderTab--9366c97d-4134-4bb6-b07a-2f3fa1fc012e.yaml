@@ -1,0 +1,106 @@
+field: 8bf74dca-3e01-4f16-839f-ab05cf7f48be
+fieldLayouts:
+  1c742272-6428-4f84-970e-6bda6a71737e:
+    tabs:
+      -
+        fields:
+          6b14a363-4106-46e0-af55-78510cefe9d2:
+            required: false
+            sortOrder: 4
+          71684ffb-37bb-4c3e-8101-2f54ea8aefde:
+            required: false
+            sortOrder: 2
+          d2e4c68c-2f0f-4eb7-ad4e-90a1a1615801:
+            required: false
+            sortOrder: 3
+          ff896812-0245-4a46-9a50-09ca8912b835:
+            required: false
+            sortOrder: 1
+        name: Content
+        sortOrder: 1
+fields:
+  6b14a363-4106-46e0-af55-78510cefe9d2:
+    contentColumnType: text
+    fieldGroup: null
+    handle: idBlocco
+    instructions: "Id per url.\r\nNon usare # nel valore, esempio:\r\nvalore: \"test\"\r\nurl: dominio.com/pagina#test"
+    name: 'Id blocco'
+    searchable: true
+    settings:
+      charLimit: ''
+      columnType: text
+      initialRows: '4'
+      multiline: ''
+      placeholder: ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  71684ffb-37bb-4c3e-8101-2f54ea8aefde:
+    contentColumnType: string
+    fieldGroup: null
+    handle: coloreSfondo
+    instructions: ''
+    name: 'Colore sfondo'
+    searchable: true
+    settings:
+      options:
+        -
+          __assoc__:
+            -
+              - default
+              - '1'
+            -
+              - label
+              - Azzurro
+            -
+              - value
+              - azzurro
+        -
+          __assoc__:
+            -
+              - default
+              - ''
+            -
+              - label
+              - Bianco
+            -
+              - value
+              - bianco
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Dropdown
+  d2e4c68c-2f0f-4eb7-ad4e-90a1a1615801:
+    contentColumnType: string
+    fieldGroup: null
+    handle: refBloccoTab
+    instructions: 'Selezionare il blocco tab da mostrare. Lasciare vuoto per mostrare il blocco tab della pagina.'
+    name: 'Riferimento blocco tab'
+    searchable: true
+    settings:
+      limit: '1'
+      localizeRelations: false
+      selectionLabel: ''
+      sources:
+        - 'section:aae40d0c-273b-45c6-a072-062a51303542'
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Entries
+  ff896812-0245-4a46-9a50-09ca8912b835:
+    contentColumnType: text
+    fieldGroup: null
+    handle: placeholder
+    instructions: ''
+    name: Placeholder
+    searchable: true
+    settings:
+      charLimit: ''
+      columnType: text
+      initialRows: '4'
+      multiline: ''
+      placeholder: ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+handle: placeholderTab
+name: 'Placeholder tab'
+sortOrder: 2

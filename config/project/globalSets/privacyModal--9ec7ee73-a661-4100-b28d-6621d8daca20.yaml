@@ -1,0 +1,12 @@
+fieldLayouts:
+  f9f3bd5b-c97f-4671-8d63-5c11081e1076:
+    tabs:
+      -
+        fields:
+          5801d0ee-a9e9-4c95-9a6d-95754c811307:
+            required: false
+            sortOrder: 1
+        name: Contenuto
+        sortOrder: 1
+handle: privacyModal
+name: 'Privacy modal'

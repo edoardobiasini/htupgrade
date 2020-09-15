@@ -1,0 +1,23 @@
+enableVersioning: true
+handle: settori
+name: Settori
+previewTargets:
+  -
+    label: 'Pagina articolo primaria'
+    urlFormat: '{url}'
+propagationMethod: all
+siteSettings:
+  5923a219-cdcb-4ce4-842e-f6e77f429764:
+    enabledByDefault: true
+    hasUrls: true
+    template: servizi/_entry
+    uriFormat: '{% if object.level == 1 %}settori/{slug}{% else %}{parent.uri}/{slug}{% endif %}'
+  644656eb-2858-42a7-b937-c3c8abed971c:
+    enabledByDefault: true
+    hasUrls: true
+    template: servizi/_entry
+    uriFormat: '{% if object.level == 1 %}settori/{slug}{% else %}{parent.uri}/{slug}{% endif %}'
+structure:
+  maxLevels: 2
+  uid: ab9b36d0-f5c0-4647-8e55-1c1cc39801ed
+type: structure

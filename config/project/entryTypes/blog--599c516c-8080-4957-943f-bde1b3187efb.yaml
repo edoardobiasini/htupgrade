@@ -1,0 +1,93 @@
+fieldLayouts:
+  b4a77b64-9ab2-4e8b-a043-aef464d8b4fc:
+    tabs:
+      -
+        elements:
+          -
+            instructions: null
+            label: Titolo
+            type: craft\fieldlayoutelements\EntryTitleField
+          -
+            fieldUid: a20cfdeb-741d-4f83-8223-0a69c8b068d0
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+          -
+            fieldUid: f394d235-6c6e-455a-a579-32a9754feb9e
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+          -
+            fieldUid: 9c928953-7e8d-427f-a6c6-55916204a013
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+          -
+            fieldUid: aeec5f98-2813-4aee-8beb-6e2d5b352395
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+          -
+            fieldUid: 1f1c6858-9f44-4044-8644-b3279b70ba08
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+        name: 'Campi blog'
+        sortOrder: 1
+      -
+        elements:
+          -
+            fieldUid: fce263b4-c698-4d79-9071-76521b937000
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+          -
+            fieldUid: eba89519-e384-43bb-8a62-94d21a24c1dd
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+          -
+            fieldUid: ea7e294a-b06c-47e4-8d5c-2c32fd1cfdf1
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+        name: Default
+        sortOrder: 2
+      -
+        elements:
+          -
+            fieldUid: 23a0f0ce-5a47-47ba-8e95-2a08c5de4917
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+          -
+            fieldUid: 59b60c63-d0bf-4274-9421-b38c038ba954
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+        name: Immagini
+        sortOrder: 3
+      -
+        elements:
+          -
+            fieldUid: d5ae378d-b90d-4736-89a1-840cf0eab13e
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+          -
+            fieldUid: 671f7cc9-2dca-48e4-820f-7bb5986023be
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+          -
+            fieldUid: cdd19e48-58f4-4712-95b9-fc58e8a679b5
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+          -
+            fieldUid: b7d83b30-ca1a-463e-adb9-8b9fae1169fc
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+        name: 'Blocco tab'
+        sortOrder: 4
+      -
+        elements:
+          -
+            fieldUid: 8caedc5d-ad29-4e2a-ab8f-1e13f219501e
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+        name: 'Campi seo'
+        sortOrder: 5
+handle: blog
+hasTitleField: true
+name: Blog
+section: b94bf89c-7184-427d-9032-d83232aa834d
+sortOrder: 1
+titleFormat: null

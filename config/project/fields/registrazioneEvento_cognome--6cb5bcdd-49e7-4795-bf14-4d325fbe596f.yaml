@@ -1,0 +1,13 @@
+contentColumnType: text
+fieldGroup: c36dced2-7081-4438-9646-45e9bba348de
+handle: registrazioneEvento_cognome
+instructions: ''
+name: Cognome
+searchable: true
+settings:
+  charLimit: null
+  columnType: text
+  multiline: 0
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

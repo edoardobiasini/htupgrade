@@ -1,0 +1,13 @@
+contentColumnType: integer(10)
+fieldGroup: 2eed2783-3562-4c4c-8bee-a2933c182cd4
+handle: modalNewsletterDurataCookie
+instructions: 'Per quanti giorni non deve apparire in automatico la modal una volta chiusa? (usare un numero intero)'
+name: 'Modal newsletter durata cookie'
+searchable: true
+settings:
+  decimals: '0'
+  max: ''
+  min: '0'
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Number

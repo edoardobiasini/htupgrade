@@ -1,0 +1,9 @@
+contentColumnType: text
+fieldGroup: c36dced2-7081-4438-9646-45e9bba348de
+handle: registrazioneEvento_email
+instructions: ''
+name: Email
+searchable: true
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

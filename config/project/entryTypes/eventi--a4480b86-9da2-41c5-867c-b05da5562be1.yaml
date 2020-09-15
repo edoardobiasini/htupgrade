@@ -1,0 +1,161 @@
+fieldLayouts:
+  6e544b4e-d8ca-4857-908b-419fc4ef07fc:
+    tabs:
+      -
+        elements:
+          -
+            instructions: null
+            label: Titolo
+            type: craft\fieldlayoutelements\EntryTitleField
+          -
+            fieldUid: fce263b4-c698-4d79-9071-76521b937000
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+          -
+            fieldUid: 59575f03-bfd4-48da-8f42-251d29c4382e
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+          -
+            fieldUid: eba89519-e384-43bb-8a62-94d21a24c1dd
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+          -
+            fieldUid: 729d6b9c-a899-4114-80d1-0182ed02a09c
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+          -
+            fieldUid: 2f0302b1-673d-4718-aece-f52b704d815c
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+          -
+            fieldUid: 8ff687b4-c355-43f4-ab1a-f491df76714e
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+          -
+            fieldUid: 2baabef7-b7d4-4356-ab95-1a277d0c1220
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+          -
+            fieldUid: 51636ab4-7cb2-4cc8-acc8-2e2c462617b2
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+          -
+            fieldUid: 23a0f0ce-5a47-47ba-8e95-2a08c5de4917
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+          -
+            fieldUid: 59b60c63-d0bf-4274-9421-b38c038ba954
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+        name: Generali
+        sortOrder: 1
+      -
+        elements:
+          -
+            fieldUid: 75fb1ab9-c467-4d62-a7da-d803426870b4
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+        name: Presentazione
+        sortOrder: 2
+      -
+        elements:
+          -
+            fieldUid: 477cd974-5bd4-4446-8edc-5b0af896e813
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+          -
+            fieldUid: 82231ddf-c368-4a62-8d7f-0d1b3bde576b
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+          -
+            fieldUid: 9468667b-b24b-46eb-ab55-1f9cf76a5efc
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+          -
+            fieldUid: 40093693-1d9d-49c8-b14c-95fe9f034d58
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+        name: Programma
+        sortOrder: 3
+      -
+        elements:
+          -
+            fieldUid: cc7e0c8d-9761-4342-a6b0-6082b963ab63
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+          -
+            fieldUid: a5973f0f-01b5-4c36-9175-101b5f9ab30b
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+          -
+            fieldUid: c8535f91-4292-480f-9d13-6f6d91b4ee47
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+        name: Mappa
+        sortOrder: 4
+      -
+        elements:
+          -
+            fieldUid: 18c9e31e-17e2-4074-9167-218bb7ea60ce
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+          -
+            fieldUid: 7dd15c62-39e5-4c1a-84ab-78bbe9e91d01
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+        name: Gallery
+        sortOrder: 5
+      -
+        elements:
+          -
+            fieldUid: 2b207e3c-f573-475e-bfc4-27051ce04ea3
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+          -
+            fieldUid: ac3e81b3-dc17-4596-abbe-00b7591d8dab
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+          -
+            fieldUid: 61c1e121-9300-4065-8112-b37dc4ada273
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+        name: Video
+        sortOrder: 6
+      -
+        elements:
+          -
+            fieldUid: e87557eb-4ae9-40ff-b476-57d225d9a315
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+        name: Documenti
+        sortOrder: 7
+      -
+        elements:
+          -
+            fieldUid: 2e4d62a9-315c-4f8c-b4cc-8b5908856efc
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+          -
+            fieldUid: 5d790315-d2e3-43d2-bdad-4c5e94933660
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+          -
+            fieldUid: d3b332b6-7087-4857-9bcc-31eaa12ef673
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+        name: Registrazione
+        sortOrder: 8
+      -
+        elements:
+          -
+            fieldUid: 8caedc5d-ad29-4e2a-ab8f-1e13f219501e
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+        name: 'Campi seo'
+        sortOrder: 9
+handle: eventi
+hasTitleField: true
+name: Eventi
+section: 177f7a1a-a1eb-415e-8ccd-dffc9d4f1f2c
+sortOrder: 1
+titleFormat: null

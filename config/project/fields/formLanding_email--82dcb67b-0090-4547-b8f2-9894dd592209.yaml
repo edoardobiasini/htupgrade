@@ -1,0 +1,9 @@
+contentColumnType: text
+fieldGroup: c187e0e2-1954-48d5-bb83-08e2691733ce
+handle: formLanding_email
+instructions: ''
+name: Email
+searchable: true
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

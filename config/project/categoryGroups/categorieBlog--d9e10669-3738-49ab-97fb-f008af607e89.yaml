@@ -1,0 +1,24 @@
+fieldLayouts:
+  210f619d-0235-49b7-a687-2724dd10096e:
+    tabs:
+      -
+        fields:
+          8caedc5d-ad29-4e2a-ab8f-1e13f219501e:
+            required: false
+            sortOrder: 1
+        name: 'Campi seo'
+        sortOrder: 1
+handle: categorieBlog
+name: 'Categorie blog'
+siteSettings:
+  5923a219-cdcb-4ce4-842e-f6e77f429764:
+    hasUrls: true
+    template: blog
+    uriFormat: 'blog/categorie/{slug}'
+  644656eb-2858-42a7-b937-c3c8abed971c:
+    hasUrls: true
+    template: blog
+    uriFormat: 'blog/categorie/{slug}'
+structure:
+  maxLevels: 1
+  uid: 54ee61e7-48bb-486a-8f3d-a38f477a2edf

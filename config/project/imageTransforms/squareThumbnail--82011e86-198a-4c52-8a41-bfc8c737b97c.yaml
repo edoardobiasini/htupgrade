@@ -1,0 +1,9 @@
+format: null
+handle: squareThumbnail
+height: 70
+interlace: none
+mode: crop
+name: 'Square thumbnail'
+position: center-center
+quality: 82
+width: 70

@@ -1,0 +1,13 @@
+contentColumnType: text
+fieldGroup: 37d91475-6d3a-472d-a918-fa2854cec239
+handle: htcenanatalizia2019_cognome
+instructions: ''
+name: Cognome
+searchable: true
+settings:
+  charLimit: null
+  columnType: text
+  multiline: 0
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

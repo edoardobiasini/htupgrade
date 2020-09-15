@@ -1,0 +1,9 @@
+contentColumnType: text
+fieldGroup: 4fb7ae08-4783-420e-bb59-19a70c9df682
+handle: digitalBreakfastConMitech_email
+instructions: ''
+name: Email
+searchable: true
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

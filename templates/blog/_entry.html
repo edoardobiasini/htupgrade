@@ -1,0 +1,245 @@
+      {% include '_header.html' %}
+
+      <main>
+
+        <section class="section-content section-hero">
+          {% set image = entry.immaginePrincipale.first() %}
+          <div class="container">
+
+            {% if image %}
+            <div class="bg-absolute-img has-img-cover">
+              <picture>
+                <source media="(max-width: 767px)"
+                        sizes="100vw"
+                        srcset="{{ image.getUrl('slideXs') }} 375w,
+                                {{ image.getUrl('slideSm') }} 750w">
+                <source media="(max-width: 991px)"
+                        sizes="750px"
+                        srcset="{{ image.getUrl('slideMd') }} 750w">
+                <img src="{{ image.getUrl('slideLg') }}" alt="{{ image.title }}">
+              </picture>
+            </div>
+            {% endif %}
+
+            <div class="row row-flex">
+              <div class="col-xs-6 col-sm-4 col-sm-offset-2">
+                <h4 style="font-size: 2.8125em;margin-bottom: 0px;">Blog</h4>
+                {% set category = entry.categoriaBlog.first() %}
+                {% if category %}
+                <a href="{{ category.url }}" class="article-category title-big">{{ category.title }}</a>
+                {% endif %}
+                <!--<a href="#" class="article-category title-big">Industry 4.0</a>-->
+              </div>
+              <div class="col-xs-6 col-sm-6 text-right">
+                {% set params = craft.entries.section('blog').relatedTo(category) %}
+                {% set nextEntry = entry.getNext(params) %}
+
+                {% if nextEntry %}
+                <a href="{{ nextEntry.url }}" class="blog-single-next"><span>Next <span></span></span></a>
+                {% endif %}
+              </div>
+            </div>
+
+            <div class="row row-blog-single-meta">
+              <div class="col-xs-6 col-sm-4 col-sm-offset-2">
+                <div class="blog-meta">
+                  {% set tags = entry.tagBlog %}
+                  {% if tags | length %}
+                  <ul class="article-tags">
+                  {% for tag in tags %}
+                      <li>{{ tag.title }}</li>
+                  {% endfor %}
+                  </ul>
+                  {% endif %}
+                </div>
+                <span class="border"></span>
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+        <section class="section-content section-breadcrumb hidden-xs">
+          <div class="container">
+
+            <div class="row">
+              <div class="col-sm-6 col-sm-offset-2">
+                {% if entry.tempoDiLettura %}
+                  <span><i class="fa fa-clock-o highlight"></i> Tempo di lettura: {{ entry.tempoDiLettura }}</span>
+                {% endif %}
+              </div>
+              <div class="col-sm-2 text-right">
+                <a href="{{ siteUrl }}{{ entry.section|kebab }}">Torna al blog</a>
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+
+        <section class="section-content section-default">
+          <div class="container">
+
+            <div class="row">
+              <div class="col-sm-3 col-sm-offset-1">
+                <div class="blog-single-author">
+                  {% if entry.autoreNome %}
+                  <span class="author-name">Scritto da <span class="highlight">{{ entry.autoreNome }}</span></span>
+                  {% endif %}
+                  {% if entry.autoreRuolo %}
+                  <span class="author-role">{{ entry.autoreRuolo }}</span>
+                  {% endif %}
+                  <time>{{ entry.postDate | date("d F Y") }}</time>
+                  <span class="border"></span>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <h1>{% if entry.titoloFormattato %}{{ entry.titoloFormattato | raw }}{% else %}{{ entry.title }}{% endif %}</h1>
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+        <section class="section-content section-default section-blog-entry">
+          <div class="container abstract">
+
+            <div class="row">
+              <div class="col-sm-2">
+              </div>
+              <div class="col-sm-8">
+                {{ entry.body | shortcodes }}
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+        {% if entry.bloccoTab | length %}
+
+        <section class="section-content section-default section-alternate section-left-nav">
+          <div class="container">
+
+            <div class="row">
+              <div class="col-sm-2">
+                {% if entry.titoloLateraleTab %}
+                <h4 class="side-title">{{ entry.titoloLateraleTab | raw }}</h4>
+                {% endif %}
+              </div>
+              <div class="col-sm-8">
+                {% if entry.titoloTab %}
+                <h2>{{ entry.titoloTab | raw }}</h2>
+                {% endif %}
+                {% if entry.descrizioneTab %}
+                <p class="abstract">{{ entry.descrizioneTab | nl2br }}</p>
+                {% endif %}
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-sm-3 col-sm-offset-1 col-md-2">
+
+
+                <div class="left_nav">
+                  {% for block in entry.bloccoTab %}
+                  <div class="left_nav_el{% if loop.first %} current_left_nav_el{% endif %}">
+                   	<h3>{{ block.titolo }}</h3>
+                    <div class="left_nav_el_content">
+                      <div class="row">
+                        <div class="col-sm-6">
+                          {{ block.contenuto }}
+                        </div>
+                        <div class="col-sm-6">
+                          {% set image = block.immagine.first() %}
+                          {% if image %}
+                          <img class="img-responsive" src="{{ image.getUrl() }}" width="{{ image.getWidth() }}" height="{{ image.getHeight() }}" alt="{{ image.title }}">
+                          {% endif %}
+                        </div>
+                      </div>
+                  	</div>
+                  </div>
+                  {% endfor %}
+
+
+              	</div>
+
+              </div>
+
+              {% set block = entry.bloccoTab.first() %}
+              <div class="left_nav_main_content_container col-sm-6 col-md-offset-1 hidden-xs">
+                <div class="left_nav_main_content">
+                  <div class="row">
+                    <div class="col-sm-6">
+                      {{ block.contenuto }}
+                    </div>
+                    <div class="col-sm-6">
+                      {% set image = block.immagine.first() %}
+                      {% if image %}
+                      <img class="img-responsive" src="{{ image.getUrl() }}" width="{{ image.getWidth() }}" height="{{ image.getHeight() }}" alt="{{ image.title }}">
+                      {% endif %}
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+        </section>
+        {% endif %}
+
+        {# Get entries from the same category, excluding the current one. var category has been set at the beginning of the template #}
+        {% set entries = craft.entries.section('blog').relatedTo(category).id('not ' ~ entry.id).limit(2).find() %}
+        {% if entries | length %}
+        <section class="section-content section-blog-list">
+          <div class="container">
+
+            <div class="row">
+              <div class="col-sm-2">
+                <h4 class="side-title">Altro dal <br><strong>blog</strong></h4>
+              </div>
+              <div class="col-sm-8">
+
+                {% for entry in entries %}
+                <article class="row">
+                  <a href="{{ entry.url }}">
+                    <div class="col-sm-3 col-md-5">
+                      {% set image = entry.immagineAnteprima.first() %}
+                      {% if image %}
+                      <div class="article-image has-img-cover">
+                      <picture>
+                        <source media="(max-width: 991px)"
+                                sizes="70px"
+                                srcset="{{ image.getUrl('squareThumbnail2x') }} 2x,
+                                        {{ image.getUrl('squareThumbnail') }} 1x">
+                        <img src="{{ image.getUrl('blogThumbnail') }}" alt="{{ image.title }}">
+                      </picture>
+                      </div>
+                      {% endif %}
+                    </div>
+                    <div class="col-sm-9 col-md-7 article-abstract">
+                      {% set category = entry.categoriaBlog.first() %}
+                      {% if category %}
+                      <span class="article-category">{{ category.title }}</span>
+                      {% endif %}
+                      <h2>{% if entry.titoloFormattato %}{{ entry.titoloFormattato | raw }}{% else %}{{ entry.title }}{% endif %}</h2>
+                    </div>
+                    <div class="col-xs-12">
+                      <span class="border border-full"></span>
+                    </div>
+                  </a>
+                </article>
+                {% endfor %}
+
+              </div>
+            </div>
+
+          </div>
+        </section>
+        {% endif %}
+
+        {% include '_bottom-content.html' %}
+
+      </main>
+
+      {% include '_footer.html' %}

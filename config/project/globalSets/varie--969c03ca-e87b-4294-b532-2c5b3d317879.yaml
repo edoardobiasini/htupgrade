@@ -1,0 +1,12 @@
+fieldLayouts:
+  d3e1d0f6-7eb2-44dc-9285-848ddf80a7e4:
+    tabs:
+      -
+        fields:
+          6724241a-358e-41df-8478-50425deda540:
+            required: false
+            sortOrder: 1
+        name: Contenuto
+        sortOrder: 1
+handle: varie
+name: Varie

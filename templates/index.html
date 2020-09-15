@@ -1,0 +1,424 @@
+  {% cache %}
+    {% minify html %}
+      {% include '_header.html' %}
+
+      <main>
+
+        <section class="section-content section-intro-text">
+          <div class="container">
+
+            <div class="row">
+              <div class="col-sm-8 col-sm-offset-2">
+                <span>{{ entry.slideshowTitolo | raw }}</span>
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+        {% if entry.slideshow | length %}
+        <section class="section-content section-carousel-top">
+          <div class="container">
+
+            <div class="row">
+
+              <div class="carousel-top">
+
+                {% for block in entry.slideshow %}
+                <div class="slide">
+                  <div class="slide-inner">
+
+                    {% set image = block.immagine.first() %}
+                    {% if image %}
+                    <div class="slide-img has-img-cover">
+                      <picture>
+                        <source media="(max-width: 767px)"
+                                sizes="100vw"
+                                srcset="{{ image.getUrl('slideHomeXs') }} 375w,
+                                        {{ image.getUrl('slideHomeMd') }} 750w">
+                        <source media="(max-width: 991px)"
+                                sizes="750px"
+                                srcset="{{ image.getUrl('slideHomeMd') }} 750w">
+                        <img src="{{ image.getUrl('slideLg') }}" alt="{{ image.title }}">
+                      </picture>
+                    </div>
+                    {% endif %}
+
+                    <div class="slide-content-top">
+                      {% if block.titoloSuperiore %}
+                      <span>{{ block.titoloSuperiore }}</span>
+                      {% endif %}
+                    </div>
+                    <div class="slide-content-middle">
+                      {% if block.titolo %}
+                      <p>{{ block.titolo }}</p>
+                      {% endif %}
+                    </div>
+                    <div class="slide-content-bottom">
+                      {{ block.descrizione }}
+                    </div>
+
+                  </div>
+                </div>
+                {% endfor %}
+
+
+              </div>
+
+              {% set block = entry.slideshow.first() %}
+              <div class="carousel-top-caption">
+                <div class="carousel-top-dots col-sm-1 col-sm-offset-10">
+                </div>
+                <div class="carousel-caption-top col-sm-8 col-sm-offset-2">
+                  <div>
+                    {% if block.titoloSuperiore %}
+                    <span>{{ block.titoloSuperiore }}</span>
+                    {% endif %}
+                  </div>
+                </div>
+                <div class="carousel-caption-middle col-sm-8 col-sm-offset-2">
+                  <div>
+                    {% if block.titolo %}
+                    <p>{{ block.titolo }}</p>
+                    {% endif %}
+                  </div>
+                </div>
+                <div class="carousel-caption-bottom col-sm-10 col-sm-offset-2">
+                  <div class="col-sm-10 col-lg-9">
+                    {{ block.descrizione }}
+                  </div>
+                </div>
+              </div>
+
+            </div><!-- row -->
+
+          </div>
+        </section>
+        {% endif %}
+
+
+        <section id="scopri-ht" class="section-content section-default">
+          <div class="container">
+
+            <div class="row">
+              <div class="col-sm-2">
+                {% if entry.homeIntroTitoloLaterale %}
+                <h4 class="side-title">{{ entry.homeIntroTitoloLaterale | raw }}</h4>
+                {% endif %}
+              </div>
+              <div class="col-sm-8">
+
+                <div class="row row-flex row-flex-bottom title-icon-row">
+                  {% set icon = entry.homeIntroIcona.first() %}
+                  {% if icon %}
+                  <div class="title-icon-container col-sm-3">
+                    <span class="title-icon" style="background-image:url({{ icon.getUrl() }})">
+                    </span>
+                  </div>
+                  <div class="title-icon-title col-sm-9">
+                  {% else %}
+                  <div class="title-icon-title col-sm-12">
+                  {% endif %}
+                    <h2>{{ entry.homeIntroTitolo | raw }}</h2>
+                  </div>
+                </div>
+
+                {% if entry.homeIntroColonnaSx and entry.homeIntroColonnaDx %}
+                <div class="row">
+                  <div class="col-sm-6">
+                    {{ entry.homeIntroColonnaSx | shortcodes }}
+                  </div>
+                  <div class="col-sm-6">
+                    {{ entry.homeIntroColonnaDx | shortcodes }}
+                  </div>
+                </div>
+                {% else %}
+                <div class="row">
+                  <div class="col-sm-12">
+                    {{ entry.homeIntroColonnaSx | shortcodes }}
+                    {{ entry.homeIntroColonnaDx | shortcodes }}
+                  </div>
+                </div>
+                {% endif %}
+
+                {% if entry.homeIntroLinkTesto and entry.homeIntroLinkUrl %}
+                <div class="row">
+                  <div class="col-xs-12 text-center">
+                    <a class="btn" href="{{ entry.homeIntroLinkUrl }}">{{ entry.homeIntroLinkTesto }}</a>
+                  </div>
+                </div>
+                {% endif %}
+
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+        {% if entry.bloccoCarousel | length %}
+        <section id="serviziesoluzioni" class="section-content section-default section-alternate">
+          <div class="container">
+
+            <div class="row">
+              <div class="col-sm-2">
+                {% if entry.titoloLateraleCarousel %}
+                <h4 class="side-title">{{ entry.titoloLateraleCarousel | raw }}</h4>
+                {% endif %}
+              </div>
+              <div class="carousel-entry col-sm-8">
+
+                  {% for block in entry.bloccoCarousel %}
+                  <div class="carousel-entry-slide">
+                    <div class="row">
+                      <div class="col-sm-6 col-sm-push-6">
+                        {% set image = block.immagine.first() %}
+                        {% if image %}
+                        <picture>
+                          {% set imageMobile = block.immagineMobile.first() %}
+                          {% if imageMobile %}
+                          <source media="(max-width: 767px)"
+                                  sizes="calc(100vw - 30px)"
+                                  srcset="{{ imageMobile.getUrl('entryCarouselMobile') }} 560w">
+                          {% endif %}
+                          <img class="img-responsive" src="{{ image.getUrl() }}" alt="{{ image.title }}">
+                        </picture>
+                        {% endif %}
+                      </div>
+                      <div class="col-sm-6 col-sm-pull-6">
+                        {% if block.titolo %}
+                        <h2>{{ block.titolo | raw }}</h2>
+                        {% endif %}
+                        {{ block.contenuto | shortcodes }}
+                      </div>
+                    </div>
+                  </div>
+                  {% endfor %}
+
+              </div>
+            </div>
+
+          </div>
+        </section>
+        {% endif %}
+
+        <section id="home-blog" class="section-content section-blog-main">
+          <div class="container carousel-blog-container">
+
+
+            <div class="carousel-blog">
+            {% set entries = craft.entries({
+              section: 'blog',
+              with: ['immaginePrincipale', 'tagBlog', 'categoriaBlog', 'titoloFormattato'],
+              limit: 3,
+            }) %}
+
+            {% for entry in entries %}
+
+              {% set image = entry.immaginePrincipale[0] %}
+              <article class="container">
+                {% if image %}
+                <div class="carousel-blog-main-bg has-img-cover">
+                  <picture>
+                    <source media="(max-width: 767px)"
+                            sizes="100vw"
+                            srcset="{{ image.getUrl('slideXs') }} 375w,
+                                    {{ image.getUrl('slideSm') }} 750w">
+                    <source media="(max-width: 991px)"
+                            sizes="750px"
+                            srcset="{{ image.getUrl('slideMd') }} 750w">
+                    <img src="{{ image.getUrl('slideLg') }}" alt="{{ image.title }}">
+                  </picture>
+                </div>
+                {% endif %}
+
+                <div class="row row-blog-main-top">
+                  <div class="col-sm-2">
+                  </div>
+                  <div class="col-sm-4">
+                  </div>
+                  <div class="col-sm-2 col-sm-offset-2">
+                    <div class="blog-meta">
+                      {% set tags = entry.tagBlog %}
+                      {% if tags | length %}
+                      <ul class="article-tags">
+                      {% for tag in tags %}
+                          <li>{{ tag.title }}</li>
+                      {% endfor %}
+                      </ul>
+                      {% endif %}
+                      {% set category = entry.categoriaBlog[0] %}
+                      {% if category %}
+                      <a href="{{ category.url }}" class="article-category">{{ category.title }}</a>
+                      {% endif %}
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row row-blog-main-content">
+                  <div class="col-sm-5 col-sm-offset-2">
+                    <span class="border"></span>
+                    <h2>{% if entry.titoloFormattato %}{{ entry.titoloFormattato | raw }}{% else %}{{ entry.title }}{% endif %}</h2>
+                    {% if entry.abstract %}
+                    <div class="abstract">
+                      {{ entry.abstract | raw }}
+                    </div>
+                    {% endif %}
+                    <div class="text-center">
+                      <a class="btn" href="{{ entry.url }}">Leggi</a>
+                    </div>
+                  </div>
+                </div>
+
+              </article>
+            {% endfor %}
+
+            </div><!-- /.carousel-blog -->
+
+            <div class="container carousel-blog-fixed">
+              <div class="row row-blog-main-top">
+                <div class="col-xs-5 col-sm-4 col-sm-offset-2">
+                  <h2>Blog</h2>
+                  <a href="{{ siteUrl }}blog" class="hidden-xs">Tutti gli articoli</a>
+                </div>
+                {% set entryFirst = craft.entries.section('blog').with(['tagBlog', 'categoriaBlog']).first() %}
+                <div class="blog-meta-container col-xs-5 col-xs-offset-2 col-sm-2 col-sm-offset-2">
+                  <div class="blog-meta">
+                    {% set tags = entryFirst.tagBlog %}
+                    {% if tags | length %}
+                    <ul class="article-tags">
+                    {% for tag in tags %}
+                        <li>{{ tag.title }}</li>
+                    {% endfor %}
+                    </ul>
+                    {% endif %}
+                    {% set categoryCarFirst = entryFirst.categoriaBlog[0] %}
+                    {% if categoryCarFirst %}
+                    <a href="{{ categoryCarFirst.url }}" class="article-category">{{ categoryCarFirst.title }}</a>
+                    {% endif %}
+                  </div>
+                  <span class="border"></span>
+                </div>
+              </div>
+            </div><!-- /.container .carousel-blog-fixed-->
+
+          </div>
+        </section>
+
+        {% set entries = craft.entries({
+          section: 'blog',
+          with: ['immagineAnteprima', 'categoriaBlog', 'titoloFormattato'],
+          limit: 2,
+          offset: 3,
+        }) %}
+        {% if entries | length %}
+        <section class="section-content section-blog-list">
+          <div class="container">
+
+            <div class="row">
+              <div class="col-sm-2">
+                <h4 class="side-title">Altro dal <br><strong>blog</strong></h4>
+              </div>
+              <div class="col-sm-8">
+
+              {% for entry in entries %}
+                <article class="row">
+                  <a href="{{ entry.url }}">
+                    <div class="col-sm-3 col-md-5">
+                      {% set image = entry.immagineAnteprima[0] %}
+                      {% if image %}
+                      <div class="article-image has-img-cover">
+                      <picture>
+                        <source media="(max-width: 991px)"
+                                sizes="70px"
+                                srcset="{{ image.getUrl('squareThumbnail2x') }} 2x,
+                                        {{ image.getUrl('squareThumbnail') }} 1x">
+                        <img src="{{ image.getUrl('blogThumbnail') }}" alt="{{ image.title }}">
+                      </picture>
+                      </div>
+                      {% endif %}
+                    </div>
+                    <div class="col-sm-9 col-md-7 article-abstract">
+                      {% set category = entry.categoriaBlog[0] %}
+                      {% if category %}
+                      <span class="article-category">{{ category.title }}</span>
+                      {% endif %}
+                      <h2>{% if entry.titoloFormattato %}{{ entry.titoloFormattato | raw }}{% else %}{{ entry.title }}{% endif %}</h2>
+                    </div>
+                    <div class="col-xs-12">
+                      <span class="border border-full"></span>
+                    </div>
+                  </a>
+                </article>
+              {% endfor %}
+
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-md-8 col-md-offset-2 text-center">
+                <a class="btn" href="{{ siteUrl }}blog">Vai al blog aziendale</a>
+              </div>
+            </div>
+
+          </div>
+        </section>
+        {% endif %}
+
+        {% if entry.htAcademy | length %}
+        {% set academyEntry = craft.entries.section('eventi').with(['immaginePrincipale', 'abstract', 'titoloFormattato']).relatedTo(entry.htAcademy).first() %}
+          {% if academyEntry | length %}
+        <section id="home-htacademy" class="section-content section-htacademy">
+          {% set image = academyEntry.immaginePrincipale[0] %}
+          <div class="container">
+
+            {% if image %}
+            <div class="bg-absolute-img has-img-cover">
+              <picture>
+                <source media="(max-width: 767px)"
+                        sizes="100vw"
+                        srcset="{{ image.getUrl('slideXs') }} 375w,
+                                {{ image.getUrl('slideSm') }} 750w">
+                <source media="(max-width: 991px)"
+                        sizes="750px"
+                        srcset="{{ image.getUrl('slideMd') }} 750w">
+                <img src="{{ image.getUrl('slideLg') }}" alt="{{ image.title }}">
+              </picture>
+            </div>
+            {% endif %}
+
+            <div class="row row-htacademy-top hidden-xs">
+              <div class="col-sm-3 col-sm-offset-2">
+                <h2>{% if academyEntry.titoloFormattato %}{{ academyEntry.titoloFormattato | raw }}{% else %}{{ academyEntry.title }}{% endif %}</h2>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="container">
+
+            <div class="row row-htacademy-content">
+              <div class="col-sm-8 col-sm-offset-2">
+                <h2 class="hidden-sm hidden-md hidden-lg">{% if academyEntry.titoloFormattato %}{{ academyEntry.titoloFormattato | raw }}{% else %}{{ academyEntry.title }}{% endif %}</h2>
+                {% if academyEntry.abstract %}
+                <div class="abstract">
+                  {{ academyEntry.abstract | raw }}
+                </div>
+                {% endif %}
+                <div class="text-center">
+                  <a class="btn btn-dark" href="{{ academyEntry.url }}">Leggi tutto l'articolo</a>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </section>
+          {% endif %}
+        {% endif %}
+
+        {% include '_bottom-content.html' %}
+
+      </main>
+
+      {% include '_footer.html' %}
+    {% endminify %}
+  {% endcache %}

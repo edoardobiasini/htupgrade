@@ -1,0 +1,102 @@
+field: 849050c3-4fe8-468e-ab77-1cd2633cba3b
+fieldLayouts:
+  f4abe35f-ba01-4f7a-8064-7fcf593c6978:
+    tabs:
+      -
+        fields:
+          06acb657-003b-4706-b15e-a2953ef939c4:
+            required: false
+            sortOrder: 3
+          2d6f3fa6-3fc2-42d6-a78e-c9f2e54a179d:
+            required: false
+            sortOrder: 4
+          467a977c-6e79-4334-9cd6-d492c71de52c:
+            required: false
+            sortOrder: 1
+          ef67dedb-f365-46a7-a857-9ec3694e1624:
+            required: false
+            sortOrder: 2
+        name: Content
+        sortOrder: 1
+fields:
+  06acb657-003b-4706-b15e-a2953ef939c4:
+    contentColumnType: string
+    fieldGroup: null
+    handle: immagine
+    instructions: ''
+    name: Immagine
+    searchable: true
+    settings:
+      defaultUploadLocationSource: 'volume:3ec8853a-a014-463e-848d-7da4f8a9bfac'
+      defaultUploadLocationSubpath: ''
+      limit: '1'
+      localizeRelations: false
+      restrictFiles: ''
+      selectionLabel: ''
+      singleUploadLocationSource: 'volume:3ec8853a-a014-463e-848d-7da4f8a9bfac'
+      singleUploadLocationSubpath: ''
+      sources: '*'
+      useSingleFolder: ''
+      viewMode: list
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Assets
+  2d6f3fa6-3fc2-42d6-a78e-c9f2e54a179d:
+    contentColumnType: string
+    fieldGroup: null
+    handle: immagineMobile
+    instructions: 'Mostrata su mobile ridimensionata a 560px x280px'
+    name: 'Immagine mobile'
+    searchable: true
+    settings:
+      defaultUploadLocationSource: 'volume:3ec8853a-a014-463e-848d-7da4f8a9bfac'
+      defaultUploadLocationSubpath: ''
+      limit: '1'
+      localizeRelations: false
+      restrictFiles: ''
+      selectionLabel: ''
+      singleUploadLocationSource: 'volume:3ec8853a-a014-463e-848d-7da4f8a9bfac'
+      singleUploadLocationSubpath: ''
+      sources: '*'
+      useSingleFolder: ''
+      viewMode: list
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Assets
+  467a977c-6e79-4334-9cd6-d492c71de52c:
+    contentColumnType: text
+    fieldGroup: null
+    handle: titolo
+    instructions: ''
+    name: Titolo
+    searchable: true
+    settings:
+      charLimit: ''
+      columnType: text
+      initialRows: '4'
+      multiline: ''
+      placeholder: ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  ef67dedb-f365-46a7-a857-9ec3694e1624:
+    contentColumnType: string
+    fieldGroup: null
+    handle: contenuto
+    instructions: ''
+    name: Contenuto
+    searchable: true
+    settings:
+      availableTransforms: '*'
+      availableVolumes: '*'
+      cleanupHtml: '1'
+      columnType: text
+      configFile: Standard.json
+      purifierConfig: ''
+      purifyHtml: '1'
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\redactor\Field
+handle: elementoCarousel
+name: 'Elemento carousel'
+sortOrder: 1

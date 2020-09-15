@@ -1,0 +1,22 @@
+contentColumnType: string
+fieldGroup: 3b41f5bc-0f07-49f3-8a63-215f81063c53
+handle: formLandingHtFlexRfid_privacy
+instructions: ''
+name: Privacy
+searchable: true
+settings:
+  options:
+    -
+      __assoc__:
+        -
+          - default
+          - 0
+        -
+          - label
+          - 'Ho preso visione della <a href="#" data-toggle="modal" data-target="#modal-privacy">nota informativa</a>. Do il consenso al trattamento dei dati.'
+        -
+          - value
+          - 'Ho preso visione della <a href="#" data-toggle="modal" data-target="#modal-privacy">nota informativa</a>. Do il consenso al trattamento dei dati.'
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Checkboxes

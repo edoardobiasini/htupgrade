@@ -1,0 +1,13 @@
+contentColumnType: text
+fieldGroup: 3b41f5bc-0f07-49f3-8a63-215f81063c53
+handle: formLandingHtFlexRfid_azienda
+instructions: ''
+name: Azienda
+searchable: true
+settings:
+  charLimit: null
+  columnType: text
+  multiline: 0
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

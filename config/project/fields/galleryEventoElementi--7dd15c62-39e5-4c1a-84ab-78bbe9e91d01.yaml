@@ -1,0 +1,13 @@
+contentColumnType: string
+fieldGroup: 0ff95cd1-1e99-432e-ade8-27d1c222c95c
+handle: galleryEventoElementi
+instructions: ''
+name: 'Gallery elementi'
+searchable: true
+settings:
+  contentTable: '{{%matrixcontent_galleryeventoelementi}}'
+  maxBlocks: null
+  propagationMethod: all
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Matrix

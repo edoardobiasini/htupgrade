@@ -1,0 +1,85 @@
+fieldLayouts:
+  615ba0dc-5a44-49fa-8b36-4d94fff09ab4:
+    tabs:
+      -
+        elements:
+          -
+            instructions: null
+            label: Title
+            type: craft\fieldlayoutelements\EntryTitleField
+          -
+            fieldUid: b92508a8-d76c-4996-9257-0b2ac5be4524
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+          -
+            fieldUid: 7270e6ce-46cf-4234-87f3-f2ebb87a5aa4
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+        name: Slideshow
+        sortOrder: 1
+      -
+        elements:
+          -
+            fieldUid: af828b5c-e222-4312-afed-0e384c8a23a0
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+          -
+            fieldUid: 6e2fdee2-5797-4af3-b171-76102513d34f
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+          -
+            fieldUid: adae69fc-f844-44d1-b96c-2fab656bbf37
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+          -
+            fieldUid: cf6c9d24-8667-4fb0-a163-61105610286e
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+          -
+            fieldUid: cede3c93-52bf-4561-b194-a98a8630bdb1
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+          -
+            fieldUid: 9937d967-97c4-462c-a2d6-369935bcf7f8
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+          -
+            fieldUid: 5ec54ed3-7dc2-465c-b632-a3766be2a381
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+        name: 'Blocco intro'
+        sortOrder: 2
+      -
+        elements:
+          -
+            fieldUid: a7cbdef6-e7fb-4670-9d70-c5a368061121
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+          -
+            fieldUid: 849050c3-4fe8-468e-ab77-1cd2633cba3b
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+        name: 'Blocco carousel'
+        sortOrder: 3
+      -
+        elements:
+          -
+            fieldUid: b4c9255e-d983-46f1-a96d-c966c51119d2
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+        name: 'HT Academy'
+        sortOrder: 4
+      -
+        elements:
+          -
+            fieldUid: 8caedc5d-ad29-4e2a-ab8f-1e13f219501e
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+        name: 'Campi seo'
+        sortOrder: 5
+handle: homepage
+hasTitleField: true
+name: Homepage
+section: 45224b7e-10d4-4b43-9519-ce86378fdb78
+sortOrder: 1
+titleFormat: null

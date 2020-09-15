@@ -1,0 +1,78 @@
+        <section class="section-content section-cta">
+          <div class="container">
+
+            <div class="row row-flex row-flex-center row-flex-desktop">
+              <div class="col-sm-6 col-sm-offset-1">
+                {% if cta.ctaTesto %}
+                <p>{{ cta.ctaTesto | raw }}</p>
+                {% endif %}
+              </div>
+              <div class="col-sm-4 text-center">
+                <a class="btn" href="#" data-toggle="modal" data-target="#modal-newsletter">Iscriviti</a>
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+        {% if craft.request.getSegment(1) != 'cmpg' %}
+        <section id="section-contatti" class="section-content section-default">
+          <div class="container">
+
+            <div class="row">
+              <div class="col-sm-8 col-sm-offset-2">
+
+                <div class="row row-flex row-flex-bottom title-icon-row">
+                  {% set icon = contatti.formContattiIcona.first() %}
+                  {% if icon %}
+                  <div class="title-icon-container col-sm-3">
+                    <span class="title-icon" style="background-image:url({{ icon.getUrl() }})">
+                    </span>
+                  </div>
+                  <div class="title-icon-title col-sm-9">
+                  {% else %}
+                  <div class="title-icon-title col-sm-12">
+                  {% endif %}
+                    {% if contatti.formContattiTitolo %}
+                    <h2>{{ contatti.formContattiTitolo | raw }}</h2>
+                    {% endif %}
+                    {% if contatti.formContattiSottotitolo %}
+                    <p class="abstract">{{ contatti.formContattiSottotitolo | raw }}</p>
+                    {% endif %}
+                  </div>
+                </div>
+
+                <div class="row">
+
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+        <section class="section-content section-map container">
+          <div class="row">
+            <div class="col-sm-6 col-sm-offset-1">
+                <h2>Le nostre sedi</h2>
+            </div>
+          </div>
+          <div class="row">
+            <div class="bottom-content map col-xs-12 col-sm-6" data-lat="{{ mappa.mappaLat|e }}" data-lng="{{ mappa.mappaLng|e }}" data-marker="map-marker-content">
+
+            </div>
+            <div class="bottom-content map col-xs-12 col-sm-6" data-lat="{{ mappaAlternativa.mappaLat|e }}" data-lng="{{ mappaAlternativa.mappaLng|e }}" data-marker="map-marker-content-alt">
+  
+            </div>
+          </div>
+        </section>
+        <div id="map-marker-content" class="hidden test2">
+          <div class="iw-subTitle">{{ mappa.titoloMarkerMappa|e }}</div>
+          <p>{{ mappa.paragrafoMarkerMappa|nl2br }}</p>
+        </div>
+        <div id="map-marker-content-alt" class="hidden">
+          <div class="iw-subTitle">{{ mappaAlternativa.titoloMarkerMappa|e }}</div>
+          <p>{{ mappaAlternativa.paragrafoMarkerMappa|nl2br }}</p>
+        </div>
+        {% endif %}

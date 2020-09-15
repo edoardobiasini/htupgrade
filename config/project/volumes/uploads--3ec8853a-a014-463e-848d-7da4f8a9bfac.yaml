@@ -1,0 +1,9 @@
+handle: uploads
+hasUrls: true
+name: Uploads
+settings:
+  path: uploads/
+  url: /uploads/
+sortOrder: 1
+type: craft\volumes\Local
+url: null

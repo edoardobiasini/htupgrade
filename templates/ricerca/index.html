@@ -1,0 +1,101 @@
+  {% cache %}
+    {% minify html %}
+      {% include '_header.html' %}
+      {% set query = craft.request.getParam('q') %}
+      <main>
+
+        <section class="section-content section-hero">
+          {% set image = entry.immaginePrincipale.first() %}
+          <div class="container">
+            {% if image %}
+            <div class="bg-absolute-img has-img-cover">
+              <picture>
+                <source media="(max-width: 767px)"
+                        sizes="100vw"
+                        srcset="{{ image.getUrl('slideXs') }} 375w,
+                                {{ image.getUrl('slideSm') }} 750w">
+                <source media="(max-width: 991px)"
+                        sizes="750px"
+                        srcset="{{ image.getUrl('slideMd') }} 750w">
+                <img src="{{ image.getUrl('slideLg') }}" alt="{{ image.title }}">
+              </picture>
+            </div>
+            {% endif %}
+
+            <div class="row row-flex">
+              <div class="col-xs-6 col-sm-4 col-sm-offset-2">
+                <h2 class="title-big">Risultati della<br><span class="highlight">Ricerca</span></h2>
+              </div>
+              <div class="col-xs-6 col-sm-6 text-right">
+              </div>
+            </div>
+
+            <div class="row row-blog-single-meta">
+              <div class="col-xs-6 col-sm-4 col-sm-offset-2">
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+        <section class="section-content section-breadcrumb hidden-xs">
+          <div class="container">
+
+            <div class="row">
+              <div class="col-sm-8 col-sm-offset-2">
+                <span>Risultati della ricerca per: <strong>{{ query }}</strong></span>
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+        <section class="section-content section-default">
+          <div class="container">
+
+            <div class="row">
+              <div class="col-sm-2">
+              </div>
+              <div class="col-sm-8">
+                {# check results count to display it #}
+                {% set totalEntries = craft.entries.search(query).order('score') %}
+                {% if totalEntries|length %}
+                <p class="highlight">{{ totalEntries|length }} {% if totalEntries|length > 1 %}risultati trovati{% else %}risultato trovato{% endif %}</p>
+                {% endif %}
+
+                {% paginate craft.entries.search(query).order('score').limit(10) as pageInfo, entries %}
+
+                  {% if entries|length %}
+
+                    {% for entry in entries %}
+                      <article class="row search-result">
+                        <div class="col-xs-12">
+                          <a href="{{ entry.url }}">
+                            <span class="border"></span>
+                            <h2>{% if entry.titoloFormattato %}{{ entry.titoloFormattato | raw }}{% else %}{{ entry.title }}{% endif %}</h2>
+                            <span class="res-type">{{ entry.type }}</span> <span class="res-url">{{ entry.url }}</span>
+                            <div class="abstract">{{ entry.abstract }}</div>
+                          </a>
+                        </div>
+                      </article>
+                    {% endfor %}
+
+                {% else %}
+                    <p>Spiacenti, la tua ricerca “{{ query }}” non ha restituito risultati.</p>
+                {% endif %}
+
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+        {% include '_pagination.html' %}
+
+        {% include '_bottom-content.html' %}
+
+      </main>
+
+      {% include '_footer.html' %}
+    {% endminify %}
+  {% endcache %}

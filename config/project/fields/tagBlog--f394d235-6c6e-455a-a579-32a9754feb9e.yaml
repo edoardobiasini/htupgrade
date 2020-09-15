@@ -1,0 +1,13 @@
+contentColumnType: string
+fieldGroup: 4da0781e-d870-4a31-b1f3-5651fc60ba83
+handle: tagBlog
+instructions: ''
+name: 'Tag blog'
+searchable: true
+settings:
+  localizeRelations: false
+  selectionLabel: ''
+  source: 'taggroup:b1394e65-201d-4ab7-95d6-b290c23c855e'
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Tags

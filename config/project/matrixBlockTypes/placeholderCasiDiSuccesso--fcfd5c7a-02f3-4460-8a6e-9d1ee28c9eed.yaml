@@ -1,0 +1,50 @@
+field: 8bf74dca-3e01-4f16-839f-ab05cf7f48be
+fieldLayouts:
+  6ec4827f-4af3-4719-9977-bf8d1d7aa388:
+    tabs:
+      -
+        fields:
+          22037155-88ec-443f-a829-65af14249936:
+            required: false
+            sortOrder: 1
+          7115acd8-663a-41a9-9a00-b3ca43139805:
+            required: false
+            sortOrder: 2
+        name: Content
+        sortOrder: 1
+fields:
+  22037155-88ec-443f-a829-65af14249936:
+    contentColumnType: text
+    fieldGroup: null
+    handle: placeholder
+    instructions: ''
+    name: Placeholder
+    searchable: true
+    settings:
+      charLimit: ''
+      columnType: text
+      initialRows: '4'
+      multiline: ''
+      placeholder: ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  7115acd8-663a-41a9-9a00-b3ca43139805:
+    contentColumnType: text
+    fieldGroup: null
+    handle: idBlocco
+    instructions: "Id per url.\r\nNon usare # nel valore, esempio:\r\nvalore: \"test\"\r\nurl: dominio.com/pagina#test"
+    name: 'Id blocco'
+    searchable: true
+    settings:
+      charLimit: ''
+      columnType: text
+      initialRows: '4'
+      multiline: ''
+      placeholder: ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+handle: placeholderCasiDiSuccesso
+name: 'Placeholder casi di successo'
+sortOrder: 4

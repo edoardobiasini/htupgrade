@@ -1,0 +1,22 @@
+contentColumnType: string
+fieldGroup: c36dced2-7081-4438-9646-45e9bba348de
+handle: registrazioneEvento_privacy
+instructions: ''
+name: Privacy
+searchable: true
+settings:
+  options:
+    -
+      __assoc__:
+        -
+          - default
+          - 1
+        -
+          - label
+          - 'Accetto la normativa sulla <a href="/privacy-policy">privacy</a>'
+        -
+          - value
+          - '1'
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Checkboxes

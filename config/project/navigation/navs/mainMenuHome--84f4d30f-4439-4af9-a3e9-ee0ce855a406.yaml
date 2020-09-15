@@ -1,0 +1,9 @@
+handle: mainMenuHome
+instructions: null
+maxNodes: null
+name: 'Main Menu Home'
+propagateNodes: false
+sortOrder: 7
+structure:
+  maxLevels: '2'
+  uid: 5f060501-d9f2-4b66-b713-df51febe6953

@@ -1,0 +1,15 @@
+contentColumnType: text
+fieldGroup: f81f7bf4-af67-403d-9134-a74a98559e15
+handle: sottotitolo2
+instructions: ''
+name: 'Sottotitolo 2'
+searchable: true
+settings:
+  charLimit: ''
+  columnType: text
+  initialRows: '4'
+  multiline: '1'
+  placeholder: ''
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

@@ -1,0 +1,13 @@
+contentColumnType: string
+fieldGroup: 50c2d3dc-234f-4646-9178-aba08cfa6b40
+handle: contenutoPagina
+instructions: ''
+name: 'Contenuto pagina'
+searchable: true
+settings:
+  contentTable: '{{%matrixcontent_contenutopagina}}'
+  maxBlocks: null
+  propagationMethod: all
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Matrix

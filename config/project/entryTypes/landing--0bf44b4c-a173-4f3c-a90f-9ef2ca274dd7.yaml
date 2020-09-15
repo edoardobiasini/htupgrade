@@ -1,0 +1,81 @@
+fieldLayouts:
+  fe9e3ac3-367a-498b-b8c4-b8d37826884c:
+    tabs:
+      -
+        elements:
+          -
+            instructions: null
+            label: Titolo
+            type: craft\fieldlayoutelements\EntryTitleField
+          -
+            fieldUid: fce263b4-c698-4d79-9071-76521b937000
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+          -
+            fieldUid: 273094e7-a529-48ce-9ec4-59f0dbe58c53
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+          -
+            fieldUid: 59575f03-bfd4-48da-8f42-251d29c4382e
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+          -
+            fieldUid: 27ce144a-1574-4e01-9e3f-0f1857f0949c
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+          -
+            fieldUid: 23a0f0ce-5a47-47ba-8e95-2a08c5de4917
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+        name: Generali
+        sortOrder: 1
+      -
+        elements:
+          -
+            fieldUid: 65656b7b-fe74-4251-b282-8f4e9405c5f6
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+        name: Contenuto
+        sortOrder: 2
+      -
+        elements:
+          -
+            fieldUid: 3dfd914e-2dd3-4f67-a7a0-03bb6fa007cd
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+          -
+            fieldUid: db7eccd7-2642-4031-b430-df685bf30632
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+          -
+            fieldUid: 0d03d93a-6baf-42e0-800b-295f04eea71f
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+          -
+            fieldUid: d0e369f9-dc1d-49ce-9f20-7be255b3985b
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+          -
+            fieldUid: d3b332b6-7087-4857-9bcc-31eaa12ef673
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+          -
+            fieldUid: 9bf904c0-847d-4e15-a830-42899bbebe07
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+        name: Newsletter
+        sortOrder: 3
+      -
+        elements:
+          -
+            fieldUid: 8caedc5d-ad29-4e2a-ab8f-1e13f219501e
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+        name: 'Campi seo'
+        sortOrder: 4
+handle: landing
+hasTitleField: true
+name: Landing
+section: b9a787d8-d8ec-4fa2-b2c6-ce21a3e293e5
+sortOrder: 1
+titleFormat: null

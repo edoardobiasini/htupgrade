@@ -1,0 +1,26 @@
+contentColumnType: string
+fieldGroup: a6ad4146-aea7-4dc9-af27-04cf8ef80403
+handle: lavoraConNoi_cv
+instructions: ''
+name: CV
+searchable: true
+settings:
+  allowedKinds:
+    - excel
+    - image
+    - pdf
+    - text
+    - word
+  defaultUploadLocationSource: 'volume:3ec8853a-a014-463e-848d-7da4f8a9bfac'
+  defaultUploadLocationSubpath: ''
+  limit: '1'
+  localizeRelations: false
+  restrictFiles: '1'
+  singleUploadLocationSource: 'volume:3ec8853a-a014-463e-848d-7da4f8a9bfac'
+  singleUploadLocationSubpath: ''
+  sources:
+    - 'volume:3ec8853a-a014-463e-848d-7da4f8a9bfac'
+  useSingleFolder: '1'
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Assets

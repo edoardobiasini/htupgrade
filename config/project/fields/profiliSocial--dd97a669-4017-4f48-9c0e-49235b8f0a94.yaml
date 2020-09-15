@@ -1,0 +1,13 @@
+contentColumnType: string
+fieldGroup: 2eed2783-3562-4c4c-8bee-a2933c182cd4
+handle: profiliSocial
+instructions: ''
+name: 'Profili social'
+searchable: true
+settings:
+  contentTable: '{{%matrixcontent_profilisocial}}'
+  maxBlocks: null
+  propagationMethod: all
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Matrix

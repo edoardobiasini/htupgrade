@@ -1,0 +1,12 @@
+fieldLayouts:
+  11c7530a-d437-4d54-b4cd-6e7d5c6fda2d:
+    tabs:
+      -
+        fields:
+          dd97a669-4017-4f48-9c0e-49235b8f0a94:
+            required: false
+            sortOrder: 1
+        name: Contenuto
+        sortOrder: 1
+handle: social
+name: Social

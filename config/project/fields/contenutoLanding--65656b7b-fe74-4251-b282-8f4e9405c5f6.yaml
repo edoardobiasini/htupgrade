@@ -1,0 +1,13 @@
+contentColumnType: string
+fieldGroup: c7d04f2d-dae7-4f28-abd7-de0466646eb4
+handle: contenutoLanding
+instructions: 'ATTENZIONE - Il primo blocco deve essere di tipo "default" altrimenti la sidebar non apparirà'
+name: 'Contenuto landing'
+searchable: true
+settings:
+  contentTable: '{{%matrixcontent_contenutolanding}}'
+  maxBlocks: null
+  propagationMethod: all
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Matrix

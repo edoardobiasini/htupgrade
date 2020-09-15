@@ -1,0 +1,45 @@
+fieldLayouts:
+  d8d59828-5051-4a4d-bb35-49f728fca37b:
+    tabs:
+      -
+        elements:
+          -
+            instructions: null
+            label: null
+            type: craft\fieldlayoutelements\EntryTitleField
+          -
+            fieldUid: 23a0f0ce-5a47-47ba-8e95-2a08c5de4917
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+          -
+            fieldUid: fce263b4-c698-4d79-9071-76521b937000
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+          -
+            fieldUid: 59575f03-bfd4-48da-8f42-251d29c4382e
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+          -
+            fieldUid: ea7e294a-b06c-47e4-8d5c-2c32fd1cfdf1
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+          -
+            fieldUid: e0afbac6-9c08-40b4-bb82-6fc625d4612d
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+        name: GENERALE
+        sortOrder: 1
+      -
+        elements:
+          -
+            fieldUid: 8caedc5d-ad29-4e2a-ab8f-1e13f219501e
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+        name: 'Campi seo'
+        sortOrder: 2
+handle: soluzioniIndex
+hasTitleField: false
+name: 'Soluzioni index'
+section: dae6c6c5-0a4a-4e2b-8064-0d82029567d5
+sortOrder: 1
+titleFormat: '{section.name|raw}'

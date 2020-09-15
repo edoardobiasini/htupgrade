@@ -1,0 +1,438 @@
+  {% cache %}
+  {% minify html %}
+  {% include '_header.html' %}
+  <!-- what's -->
+  <main>
+
+    {% include '_breadcrumb.html' %}
+
+    <section class="section-content section-hero">
+      {% if entry.id == 1725 %}
+      <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+      <link rel="stylesheet" type="text/css"
+        href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+      <script type="text/javascript" src="/assets/js/snow-plugin.js"></script>
+      <style>
+        .event-single .section-hero-caption>.container>.row:first-child .col-sm-4 {
+          color: #B3000C !important;
+        }
+
+        .natale {
+          color: white !important;
+          background-color: #B3000C !important;
+        }
+
+        .natale strong,
+        .natale b {
+          color: rgb(231, 231, 231) !important;
+        }
+
+        .natale p {
+          color: white !important;
+
+        }
+
+        .natale p a {
+          color: rgb(231, 216, 216) !important;
+          text-decoration: underline;
+        }
+
+        .natale form input {
+          background-color: rgb(244, 244, 244) !important;
+        }
+
+        .natale a span {
+          color: rgb(231, 216, 216);
+        }
+
+        .section-registrazione .btn,
+        .btn {
+          color: rgb(156, 18, 28) !important;
+          background-color: rgb(244, 244, 244) !important;
+        }
+
+        .natale-dark {
+          background-color: #f4f4f4 !important;
+          color: rgb(156, 18, 28) !important;
+        }
+
+        .natale-dark .side-title strong {
+          color: rgb(156, 18, 28) !important;
+        }
+
+        .natale-dark .side-title {
+          color: #a21b1b !important;
+        }
+
+        .flurry-container {
+          height: 100%;
+        }
+
+        #navbar-event ul li.active a::after,
+        body:not(.touch-events) #navbar-event ul li a::after {
+          background-color: rgb(233, 122, 122);
+        }
+
+        .snow-canvas {
+          display: block;
+          width: 100%;
+          height: 100%;
+          top: 0;
+          left: 0;
+          position: fixed;
+          pointer-events: none;
+        }
+      </style>
+      <canvas class="snow-canvas" speed="1" interaction="false" size="2" count="80" opacity="0.00001"
+        start-color="rgba(253,252,251,1)" end-color="rgba(251,252,253,0.3)" wind-power="0" image="false" width="1366"
+        height="667"></canvas>
+      <canvas class="snow-canvas" speed="3" interaction="true" size="6" count="30" start-color="rgba(253,252,251,1)"
+        end-color="rgba(251,252,253,0.3)" opacity="0.00001" wind-power="2" image="false" width="1366"
+        height="667"></canvas>
+      <!--<canvas class="snow-canvas" speed="3" interaction="true" size="12" count="20" wind-power="-5"
+        image="/assets/img/snow.png" width="1366" height="667"></canvas>-->
+      {% endif %}
+      {% set image = entry.immaginePrincipale.first() %}
+      <div class="container">
+        {% if image %}
+        <div class="bg-absolute-img has-img-cover">
+          <picture>
+            <source media="(max-width: 767px)" sizes="100vw" srcset="{{ image.getUrl('slideXs') }} 375w,
+                                {{ image.getUrl('slideSm') }} 750w">
+            <source media="(max-width: 991px)" sizes="750px" srcset="{{ image.getUrl('slideMd') }} 750w">
+            <img src="{{ image.getUrl('slideLg') }}" alt="{{ image.title }}">
+          </picture>
+        </div>
+        {% endif %}
+
+        <div class="row">
+          <div class="col-sm-8 col-sm-offset-2">
+            <h1>{% if entry.titoloFormattato %}{{ entry.titoloFormattato | raw }}{% else %}{{ entry.title }}{% endif %}
+            </h1>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="section-content section-hero-caption">
+      <div class="container natale">
+
+        <div class="row row-flex">
+          <div class="col-sm-2 hidden-xs">
+          </div>
+          <div class="col-xs-4 col-sm-4">
+            <time>{% if entry.dataEventoTesto %}{{ entry.dataEventoTesto | nl2br }}{% else %}{{ entry.dataEvento | date("d F Y") }}{% endif %}</time>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <section class="section-content section-default section-title">
+      <div class="container natale">
+
+        <div class="row">
+          <div class="col-sm-8 col-sm-offset-2">
+            <h1>{{ entry.sottotitolo | raw }}</h1>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section id="navbar-event">
+      <div class="container natale">
+
+        <div class="row">
+          <div class="col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2">
+            <nav class="hidden-xs">
+              <ul class="nav navbar-nav">
+                {% if entry.eventoPresentazione %}
+                <li><a class="scroll-link" href="#presentazione"><span>Presentazione</span></a></li>
+                {% endif %}
+                {% if entry.programmaEventoTitolo or entry.programmaEventoIntroduzione or entry.programmaEventoPunti | length %}
+                <li><a class="scroll-link" href="#programma"><span>Programma</span></a></li>
+                {% endif %}
+                {% if entry.mappaEventoLat and entry.mappaEventoLng %}
+                <li><a class="scroll-link" href="#location"><span>Location</span></a></li>
+                {% endif %}
+                {% if entry.galleryEventoElementi | length or entry.videoEventoUrl %}
+                <li><a class="scroll-link" href="#media"><span>Media gallery</span></a></li>
+                {% endif %}
+                {% if entry.documentiEvento | length %}
+                <li><a class="scroll-link" href="#documenti"><span>Documenti</span></a></li>
+                {% endif %}
+                {% if entry.registrazioneEventoForm %}
+                <li><a class="scroll-link" href="#registrazione"><span>Registrazione</span></a></li>
+                {% endif %}
+              </ul>
+            </nav>
+            <!--/.nav-collapse -->
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    {# PRESENTAZIONE #}
+    {% if entry.eventoPresentazione %}
+    <section class="section-content section-default section-presentazione">
+      <div class="container natale">
+
+        <div id="presentazione" class="abstract">
+
+          <div class="row">
+            <div class="col-sm-8 col-sm-offset-2 natale">
+              {{ entry.eventoPresentazione }}
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+    {% endif %}
+
+    {# PROGRAMMA #}
+    {% if entry.programmaEventoTitolo or entry.programmaEventoIntroduzione or entry.programmaEventoPunti | length %}
+    <section id="programma" class="section-content section-default section-programma">
+      <div class="container abstract">
+
+        <div class="row">
+          <div class="col-sm-2">
+            <h4 class="side-title"><strong>Programma</strong></h4>
+          </div>
+          <div class="col-sm-8">
+            <div class="row row-flex row-flex-bottom title-icon-row">
+              {% set icon = entry.programmaEventoIcona.first() %}
+              {% if icon %}
+              <div class="title-icon-container col-sm-3">
+                <span class="title-icon" style="background-image:url({{ icon.getUrl() }})">
+                </span>
+              </div>
+              <div class="title-icon-title col-sm-9">
+                {% else %}
+                <div class="title-icon-title col-sm-12">
+                  {% endif %}
+                  <h2>{{ entry.programmaEventoTitolo | raw }}</h2>
+                </div>
+              </div>
+              {% if entry.programmaEventoIntroduzione %}
+              <div class="abstract">
+                {{ entry.programmaEventoIntroduzione }}
+              </div>
+              {% endif %}
+
+              {% if entry.programmaEventoPunti | length %}
+              <div class="programma-list">
+                {% for block in entry.programmaEventoPunti %}
+                <div class="programma-list-item">
+                  {% if block.orario %}
+                  <time>{{ block.orario }}</time>
+                  {% endif %}
+                  {% if block.autoreNome %}
+                  <span class="author-name">{{ block.autoreNome }}</span>
+                  {% endif %}
+                  {% if block.autoreRuolo %}
+                  <span class="author-role">{{ block.autoreRuolo }}</span>
+                  {% endif %}
+                  {% if block.titolo %}
+                  <h3>{{ block.titolo }}</h3>
+                  {% endif %}
+                  {% if block.descrizione %}
+                  <p>{{ block.descrizione }}</p>
+                  {% endif %}
+                </div>
+                {% endfor %}
+              </div>
+              {% endif %}
+
+            </div>
+          </div>
+
+        </div>
+    </section>
+    {% endif %}
+
+    {# MAPPA #}
+    {% if entry.mappaEventoLat and entry.mappaEventoLng %}
+    <section id="location" class="section-content section-default section-alternate section-location">
+      <div class="container abstract natale-dark">
+
+        <div class="row">
+          <div class="col-sm-2">
+            <h4 class="side-title">Dov'è <strong>l'evento</strong></h4>
+          </div>
+          <div class="col-sm-8">
+            {% if entry.mappaEventoIntroduzione %}
+            <h2>{{ entry.mappaEventoIntroduzione | raw }}</h2>
+            {% endif %}
+          </div>
+        </div>
+
+      </div>
+
+      <div class="container map" data-lat="{{ entry.mappaEventoLat }}" data-lng="{{ entry.mappaEventoLng }}"
+        data-noinfowindow="true">
+
+      </div>
+    </section>
+    {% endif %}
+
+    {# GALLERY #}
+    {% if entry.galleryEventoElementi | length %}
+    <section id="media" class="section-content section-default section-media">
+      <div class="container abstract">
+
+        <div class="row">
+          <div class="col-sm-2">
+            <h4 class="side-title">Media <strong>gallery</strong></h4>
+          </div>
+          <div class="col-sm-8">
+            {% if entry.galleryEventoIntro %}
+            <h2>{{ entry.galleryEventoIntro | raw }}</h2>
+            {% endif %}
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="carousel-event-container">
+
+            <div class="carousel-event">
+
+              {% for block in entry.galleryEventoElementi %}
+              {% set image = block.immagine.first() %}
+              <div{% if loop.first %} class="carousel-event-first" {% endif %}>
+                <a href="{{ image.getUrl() }}" data-lightbox="event-carousel">
+                  <picture>
+                    <source media="(max-width: 767px)" sizes="calc(50vw - 20px)" srcset="{{ image.getUrl('galleryThumbnailSmall') }} 195w,
+                                        {{ image.getUrl('galleryThumbnail') }} 390w">
+                    <img src="{{ image.getUrl('galleryThumbnail') }}" alt="{{ image.title }}" class="img-responsive" />
+                  </picture>
+                </a>
+            </div>
+
+            {% endfor %}
+
+            {% set block = entry.galleryEventoElementi.first() %}
+            {% set image = block.immagine.first() %}
+            <div class="carousel-event-placeholder">
+              <picture>
+                <source media="(max-width: 767px)" sizes="calc(50vw - 20px)" srcset="{{ image.getUrl('galleryThumbnailSmall') }} 195w,
+                                      {{ image.getUrl('galleryThumbnail') }} 390w">
+                <img src="{{ image.getUrl('galleryThumbnail') }}" alt="{{ image.title }}" class="img-responsive" />
+              </picture>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+
+      <div class="row carousel-event-dots">
+        <div class="col-xs-12">
+
+        </div>
+      </div>
+
+      </div>
+    </section>
+    {% endif %}
+
+    {# VIDEO #}
+    {% if entry.videoEventoUrl %}
+    <section{% if entry.galleryEventoElementi | length < 1 %} id="media" {% endif %}
+      class="section-content section-default section-alternate section-media-video">
+      <div class="container abstract">
+
+        <div class="row">
+          <div class="col-sm-8 col-sm-offset-2 col-md-3 col-md-push-7 col-md-offset-0">
+            {% if entry.videoEventoTitolo %}
+            <h3>{{ entry.videoEventoTitolo | raw }}</h3>
+            {% endif %}
+            <span class="border border-full"></span>
+            {% if entry.videoEventoIntroduzione %}
+            {{ entry.videoEventoIntroduzione }}
+            {% endif %}
+          </div>
+          <div class="col-sm-8 col-sm-offset-2 col-md-5 col-md-pull-1 col-md-offset-0">
+            <div class="embed-responsive embed-responsive-16by9">
+              <iframe class="embed-responsive-item" src="{{ entry.videoEventoUrl }}"></iframe>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      </section>
+      {% endif %}
+
+      {# DOCUMENTI #}
+      {% if entry.documentiEvento | length %}
+      <section id="documenti" class="section-content section-default section-documenti">
+        <div class="container">
+
+          <div class="row">
+            <div class="col-sm-2">
+            </div>
+            <div class="col-sm-8">
+              <h2>Documentazione</h2>
+              <p>&nbsp;</p>
+              {% for block in entry.documentiEvento %}
+              {% set file = block.file.first() %}
+              <a href="{{ file.url }}" target="_blank" class="grey-block grey-block-download">
+                <div class="grey-block-inner">
+                  <p><span><i class="fa fa-download" aria-hidden="true"></i> {{ file.kind }}
+                      {{ file.size|filesize }}</span><strong>{{ block.titolo }}</strong></p>
+                </div>
+              </a>
+              {% endfor %}
+            </div>
+          </div>
+
+        </div>
+      </section>
+      {% endif %}
+
+      {% if entry.registrazioneEventoForm %}
+      <section id="registrazione" class="section-content section-default section-highlight section-registrazione">
+        <div class="container abstract natale">
+
+          <div class="row">
+            <div class="col-sm-2">
+              <h4 class="side-title">Registrazione evento</h4>
+            </div>
+            <div class="col-sm-8 abstract">
+              {% if entry.registrazioneEventoTitolo %}
+              <h2>{{ entry.registrazioneEventoTitolo | raw }}</h2>
+              {% endif %}
+              {% if entry.registrazioneEventoIntroduzione %}
+              {{ entry.registrazioneEventoIntroduzione | raw }}
+              {% endif %}
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-sm-8 col-sm-offset-2">
+              {% set form = craft.formerly.form(entry.registrazioneEventoForm) %}
+              {% set registrazione = true %}
+              {% include '_form.html' with { form: form, registrazione: registrazione } %}
+            </div>
+          </div>
+
+        </div>
+      </section>
+      {% endif %}
+
+      {% include '_bottom-content.html' %}
+
+  </main>
+  {% if entry.id == 1725 %}
+  <script>
+    $(".snow-canvas").snow();
+  </script>
+  {% endif %}
+  {% include '_footer.html' %}
+  {% endminify %}
+  {% endcache %}

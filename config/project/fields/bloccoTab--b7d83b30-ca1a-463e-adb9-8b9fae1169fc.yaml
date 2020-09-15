@@ -1,0 +1,13 @@
+contentColumnType: string
+fieldGroup: 9baddee7-d285-45d7-b12d-56a4dee63bf3
+handle: bloccoTab
+instructions: ''
+name: 'Blocco tab'
+searchable: true
+settings:
+  contentTable: '{{%matrixcontent_bloccotab}}'
+  maxBlocks: null
+  propagationMethod: all
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Matrix

@@ -1,0 +1,15 @@
+contentColumnType: text
+fieldGroup: 9baddee7-d285-45d7-b12d-56a4dee63bf3
+handle: titoloTab
+instructions: ''
+name: Titolo
+searchable: true
+settings:
+  charLimit: ''
+  columnType: text
+  initialRows: '4'
+  multiline: ''
+  placeholder: ''
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

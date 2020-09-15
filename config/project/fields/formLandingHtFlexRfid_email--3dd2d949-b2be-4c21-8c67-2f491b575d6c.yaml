@@ -1,0 +1,9 @@
+contentColumnType: text
+fieldGroup: 3b41f5bc-0f07-49f3-8a63-215f81063c53
+handle: formLandingHtFlexRfid_email
+instructions: ''
+name: Email
+searchable: true
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

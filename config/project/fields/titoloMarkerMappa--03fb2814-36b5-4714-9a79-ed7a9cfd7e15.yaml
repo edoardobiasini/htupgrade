@@ -1,0 +1,15 @@
+contentColumnType: text
+fieldGroup: 2eed2783-3562-4c4c-8bee-a2933c182cd4
+handle: titoloMarkerMappa
+instructions: ''
+name: 'Titolo marker mappa'
+searchable: true
+settings:
+  charLimit: ''
+  columnType: text
+  initialRows: '4'
+  multiline: ''
+  placeholder: ''
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

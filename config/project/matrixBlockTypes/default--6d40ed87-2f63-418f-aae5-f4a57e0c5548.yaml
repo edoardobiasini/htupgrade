@@ -1,0 +1,78 @@
+field: 65656b7b-fe74-4251-b282-8f4e9405c5f6
+fieldLayouts:
+  793adf38-d9b7-4304-ab4c-138508b240e4:
+    tabs:
+      -
+        fields:
+          775e3b27-e5b2-4d5d-8ef9-df4810bb10c3:
+            required: false
+            sortOrder: 2
+          98260aca-f373-4736-8823-e1d1fe708d41:
+            required: false
+            sortOrder: 3
+          ef236eb8-8c48-4857-9f13-d6e4d5d882e5:
+            required: false
+            sortOrder: 1
+        name: Content
+        sortOrder: 1
+fields:
+  775e3b27-e5b2-4d5d-8ef9-df4810bb10c3:
+    contentColumnType: text
+    fieldGroup: null
+    handle: contenuto
+    instructions: ''
+    name: Contenuto
+    searchable: true
+    settings:
+      charLimit: ''
+      columnType: text
+      initialRows: '4'
+      multiline: '1'
+      placeholder: ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  98260aca-f373-4736-8823-e1d1fe708d41:
+    contentColumnType: string
+    fieldGroup: null
+    handle: immagineLaterale
+    instructions: ''
+    name: 'Immagine laterale'
+    searchable: true
+    settings:
+      allowedKinds:
+        - image
+      defaultUploadLocationSource: 'volume:3ec8853a-a014-463e-848d-7da4f8a9bfac'
+      defaultUploadLocationSubpath: ''
+      limit: '1'
+      localizeRelations: false
+      restrictFiles: '1'
+      selectionLabel: ''
+      singleUploadLocationSource: 'volume:3ec8853a-a014-463e-848d-7da4f8a9bfac'
+      singleUploadLocationSubpath: ''
+      sources:
+        - 'volume:3ec8853a-a014-463e-848d-7da4f8a9bfac'
+      useSingleFolder: ''
+      viewMode: list
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Assets
+  ef236eb8-8c48-4857-9f13-d6e4d5d882e5:
+    contentColumnType: text
+    fieldGroup: null
+    handle: titolo
+    instructions: ''
+    name: Titolo
+    searchable: true
+    settings:
+      charLimit: ''
+      columnType: text
+      initialRows: '4'
+      multiline: ''
+      placeholder: ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+handle: default
+name: Default
+sortOrder: 1

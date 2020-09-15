@@ -1,0 +1,17 @@
+contentColumnType: string
+fieldGroup: 0ff95cd1-1e99-432e-ade8-27d1c222c95c
+handle: sintesiEvento
+instructions: 'Testo mostrato sotto il titolo negli eventi in piccolo successivi all''evento in evidenza'
+name: 'Sintesi evento'
+searchable: true
+settings:
+  availableTransforms: '*'
+  availableVolumes: '*'
+  cleanupHtml: '1'
+  columnType: text
+  configFile: ''
+  purifierConfig: ''
+  purifyHtml: '1'
+translationKeyFormat: null
+translationMethod: none
+type: craft\redactor\Field

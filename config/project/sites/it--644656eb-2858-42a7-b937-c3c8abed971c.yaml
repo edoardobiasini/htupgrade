@@ -1,0 +1,8 @@
+baseUrl: 'https://www.h-t.it/'
+handle: it
+hasUrls: true
+language: it
+name: 'HT (it)'
+primary: true
+siteGroup: 9c73621f-1282-47ab-9944-03896fdba278
+sortOrder: 1

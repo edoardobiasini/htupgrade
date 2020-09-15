@@ -1,0 +1,15 @@
+contentColumnType: text
+fieldGroup: ef05658d-df64-4789-a6b0-f454568fe368
+handle: homeIntroLinkTesto
+instructions: ''
+name: 'Link testo'
+searchable: true
+settings:
+  charLimit: ''
+  columnType: text
+  initialRows: '4'
+  multiline: ''
+  placeholder: ''
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

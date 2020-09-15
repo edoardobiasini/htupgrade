@@ -1,0 +1,13 @@
+contentColumnType: string
+fieldGroup: 52200315-8cca-4ee2-8636-5d0cd7105de4
+handle: bloccoCarousel
+instructions: ''
+name: 'Blocco carousel'
+searchable: true
+settings:
+  contentTable: '{{%matrixcontent_bloccocarousel}}'
+  maxBlocks: null
+  propagationMethod: all
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Matrix

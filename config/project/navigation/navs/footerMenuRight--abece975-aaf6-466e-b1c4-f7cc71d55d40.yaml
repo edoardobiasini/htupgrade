@@ -1,0 +1,9 @@
+handle: footerMenuRight
+instructions: null
+maxNodes: null
+name: 'Footer Menu Right'
+propagateNodes: false
+sortOrder: 4
+structure:
+  maxLevels: '1'
+  uid: 1917ce96-e319-4a68-9d24-701398506cce

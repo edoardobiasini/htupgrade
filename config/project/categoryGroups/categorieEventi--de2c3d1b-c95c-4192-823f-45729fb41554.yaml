@@ -1,0 +1,24 @@
+fieldLayouts:
+  59bce77f-3a81-473d-b804-f778f009cc42:
+    tabs:
+      -
+        fields:
+          8caedc5d-ad29-4e2a-ab8f-1e13f219501e:
+            required: false
+            sortOrder: 1
+        name: 'Campi seo'
+        sortOrder: 1
+handle: categorieEventi
+name: 'Categorie eventi'
+siteSettings:
+  5923a219-cdcb-4ce4-842e-f6e77f429764:
+    hasUrls: true
+    template: eventi
+    uriFormat: 'eventi/categorie/{slug}'
+  644656eb-2858-42a7-b937-c3c8abed971c:
+    hasUrls: true
+    template: eventi
+    uriFormat: 'eventi/categorie/{slug}'
+structure:
+  maxLevels: 1
+  uid: 5fe80973-57b6-4c21-925a-6cd84eb21c60

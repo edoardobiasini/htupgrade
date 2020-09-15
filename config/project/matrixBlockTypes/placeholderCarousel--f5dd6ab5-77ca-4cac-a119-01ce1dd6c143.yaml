@@ -1,0 +1,106 @@
+field: 8bf74dca-3e01-4f16-839f-ab05cf7f48be
+fieldLayouts:
+  ce4fe353-8e76-4974-a85f-efe1268398d9:
+    tabs:
+      -
+        fields:
+          1f7ed470-bb6d-481c-9f4a-b59402e6bbe6:
+            required: false
+            sortOrder: 1
+          4ab8a3ca-df2f-44eb-8caf-55c03117db6e:
+            required: false
+            sortOrder: 4
+          5397a0b9-76b7-4b95-a541-614840778ec8:
+            required: false
+            sortOrder: 3
+          ff9e6823-e8a9-4f89-a579-a195ae84c874:
+            required: false
+            sortOrder: 2
+        name: Content
+        sortOrder: 1
+fields:
+  1f7ed470-bb6d-481c-9f4a-b59402e6bbe6:
+    contentColumnType: text
+    fieldGroup: null
+    handle: placeholder
+    instructions: ''
+    name: Placeholder
+    searchable: true
+    settings:
+      charLimit: ''
+      columnType: text
+      initialRows: '4'
+      multiline: ''
+      placeholder: ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  4ab8a3ca-df2f-44eb-8caf-55c03117db6e:
+    contentColumnType: text
+    fieldGroup: null
+    handle: idBlocco
+    instructions: "Id per url.\r\nNon usare # nel valore, esempio:\r\nvalore: \"test\"\r\nurl: dominio.com/pagina#test"
+    name: 'Id blocco'
+    searchable: true
+    settings:
+      charLimit: ''
+      columnType: text
+      initialRows: '4'
+      multiline: ''
+      placeholder: ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  5397a0b9-76b7-4b95-a541-614840778ec8:
+    contentColumnType: string
+    fieldGroup: null
+    handle: refBloccoCarousel
+    instructions: 'Selezionare il blocco carousel da mostrare. Lasciare vuoto per mostrare il blocco carousel della pagina.'
+    name: 'Riferimento blocco carousel'
+    searchable: true
+    settings:
+      limit: '1'
+      localizeRelations: false
+      selectionLabel: ''
+      sources:
+        - 'section:363ff1db-4b49-4221-a790-89668f16597c'
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Entries
+  ff9e6823-e8a9-4f89-a579-a195ae84c874:
+    contentColumnType: string
+    fieldGroup: null
+    handle: coloreSfondo
+    instructions: ''
+    name: 'Colore sfondo'
+    searchable: true
+    settings:
+      options:
+        -
+          __assoc__:
+            -
+              - default
+              - '1'
+            -
+              - label
+              - Azzurro
+            -
+              - value
+              - azzurro
+        -
+          __assoc__:
+            -
+              - default
+              - ''
+            -
+              - label
+              - Bianco
+            -
+              - value
+              - bianco
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Dropdown
+handle: placeholderCarousel
+name: 'Placeholder carousel'
+sortOrder: 3

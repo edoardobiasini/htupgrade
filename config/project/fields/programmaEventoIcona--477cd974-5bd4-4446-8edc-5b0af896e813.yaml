@@ -1,0 +1,23 @@
+contentColumnType: string
+fieldGroup: 0ff95cd1-1e99-432e-ade8-27d1c222c95c
+handle: programmaEventoIcona
+instructions: ''
+name: 'Icona Titolo'
+searchable: true
+settings:
+  allowedKinds:
+    - image
+  defaultUploadLocationSource: 'volume:3ec8853a-a014-463e-848d-7da4f8a9bfac'
+  defaultUploadLocationSubpath: ''
+  limit: '1'
+  localizeRelations: false
+  restrictFiles: '1'
+  selectionLabel: ''
+  singleUploadLocationSource: 'volume:3ec8853a-a014-463e-848d-7da4f8a9bfac'
+  singleUploadLocationSubpath: ''
+  sources: '*'
+  useSingleFolder: ''
+  viewMode: list
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Assets

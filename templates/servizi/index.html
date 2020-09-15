@@ -1,0 +1,153 @@
+  {% cache %}
+    {% minify html %}
+      {% paginate craft.entries.section('servizi').limit(5) as pageInfo, pageEntries %}
+      {% include '_header.html' %}
+
+      <main>
+
+        {% include '_breadcrumb.html' %}
+
+        <section class="section-content section-hero">
+          {% set image = entry.immaginePrincipale.first() %}
+          <div class="container">
+            {% if image %}
+            <div class="bg-absolute-img has-img-cover">
+              <picture>
+                <source media="(max-width: 767px)"
+                        sizes="100vw"
+                        srcset="{{ image.getUrl('slideXs') }} 375w,
+                                {{ image.getUrl('slideSm') }} 750w">
+                <source media="(max-width: 991px)"
+                        sizes="750px"
+                        srcset="{{ image.getUrl('slideMd') }} 750w">
+                <img src="{{ image.getUrl('slideLg') }}" alt="{{ image.title }}">
+              </picture>
+            </div>
+            {% endif %}
+
+            <div class="row">
+              <div class="col-sm-8 col-sm-offset-2">
+                <h1>{% if entry.titoloFormattato %}{{ entry.titoloFormattato | raw }}{% else %}{{ entry.title }}{% endif %}</h1>
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+
+        <section class="section-content section-default">
+          <div class="container">
+
+            <div class="row row-flex">
+              <div class="col-sm-2">
+              </div>
+              <div class="col-sm-8">
+
+                <div class="row">
+                  <div class="col-sm-7">
+                    {% if entry.sottotitolo %}
+                    <h2>{{ entry.sottotitolo | raw }}</h2>
+                    {% endif %}
+                    {{ entry.body | shortcodes }}
+                  </div>
+                  <div class="col-sm-5">
+                    {% set image = entry.immagineLaterale.first() %}
+                    {% if image %}
+                    <img src="{{ image.getUrl() }}" class="img-responsive side-img hidden-xs" alt="{{ image.title }}">
+                    {% endif %}
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+        <section class="section-content section-services-list">
+
+          {% for entry in pageEntries %}
+          <article class="container service-list-item">
+            <a href="{{ entry.url }}">
+              <div class="row row-flex">
+
+              {% if loop.index is divisibleby(2) %}
+
+                <div class="col-xs-8 col-sm-5 col-sm-offset-1 service-list-content">
+                  <h2>{% if entry.titoloFormattato %}{{ entry.titoloFormattato | raw }}{% else %}{{ entry.title }}{% endif %}</h2>
+                  {% if entry.abstract %}
+                  <div class="abstract">
+                    {{ entry.abstract | raw }}
+                  </div>
+                  {% endif %}
+                </div>
+                <div class="col-xs-4 col-sm-4 col-sm-offset-2 service-list-img-container">
+                  {% set image = entry.immagineAnteprima.first() %}
+                  {% if image %}
+                  <div class="service-list-img has-img-cover">
+                    <picture>
+                      <source media="(max-width: 767px)"
+                              sizes="33.33333333vw"
+                              srcset="{{ image.getUrl('servizioThumbnail') }} 2x,
+                                      {{ image.getUrl('servizioThumbnailSmall') }} 1x">
+                      <img src="{{ image.getUrl('servizioThumbnail') }}" alt="{{ image.title }}">
+                    </picture>
+                  </div>
+                  {% endif %}
+                  <div class="service-list-img-hover">
+                    <div>
+                      <span></span>
+                      <span>Leggi tutto</span>
+                    </div>
+                  </div>
+                </div>
+
+              {% else %}
+
+                <div class="col-xs-4 col-sm-4 service-list-img-container">
+                  {% set image = entry.immagineAnteprima.first() %}
+                  {% if image %}
+                  <div class="service-list-img has-img-cover">
+                    <picture>
+                      <source media="(max-width: 767px)"
+                              sizes="33.33333333vw"
+                              srcset="{{ image.getUrl('servizioThumbnail') }} 2x,
+                                      {{ image.getUrl('servizioThumbnailSmall') }} 1x">
+                      <img src="{{ image.getUrl('servizioThumbnail') }}" alt="{{ image.title }}">
+                    </picture>
+                  </div>
+                  {% endif %}
+                  <div class="service-list-img-hover">
+                    <div>
+                      <span></span>
+                      <span>Leggi tutto</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-xs-8 col-sm-5 col-sm-offset-1 service-list-content">
+                  <h2>{% if entry.titoloFormattato %}{{ entry.titoloFormattato | raw }}{% else %}{{ entry.title }}{% endif %}</h2>
+                  {% if entry.abstract %}
+                  <div class="abstract">
+                    {{ entry.abstract | raw }}
+                  </div>
+                  {% endif %}
+                </div>
+
+              {% endif %}
+
+              </div>
+            </a>
+          </article>
+          {% endfor %}
+
+        </section>
+
+        {% include '_pagination.html' %}
+
+        {% include '_bottom-content.html' %}
+
+      </main>
+
+      {% include '_footer.html' %}
+    {% endminify %}
+  {% endcache %}

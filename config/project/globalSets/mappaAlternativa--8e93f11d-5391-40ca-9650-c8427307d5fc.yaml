@@ -1,0 +1,24 @@
+fieldLayouts:
+  a6f8ee29-b218-420c-9e49-746f168c44e3:
+    tabs:
+      -
+        fields:
+          03fb2814-36b5-4714-9a79-ed7a9cfd7e15:
+            required: false
+            sortOrder: 4
+          52bb0f2d-d89d-4f41-bcb0-079691e8fb79:
+            required: false
+            sortOrder: 3
+          6c2ef126-2735-48b9-b073-3586a4319ab8:
+            required: false
+            sortOrder: 1
+          873b866c-1504-4803-ad8e-c15e5529d73f:
+            required: false
+            sortOrder: 2
+          df24ecfd-d27a-4734-8804-07bc42781f6b:
+            required: false
+            sortOrder: 5
+        name: Contenuto
+        sortOrder: 1
+handle: mappaAlternativa
+name: 'Mappa Alternativa'

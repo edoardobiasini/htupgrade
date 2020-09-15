@@ -1,0 +1,15 @@
+contentColumnType: text
+fieldGroup: 2eed2783-3562-4c4c-8bee-a2933c182cd4
+handle: footerInfo
+instructions: ''
+name: 'Footer info'
+searchable: true
+settings:
+  charLimit: '300'
+  columnType: text
+  initialRows: '3'
+  multiline: '1'
+  placeholder: ''
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

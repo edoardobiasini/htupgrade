@@ -1,0 +1,12 @@
+fieldLayouts:
+  f7ad2763-5d22-489c-91a7-a9c260888a2d:
+    tabs:
+      -
+        fields:
+          8aa9ac81-54fc-46ab-9077-f2a378f13397:
+            required: false
+            sortOrder: 1
+        name: Contenuto
+        sortOrder: 1
+handle: cta
+name: CTA

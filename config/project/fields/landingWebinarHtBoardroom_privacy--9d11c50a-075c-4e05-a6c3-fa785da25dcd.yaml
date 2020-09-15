@@ -1,0 +1,33 @@
+contentColumnType: string
+fieldGroup: 3b3cfe00-379b-4bd0-a76c-092983183125
+handle: landingWebinarHtBoardroom_privacy
+instructions: 'Presa visione delle informazioni sul trattamento dei dati (http://www.h-t.it/privacy-policy) consento al trattamento dei dati per:'
+name: Privacy
+searchable: true
+settings:
+  options:
+    -
+      __assoc__:
+        -
+          - default
+          - 0
+        -
+          - label
+          - 'Dare riscontro a richieste dell’interessato, gestire la partecipazione dell’interessato alle attività svolte dal Titolare, dare esecuzione ad obblighi di legge.'
+        -
+          - value
+          - Ricontatto
+    -
+      __assoc__:
+        -
+          - default
+          - 0
+        -
+          - label
+          - 'Ricevere la Newsletter e quindi autorizzare l’utilizzo dei dati a fini promozionali attraverso l’invio di comunicazioni commerciali.'
+        -
+          - value
+          - Marketing
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Checkboxes

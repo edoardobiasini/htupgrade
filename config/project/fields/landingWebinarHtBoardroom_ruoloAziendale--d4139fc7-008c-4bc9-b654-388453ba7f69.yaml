@@ -1,0 +1,13 @@
+contentColumnType: text
+fieldGroup: 3b3cfe00-379b-4bd0-a76c-092983183125
+handle: landingWebinarHtBoardroom_ruoloAziendale
+instructions: ''
+name: 'Ruolo Aziendale'
+searchable: true
+settings:
+  charLimit: null
+  columnType: text
+  multiline: 0
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

@@ -1,0 +1,113 @@
+      <footer id="main-footer">
+        <div class="container">
+
+          <div class="row row-flex row-flex-desktop">
+            <div class="col-sm-2 col-sm-offset-1">
+              <a href="#" class="logo-footer"></a>
+            </div>
+            <div class="copyright col-sm-2 col-sm-offset-1">
+              <span>{{ varie.footerInfo|raw }}</span>
+powered by <a href="http://theuncommonfactory.com/" target="_blank">TUF</a>
+            </div>
+            <nav class="collapsible-nav col-xs-10 col-xs-offset-1 hidden-sm hidden-md hidden-lg">
+              {% include '_main-menu.html' %}
+            </nav>
+            <div class="col-sm-4 footer-nav-secondary hidden-xs">
+              <nav>
+                <h4>Scopri HT</h4>
+
+              </nav>
+            </div>
+            <div class="col-sm-2 footer-nav hidden-xs">
+
+
+            </div>
+            <div class="col-sm-2 footer-social">
+              <h4>Follow us</h4>
+              <ul>
+                {% for block in social.profiliSocial %}
+                    <li><a href="{{ block.urlSocial|e }}" target="_blank">{% if block.iconaSocial %}<i class="fa fa-{{ block.iconaSocial|e }}"></i>{% endif %}{{ block.testoSocial|e }}</a></li>
+                {% endfor %}
+              </ul>
+             
+
+          </div>
+
+        </div>
+      </footer>
+
+      {% if craft.request.getSegment(1) != 'cmpg' %}
+      <div id="modal-newsletter" class="modal fade" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            </div>
+            <div class="modal-body">
+              <div class="modal-message text-center">
+                {% if newsletter.modalNewsletterTitolo %}
+                <h4>{{ newsletter.modalNewsletterTitolo }}</h4>
+                {% endif %}
+                {% if newsletter.modalNewsletterSottotitolo %}
+                <h5>{{ newsletter.modalNewsletterSottotitolo }}</h5>
+                {% endif %}
+                <a href="#" class="btn btn-modal-form">Iscriviti</a>
+                {% if newsletter.modalNewsletterMessaggioSpam %}
+                <p><small>{{ newsletter.modalNewsletterMessaggioSpam }}</small></p>
+                {% endif %}
+              </div>
+              <div class="modal-form text-center">
+                {{ newsletter.newsletterForm|raw }}
+              </div>
+            </div>
+            <div class="modal-footer">
+            </div>
+          </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+      </div><!-- /.modal -->
+      {% endif %}
+
+      {% if craft.request.getSegment(1) == 'cmpg' %}
+      <div id="modal-privacy" class="modal fade" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            </div>
+            <div class="modal-body">
+              <div class="modal-message text-center">
+                <h4>Privacy Policy</h4>
+                {{ privacyModal.privacyModalContent|raw }}
+              </div>
+            </div>
+            <div class="modal-footer">
+            </div>
+          </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+      </div><!-- /.modal -->
+      {% endif %}
+
+      <div id="xs-lnd"></div>
+      <div id="xs"></div>
+
+    </div><!-- /.page-wrapper -->
+
+    <link rel="preload" href="{{siteUrl}}assets/css/styles.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="{{siteUrl}}assets/css/styles.min.css"></noscript>
+    <script>
+    /*! loadCSS rel=preload polyfill. [c]2017 Filament Group, Inc. MIT License */
+    !function(t){"use strict";t.loadCSS||(t.loadCSS=function(){});var e=loadCSS.relpreload={};if(e.support=function(){var e;try{e=t.document.createElement("link").relList.supports("preload")}catch(t){e=!1}return function(){return e}}(),e.bindMediaToggle=function(t){var e=t.media||"all";function a(){t.addEventListener?t.removeEventListener("load",a):t.attachEvent&&t.detachEvent("onload",a),t.setAttribute("onload",null),t.media=e}t.addEventListener?t.addEventListener("load",a):t.attachEvent&&t.attachEvent("onload",a),setTimeout(function(){t.rel="stylesheet",t.media="only x"}),setTimeout(a,3e3)},e.poly=function(){if(!e.support())for(var a=t.document.getElementsByTagName("link"),n=0;n<a.length;n++){var o=a[n];"preload"!==o.rel||"style"!==o.getAttribute("as")||o.getAttribute("data-loadcss")||(o.setAttribute("data-loadcss",!0),e.bindMediaToggle(o))}},!e.support()){e.poly();var a=t.setInterval(e.poly,500);t.addEventListener?t.addEventListener("load",function(){e.poly(),t.clearInterval(a)}):t.attachEvent&&t.attachEvent("onload",function(){e.poly(),t.clearInterval(a)})}"undefined"!=typeof exports?exports.loadCSS=loadCSS:t.loadCSS=loadCSS}("undefined"!=typeof global?global:this);
+    </script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+    <script>
+    WebFont.load({
+      google: {
+        families: ['Open Sans:300,400,600,700', 'Merriweather:300,400,700', 'Montserrat:400,700']
+      }
+    });
+    </script>
+    {% includeJsFile siteUrl ~ "assets/js/scripts.min.js" %}
+    {{ getFootHtml() }}
+  </body>
+</html>

@@ -1,0 +1,163 @@
+field: 8bf74dca-3e01-4f16-839f-ab05cf7f48be
+fieldLayouts:
+  67a6bb38-130e-4582-a75e-df538ea44b4f:
+    tabs:
+      -
+        fields:
+          027b8b9d-393e-403a-aab0-1e845f9ed355:
+            required: false
+            sortOrder: 2
+          14d0686f-0dc8-435d-8e02-98d065edbd54:
+            required: false
+            sortOrder: 6
+          baf0ceb1-b82c-4a35-a084-95723548e47e:
+            required: false
+            sortOrder: 1
+          dd14bf20-19cb-4b91-a275-dd83ddd43b74:
+            required: false
+            sortOrder: 5
+          edd3bde7-9eb6-400a-9952-c6ece31b1f6d:
+            required: false
+            sortOrder: 4
+          fe3783f9-a2b0-4e2b-80e7-4aec3ad8a06c:
+            required: false
+            sortOrder: 3
+        name: Content
+        sortOrder: 1
+fields:
+  027b8b9d-393e-403a-aab0-1e845f9ed355:
+    contentColumnType: text
+    fieldGroup: null
+    handle: titoloLaterale
+    instructions: ''
+    name: 'Titolo laterale'
+    searchable: true
+    settings:
+      charLimit: ''
+      columnType: text
+      initialRows: '4'
+      multiline: ''
+      placeholder: ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  14d0686f-0dc8-435d-8e02-98d065edbd54:
+    contentColumnType: text
+    fieldGroup: null
+    handle: idBlocco
+    instructions: "Id per url.\r\nNon usare # nel valore, esempio:\r\nvalore: \"test\"\r\nurl: dominio.com/pagina#test"
+    name: 'Id blocco'
+    searchable: true
+    settings:
+      charLimit: ''
+      columnType: text
+      initialRows: '4'
+      multiline: ''
+      placeholder: ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  baf0ceb1-b82c-4a35-a084-95723548e47e:
+    contentColumnType: string
+    fieldGroup: null
+    handle: formato
+    instructions: ''
+    name: Formato
+    searchable: true
+    settings:
+      options:
+        -
+          __assoc__:
+            -
+              - default
+              - '1'
+            -
+              - label
+              - 'Full width'
+            -
+              - value
+              - fullWidth
+        -
+          __assoc__:
+            -
+              - default
+              - ''
+            -
+              - label
+              - 'Background right'
+            -
+              - value
+              - backgroundRight
+        -
+          __assoc__:
+            -
+              - default
+              - ''
+            -
+              - label
+              - 'Background left'
+            -
+              - value
+              - backgroundLeft
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\RadioButtons
+  dd14bf20-19cb-4b91-a275-dd83ddd43b74:
+    contentColumnType: string
+    fieldGroup: null
+    handle: background
+    instructions: ''
+    name: Background
+    searchable: true
+    settings:
+      defaultUploadLocationSource: 'volume:3ec8853a-a014-463e-848d-7da4f8a9bfac'
+      defaultUploadLocationSubpath: ''
+      limit: '1'
+      localizeRelations: false
+      restrictFiles: ''
+      selectionLabel: ''
+      singleUploadLocationSource: 'volume:3ec8853a-a014-463e-848d-7da4f8a9bfac'
+      singleUploadLocationSubpath: ''
+      sources: '*'
+      useSingleFolder: ''
+      viewMode: list
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Assets
+  edd3bde7-9eb6-400a-9952-c6ece31b1f6d:
+    contentColumnType: string
+    fieldGroup: null
+    handle: contenuto
+    instructions: ''
+    name: Contenuto
+    searchable: true
+    settings:
+      availableTransforms: '*'
+      availableVolumes: '*'
+      cleanupHtml: '1'
+      columnType: text
+      configFile: Standard.json
+      purifierConfig: ''
+      purifyHtml: '1'
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\redactor\Field
+  fe3783f9-a2b0-4e2b-80e7-4aec3ad8a06c:
+    contentColumnType: text
+    fieldGroup: null
+    handle: titolo
+    instructions: ''
+    name: Titolo
+    searchable: true
+    settings:
+      charLimit: ''
+      columnType: text
+      initialRows: '4'
+      multiline: ''
+      placeholder: ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+handle: bloccoTesto
+name: 'Blocco testo'
+sortOrder: 1

@@ -1,0 +1,45 @@
+fieldLayouts:
+  b4cbe84c-0304-4ce9-b93f-337a6d28b82a:
+    tabs:
+      -
+        elements:
+          -
+            instructions: null
+            label: null
+            type: craft\fieldlayoutelements\EntryTitleField
+          -
+            fieldUid: 23a0f0ce-5a47-47ba-8e95-2a08c5de4917
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+          -
+            fieldUid: fce263b4-c698-4d79-9071-76521b937000
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+          -
+            fieldUid: 59575f03-bfd4-48da-8f42-251d29c4382e
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+          -
+            fieldUid: ea7e294a-b06c-47e4-8d5c-2c32fd1cfdf1
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+          -
+            fieldUid: e0afbac6-9c08-40b4-bb82-6fc625d4612d
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+        name: GENERALE
+        sortOrder: 1
+      -
+        elements:
+          -
+            fieldUid: 8caedc5d-ad29-4e2a-ab8f-1e13f219501e
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+        name: 'Campi seo'
+        sortOrder: 2
+handle: settoriIndex
+hasTitleField: false
+name: 'Settori index'
+section: a1708e38-01f2-4783-bd81-769273e89892
+sortOrder: 1
+titleFormat: '{section.name|raw}'

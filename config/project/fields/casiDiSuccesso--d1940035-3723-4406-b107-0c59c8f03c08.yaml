@@ -1,0 +1,15 @@
+contentColumnType: string
+fieldGroup: 50c2d3dc-234f-4646-9178-aba08cfa6b40
+handle: casiDiSuccesso
+instructions: ''
+name: 'Casi di successo'
+searchable: true
+settings:
+  limit: '1'
+  localizeRelations: false
+  selectionLabel: ''
+  sources:
+    - 'section:b94bf89c-7184-427d-9032-d83232aa834d'
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Entries

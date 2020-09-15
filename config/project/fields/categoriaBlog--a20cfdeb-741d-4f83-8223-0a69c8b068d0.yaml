@@ -1,0 +1,14 @@
+contentColumnType: string
+fieldGroup: 4da0781e-d870-4a31-b1f3-5651fc60ba83
+handle: categoriaBlog
+instructions: ''
+name: 'Categoria blog'
+searchable: true
+settings:
+  branchLimit: '1'
+  localizeRelations: true
+  selectionLabel: ''
+  source: 'group:d9e10669-3738-49ab-97fb-f008af607e89'
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Categories

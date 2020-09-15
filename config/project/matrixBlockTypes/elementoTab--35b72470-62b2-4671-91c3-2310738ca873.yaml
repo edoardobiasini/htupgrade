@@ -1,0 +1,79 @@
+field: b7d83b30-ca1a-463e-adb9-8b9fae1169fc
+fieldLayouts:
+  b92923e3-f1ed-462a-9bef-86e6cab7a219:
+    tabs:
+      -
+        fields:
+          32839092-4d18-48cd-8f40-a4e88fc08ab6:
+            required: false
+            sortOrder: 3
+          c65cb618-00ef-41b7-9240-42e65e3dc8ab:
+            required: false
+            sortOrder: 2
+          e1cf3f65-6077-478c-a331-ce1a101c0cee:
+            required: false
+            sortOrder: 1
+        name: Content
+        sortOrder: 1
+fields:
+  32839092-4d18-48cd-8f40-a4e88fc08ab6:
+    contentColumnType: string
+    fieldGroup: null
+    handle: immagine
+    instructions: ''
+    name: Immagine
+    searchable: true
+    settings:
+      allowedKinds:
+        - image
+      defaultUploadLocationSource: 'volume:3ec8853a-a014-463e-848d-7da4f8a9bfac'
+      defaultUploadLocationSubpath: ''
+      limit: '1'
+      localizeRelations: false
+      restrictFiles: '1'
+      selectionLabel: ''
+      singleUploadLocationSource: 'volume:3ec8853a-a014-463e-848d-7da4f8a9bfac'
+      singleUploadLocationSubpath: ''
+      sources: '*'
+      useSingleFolder: ''
+      viewMode: list
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Assets
+  c65cb618-00ef-41b7-9240-42e65e3dc8ab:
+    contentColumnType: string
+    fieldGroup: null
+    handle: contenuto
+    instructions: ''
+    name: Contenuto
+    searchable: true
+    settings:
+      availableTransforms: '*'
+      availableVolumes: '*'
+      cleanupHtml: '1'
+      columnType: text
+      configFile: Standard.json
+      purifierConfig: ''
+      purifyHtml: '1'
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\redactor\Field
+  e1cf3f65-6077-478c-a331-ce1a101c0cee:
+    contentColumnType: text
+    fieldGroup: null
+    handle: titolo
+    instructions: ''
+    name: Titolo
+    searchable: true
+    settings:
+      charLimit: ''
+      columnType: text
+      initialRows: '4'
+      multiline: ''
+      placeholder: ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+handle: elementoTab
+name: 'Elemento tab'
+sortOrder: 1

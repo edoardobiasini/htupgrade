@@ -1,0 +1,61 @@
+fieldLayouts:
+  ae89369e-17b5-4e8d-9144-33a54f477395:
+    tabs:
+      -
+        elements:
+          -
+            instructions: null
+            label: Titolo
+            type: craft\fieldlayoutelements\EntryTitleField
+          -
+            fieldUid: fce263b4-c698-4d79-9071-76521b937000
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+          -
+            fieldUid: 59575f03-bfd4-48da-8f42-251d29c4382e
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+          -
+            fieldUid: eba89519-e384-43bb-8a62-94d21a24c1dd
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+          -
+            fieldUid: 23a0f0ce-5a47-47ba-8e95-2a08c5de4917
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+          -
+            fieldUid: 59b60c63-d0bf-4274-9421-b38c038ba954
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+        name: Generale
+        sortOrder: 1
+      -
+        elements:
+          -
+            fieldUid: 8bf74dca-3e01-4f16-839f-ab05cf7f48be
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+        name: Contenuto
+        sortOrder: 2
+      -
+        elements:
+          -
+            fieldUid: d1940035-3723-4406-b107-0c59c8f03c08
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+        name: 'Casi di successo'
+        sortOrder: 3
+      -
+        elements:
+          -
+            fieldUid: 8caedc5d-ad29-4e2a-ab8f-1e13f219501e
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+        name: 'Campi seo'
+        sortOrder: 4
+handle: settori
+hasTitleField: true
+name: Settori
+section: ff3224be-a0d7-45a1-a3b9-8460e2bf7a27
+sortOrder: 1
+titleFormat: null

@@ -1,0 +1,19 @@
+enableVersioning: true
+handle: blocchiTab
+name: 'Blocchi tab'
+propagationMethod: all
+siteSettings:
+  5923a219-cdcb-4ce4-842e-f6e77f429764:
+    enabledByDefault: true
+    hasUrls: false
+    template: null
+    uriFormat: null
+  644656eb-2858-42a7-b937-c3c8abed971c:
+    enabledByDefault: true
+    hasUrls: false
+    template: null
+    uriFormat: null
+structure:
+  maxLevels: null
+  uid: 89440937-31f3-4bed-b688-e6f6c27c0b60
+type: structure

@@ -1,0 +1,13 @@
+contentColumnType: text
+fieldGroup: c187e0e2-1954-48d5-bb83-08e2691733ce
+handle: formLanding_nomeECognome
+instructions: ''
+name: 'Nome e Cognome'
+searchable: true
+settings:
+  charLimit: null
+  columnType: text
+  multiline: 0
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

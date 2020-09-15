@@ -1,0 +1,9 @@
+contentColumnType: text
+fieldGroup: 15964ac7-d0b9-40ef-b127-665260a7d52a
+handle: htKickOffDay2019_email
+instructions: ''
+name: Email
+searchable: true
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

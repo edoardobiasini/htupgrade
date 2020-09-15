@@ -1,0 +1,9 @@
+format: null
+handle: galleryThumbnail
+height: 245
+interlace: none
+mode: crop
+name: 'Gallery thumbnail'
+position: center-center
+quality: 82
+width: 390

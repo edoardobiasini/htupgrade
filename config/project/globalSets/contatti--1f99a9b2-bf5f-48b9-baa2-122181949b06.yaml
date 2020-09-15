@@ -1,0 +1,18 @@
+fieldLayouts:
+  22f3fe32-aff4-46dc-a1a6-8aba1988c4c1:
+    tabs:
+      -
+        fields:
+          2cb9e544-505c-41d9-9d99-06351e992a80:
+            required: false
+            sortOrder: 2
+          a6767947-817a-46c2-9000-516842c52bb1:
+            required: false
+            sortOrder: 3
+          d2b054f0-4710-4b96-814a-110850f35263:
+            required: false
+            sortOrder: 1
+        name: Contenuto
+        sortOrder: 1
+handle: contatti
+name: Contatti

@@ -1,0 +1,147 @@
+dateModified: 1600158350
+email:
+  fromEmail: marketing@h-t.it
+  fromName: 'HT High Technology'
+  template: null
+  transportType: craft\mail\transportadapters\Sendmail
+graphql:
+  publicToken:
+    enabled: false
+    expiryDate: null
+plugins:
+  cp-css:
+    enabled: '0'
+    licenseKey: null
+    schemaVersion: 1.1.0
+    settings:
+      additionalCss: ".elementselectormodal { user-select:initial; }\r\nh4.title-big {\r\n    margin-bottom: 38px;\r\n    font-size: 2.8125em;\r\n}"
+      cssFile: ''
+  craft-cookie-consent:
+    enabled: '0'
+    licenseKey: null
+    schemaVersion: 1.0.0
+    settings:
+      dismiss: ACCETTO
+      layout: block
+      learn: Leggi
+      learn_more_link: 'http://www.h-t.it/cookie-policy'
+      message: 'Questo sito fa uso di cookie per migliorare la vostra esperienza online. Proseguendo nella navigazione lo accetti.'
+      palette: default
+      palette_banner: '#eaf0f3'
+      palette_banner_text: '#333333'
+      palette_button: '#009ee0'
+      palette_button_text: '#ffffff'
+      position: bottom
+  formerly:
+    enabled: '1'
+    licenseKey: null
+    schemaVersion: 1.0.0
+    settings: null
+  htmlcache:
+    enabled: '0'
+    licenseKey: null
+    schemaVersion: 1.0.0
+    settings:
+      cacheDuration: '3600'
+      enableGeneral: ''
+      enableIndex: ''
+  htshortcodes:
+    enabled: '1'
+    licenseKey: null
+    schemaVersion: 1.0.0
+    settings: null
+  htsitemap:
+    enabled: '1'
+    licenseKey: null
+    schemaVersion: 1.0.0
+    settings: null
+  minify:
+    enabled: '1'
+    licenseKey: null
+    schemaVersion: 1.0.0
+    settings: null
+  navee:
+    enabled: '1'
+    licenseKey: null
+    schemaVersion: 1.0.0
+    settings: null
+  navigation:
+    edition: standard
+    enabled: true
+    licenseKey: 2AR9DEYCDEQXNLDDQOREZZU4
+    schemaVersion: 1.0.19
+    settings:
+      bypassProjectConfig: false
+      pluginName: Navigation
+  redactor:
+    edition: standard
+    enabled: true
+    schemaVersion: 2.3.0
+  seomatic:
+    enabled: '1'
+    licenseKey: null
+    schemaVersion: 1.1.25
+    settings:
+      pluginNameOverride: SEOmetrics
+  shortcodes:
+    enabled: '1'
+    licenseKey: null
+    schemaVersion: 1.0.0
+    settings: null
+  sitemap:
+    enabled: '1'
+    licenseKey: null
+    schemaVersion: 1.0.0
+    settings:
+      sections:
+        1:
+          changefreq: daily
+          priority: '1.0'
+        3:
+          changefreq: daily
+          priority: '0.5'
+        4:
+          changefreq: daily
+          priority: '0.5'
+        5:
+          changefreq: daily
+          priority: '0.5'
+        6:
+          changefreq: daily
+          priority: '0.5'
+        7:
+          changefreq: daily
+          priority: '0.5'
+        8:
+          changefreq: daily
+          priority: '0.5'
+        10:
+          changefreq: daily
+          priority: '0.5'
+        11:
+          changefreq: daily
+          priority: '0.5'
+        14:
+          changefreq: daily
+          priority: '0.5'
+        15:
+          changefreq: daily
+          priority: '0.5'
+        16:
+          changefreq: weekly
+          priority: '0.5'
+        17:
+          changefreq: weekly
+          priority: '0.5'
+system:
+  edition: pro
+  live: true
+  name: HT
+  schemaVersion: 3.5.13
+  timeZone: Europe/Rome
+users:
+  allowPublicRegistration: false
+  defaultGroup: null
+  photoSubpath: null
+  photoVolumeUid: null
+  requireEmailVerification: true

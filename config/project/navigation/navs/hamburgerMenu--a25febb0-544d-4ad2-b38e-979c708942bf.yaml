@@ -1,0 +1,9 @@
+handle: hamburgerMenu
+instructions: null
+maxNodes: null
+name: 'Hamburger menu'
+propagateNodes: false
+sortOrder: 1
+structure:
+  maxLevels: '3'
+  uid: 1aac94ed-0605-4532-b6e7-8204ab0b04ee

@@ -1,0 +1,13 @@
+contentColumnType: text
+fieldGroup: 5c7bd7f1-5563-4380-8339-b42023e3b36b
+handle: contatti_cognome
+instructions: ''
+name: Cognome
+searchable: true
+settings:
+  charLimit: null
+  columnType: text
+  multiline: 0
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

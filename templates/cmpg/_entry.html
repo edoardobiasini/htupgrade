@@ -1,0 +1,264 @@
+  {% minify html %}
+      {% include '_header.html' %}
+
+      <main>
+
+        <section class="section-content section-intro-text">
+          <div class="container">
+
+            <div class="row row-flex row-flex-bottom">
+              <div class="col-sm-6 col-sm-offset-1">
+                <span>{% if entry.titoloFormattato %}{{ entry.titoloFormattato | raw }}{% else %}{{ entry.title }}{% endif %}
+              </div>
+              <div class="col-sm-4 text-center hidden-xs">
+                {% set image = entry.loghiLanding.first() %}
+                {% if image %}
+                <img src="{{ image.getUrl() }}" class="img-responsive" alt="{{ image.title }}">
+                {% endif %}
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+        <section class="section-content section-carousel-top">
+          <div class="container">
+
+            <div class="row">
+
+              <!--<div class="carousel-top">-->
+              <div>
+
+                <div class="slide">
+                  <div class="slide-inner">
+
+                    {% set image = entry.immaginePrincipale.first() %}
+                    {% if image %}
+                    <div class="slide-img has-img-cover">
+                      <picture>
+                        <source media="(max-width: 767px)"
+                                sizes="100vw"
+                                srcset="{{ image.getUrl('slideXs') }} 375w,
+                                        {{ image.getUrl('slideSm') }} 750w">
+                        <source media="(max-width: 991px)"
+                                sizes="750px"
+                                srcset="{{ image.getUrl('slideMd') }} 750w">
+                        <img src="{{ image.getUrl('slideLg') }}" alt="{{ image.title }}">
+                      </picture>
+                    </div>
+                    {% endif %}
+
+                  </div>
+                </div>
+
+              </div>
+
+              <!--<div class="carousel-top-caption">-->
+              <div>
+                {% if entry.sottotitolo %}
+                <div class="carousel-caption-middle col-sm-6 col-sm-offset-1">
+                  <div>
+                    <p>{{ entry.sottotitolo | raw }}</p>
+                  </div>
+                </div>
+                {% endif %}
+                {% if entry.sottotitolo %}
+                <div class="carousel-caption-bottom col-sm-11 col-sm-offset-1">
+                  <div class="col-sm-6">
+                    <p>{{ entry.sottotitolo2 | raw }}</p>
+                  </div>
+                </div>
+                {% endif %}
+              </div>
+
+            </div><!-- row -->
+
+          </div>
+        </section>
+
+    {% for block in entry.contenutoLanding %}
+
+      {% if block.type == "default" %}
+
+
+        <section class="section-content section-default">
+          <div class="container">
+
+            <div class="row{% if loop.first %} sticky-sidebar-wrapper{% endif %}">
+              <div class="col-sm-6 col-sm-offset-1">
+
+                <span class="border"></span>
+                {% if block.titolo %}
+                <h2>{{ block.titolo | raw }}</h2>
+                {% endif %}
+
+                <div class="row">
+                  {% set image = block.immagineLaterale.first() %}
+                  {% if image %}
+                  <div class="col-xs-4">
+                    <img src="{{ image.getUrl() }}" class="img-responsive" alt="{{ image.title }}">
+                  </div>
+                  <div class="col-xs-8 abstract">
+                  {% else %}
+                  <div class="col-xs-12 abstract">
+                  {% endif %}
+                  {% if block.contenuto %}
+                      <p>{{ block.contenuto | raw }}</p>
+                  {% endif %}
+                  </div>
+                </div>
+
+              </div>
+
+              {% if loop.first %}
+              <div class="col-sm-4 hidden-xs sticky-sidebar-container">
+                <aside class="sticky-sidebar">
+                  {% if entry.landingNewsletterTitolo %}
+                  <h2>{{ entry.landingNewsletterTitolo }}</h2>
+                  {% endif %}
+                  {% if entry.landingNewsletterIntroduzione %}
+                  <p>{{ entry.landingNewsletterIntroduzione | nl2br }}</p>
+                  {% endif %}
+
+                {% if entry.registrazioneEventoForm | length %}
+                  {% set form = craft.formerly.form(entry.registrazioneEventoForm) %}
+                  {% set registrazione = true %}
+                  {% include '_form-landing.html' with { form: form, registrazione: registrazione } %}
+
+                {% else %}
+                  {{ entry.landingNewsletterMailchimp | raw }}
+                {% endif %}
+
+                </aside><!-- /.sticky-sidebar -->
+              </div>
+              {% endif %}
+
+            </div>
+
+          </div>
+        </section>
+
+        {% elseif block.type == "inverso" %}
+
+        <section class="section-content section-default section-alternate">
+          <div class="container">
+
+            <div class="row">
+              <div class="col-sm-4 col-sm-offset-2">
+                {% if block.titolo %}
+                <h2 class="title-big">{{ block.titolo | raw }}</h2>
+                {% endif %}
+              </div>
+            </div>
+
+            {% if block.contenuto %}
+            <div class="row">
+              <div class="col-sm-6 col-sm-offset-1">
+
+                {{ block.contenuto | shortcodes }}
+
+              </div>
+            </div>
+            {% endif %}
+
+          </div>
+        </section>
+
+        {% elseif block.type == "bloccoImmagine" %}
+
+        <section class="section-content section-htacademy">
+          {% set image = block.immagine.first() %}
+          <div class="container"{% if image %} style="background-image:url({{ image.getUrl() }})"{% endif %}>
+
+            <div class="row row-htacademy-top hidden-xs">
+              <div class="col-sm-5 col-sm-offset-1">
+                <span class="border"></span>
+                {% if block.titolo %}
+                <h2>{{ block.titolo | raw }}</h2>
+                {% endif %}
+              </div>
+            </div>
+
+          </div>
+
+          <div class="container landing-htacademy-title-2 hidden-xs">
+            <div class="row">
+              <div class="col-sm-5 col-sm-offset-1">
+                {% if block.sottotitolo %}
+                <h3 class="highlight">{{ block.sottotitolo | raw }}</h3>
+                {% endif %}
+              </div>
+            </div>
+          </div>
+
+          <div class="container">
+
+            <div class="row row-htacademy-content">
+              <div class="col-sm-6 col-sm-offset-1">
+                {% if block.titolo %}
+                <h2 class="hidden-sm hidden-md hidden-lg">{{ block.titolo | raw }}</h2>
+                {% endif %}
+                {% if block.sottotitolo %}
+                <h3 class="highlight hidden-sm hidden-md hidden-lg">{{ block.sottotitolo | raw }}</h3>
+                {% endif %}
+
+                {% if block.contenuto %}
+                {{ block.contenuto | shortcodes }}
+                {% endif %}
+
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+        {# END BLOCKTYPE IF #}
+        {% endif %}
+
+      {# END MATRIX LOOP #}
+      {% endfor %}
+
+        {% include '_bottom-content.html' %}
+
+        <section id="landing-mobile-form" class="section-content section-default hidden-sm hidden-md hidden-lg">
+          <div class="container">
+
+            <div class="row">
+              <div class="col-sm-8 col-sm-offset-2">
+
+                <div class="row row-flex row-flex-bottom title-icon-row">
+                  <div class="title-icon-title col-sm-12">
+                    {% if entry.landingNewsletterTitolo %}
+                    <h2>{{ entry.landingNewsletterTitolo }}</h2>
+                    {% endif %}
+                    {% if entry.landingNewsletterIntroduzione %}
+                    <p class="abstract">{{ entry.landingNewsletterIntroduzione | nl2br }}</p>
+                    {% endif %}
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-xs-12">
+
+                    {% if entry.registrazioneEventoForm | length %}
+                      {% set form = craft.formerly.form(entry.registrazioneEventoForm) %}
+                      {% set registrazione = true %}
+                      {% include '_form-landing.html' with { form: form, registrazione: registrazione } %}
+
+                    {% else %}
+                      {{ entry.landingNewsletterMailchimp | raw }}
+                    {% endif %}
+
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+      </main>
+
+      {% include '_footer.html' %}
+    {% endminify %}

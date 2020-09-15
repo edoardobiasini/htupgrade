@@ -1,0 +1,13 @@
+contentColumnType: text
+fieldGroup: 15964ac7-d0b9-40ef-b127-665260a7d52a
+handle: htKickOffDay2019_seSiSpecificaQuiAQualeIntolleranzaHai
+instructions: 'Sei intollerante a qualche cibo?'
+name: 'Se si, specifica qui a quale intolleranza hai'
+searchable: true
+settings:
+  charLimit: null
+  columnType: text
+  multiline: 0
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

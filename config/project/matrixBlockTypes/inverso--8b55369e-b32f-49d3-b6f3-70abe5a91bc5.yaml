@@ -1,0 +1,52 @@
+field: 65656b7b-fe74-4251-b282-8f4e9405c5f6
+fieldLayouts:
+  de18d544-18db-4267-b0de-b446b744202e:
+    tabs:
+      -
+        fields:
+          7171f6c3-7e25-4c9b-bbc9-cc52f94193c1:
+            required: false
+            sortOrder: 2
+          7a50d6b4-d5f4-4645-8475-d8c2cb2a9d5f:
+            required: false
+            sortOrder: 1
+        name: Content
+        sortOrder: 1
+fields:
+  7171f6c3-7e25-4c9b-bbc9-cc52f94193c1:
+    contentColumnType: string
+    fieldGroup: null
+    handle: contenuto
+    instructions: ''
+    name: Contenuto
+    searchable: true
+    settings:
+      availableTransforms: '*'
+      availableVolumes: '*'
+      cleanupHtml: '1'
+      columnType: text
+      configFile: Standard.json
+      purifierConfig: ''
+      purifyHtml: '1'
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\redactor\Field
+  7a50d6b4-d5f4-4645-8475-d8c2cb2a9d5f:
+    contentColumnType: text
+    fieldGroup: null
+    handle: titolo
+    instructions: ''
+    name: Titolo
+    searchable: true
+    settings:
+      charLimit: ''
+      columnType: text
+      initialRows: '4'
+      multiline: ''
+      placeholder: ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+handle: inverso
+name: Inverso
+sortOrder: 2

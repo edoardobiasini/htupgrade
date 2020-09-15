@@ -1,0 +1,341 @@
+  {% cache %}
+    {% minify html %}
+      {% include '_header.html' %}
+
+      <main>
+
+        {% include '_breadcrumb.html' %}
+
+        <section class="section-content section-hero">
+          {% set image = entry.immaginePrincipale.first() %}
+          <div class="container">
+            {% if image %}
+            <div class="bg-absolute-img has-img-cover">
+              <picture>
+                <source media="(max-width: 767px)"
+                        sizes="100vw"
+                        srcset="{{ image.getUrl('slideXs') }} 375w,
+                                {{ image.getUrl('slideSm') }} 750w">
+                <source media="(max-width: 991px)"
+                        sizes="750px"
+                        srcset="{{ image.getUrl('slideMd') }} 750w">
+                <img src="{{ image.getUrl('slideLg') }}" alt="{{ image.title }}">
+              </picture>
+            </div>
+            {% endif %}
+
+            <div class="row">
+              <div class="col-sm-8 col-sm-offset-2">
+                <h1>{% if entry.titoloFormattato %}{{ entry.titoloFormattato | raw }}{% else %}{{ entry.title }}{% endif %}</h1>
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+        <section class="section-content section-hero-caption">
+          <div class="container">
+
+            <div class="row row-flex">
+              <div class="col-xs-1 col-sm-2">
+              </div>
+              <div class="col-xs-11 col-sm-8">
+                <p>{{ entry.sottotitolo | raw }}</p>
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+{% for block in entry.contenutoPagina %}
+
+    {% if block.idBlocco | length %}
+      <a name="{{ block.idBlocco }}"></a>
+    {% endif %}
+
+    {% if block.type == "bloccoTesto" %}
+
+      {% if block.formato == 'backgroundRight' %}
+
+        <section class="section-content section-default side-bg side-bg-right">
+          {% set image = block.background.first() %}
+          <div class="container"{% if image %} style="background-image:url({{ image.getUrl() }})"{% endif %}>
+
+            <div class="row">
+              <div class="col-sm-2">
+                {% if block.titoloLaterale %}
+                <h4 class="side-title">{{ block.titoloLaterale | raw }}</h4>
+                {% endif %}
+              </div>
+              <div class="col-sm-5">
+                {% if block.titolo %}
+                <h2 class="title-big">{{ block.titolo | raw }}</h2>
+                {% endif %}
+                {{ block.contenuto | shortcodes }}
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+      {% elseif block.formato == 'backgroundLeft' %}
+
+        <section class="section-content section-default side-bg">
+          {% set image = block.background.first() %}
+          <div class="container"{% if image %} style="background-image:url({{ image.getUrl() }})"{% endif %}>
+
+            <div class="row">
+              <div class="col-sm-2">
+                {% if block.titoloLaterale %}
+                <h4 class="side-title">{{ block.titoloLaterale | raw }}</h4>
+                {% endif %}
+              </div>
+              <div class="col-sm-6 col-sm-offset-2">
+                {% if block.titolo %}
+                <h2 class="title-big">{{ block.titolo | raw }}</h2>
+                {% endif %}
+                {{ block.contenuto | shortcodes }}
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+      {% else %}
+
+        <section class="section-content section-default">
+          <div class="container">
+
+            <div class="row">
+              <div class="col-sm-2">
+              </div>
+              <div class="col-sm-8">
+                {% if block.titolo %}
+                <h3><strong class="highlight">{{ block.titolo | raw }}</strong></h3>
+                {% endif %}
+                {{ block.contenuto | shortcodes }}
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+      {% endif %}
+
+  {% elseif block.type == "bloccoLibero" %}
+
+    <section class="section-content section-default section-free-rows {% if block.titolo %}section-free-rows-title{% endif %}">
+      <div class="container">
+        {% if block.titolo %}
+        <div class="row">
+          <div class="col-sm-2">
+          </div>
+          <div class="col-sm-8">
+            <h3><strong class="highlight">{{ block.titolo | raw }}</strong></h3>
+          </div>
+        </div>
+        {% endif %}
+        {{ block.contenuto | shortcodes }}
+      </div>
+    </section>
+
+  {% elseif block.type == "placeholderTab" %}
+    {% if block.refBloccoTab | length %}
+      {% set tabEntry = block.refBloccoTab.first() %}
+    {% else %}
+      {% if entry.bloccoTab | length %}
+        {% set tabEntry = entry %}
+      {% endif %}
+    {% endif %}
+    {% if tabEntry | length %}
+    <section class="section-content section-default {% if block.coloreSfondo != 'bianco' %}section-alternate {% endif %}section-left-nav">
+      <div class="container">
+
+        <div class="row">
+          <div class="col-sm-2">
+            {% if tabEntry.titoloLateraleTab %}
+            <h4 class="side-title">{{ tabEntry.titoloLateraleTab | raw }}</h4>
+            {% endif %}
+          </div>
+          <div class="col-sm-8">
+            {% if tabEntry.titoloTab %}
+            <h2>{{ tabEntry.titoloTab | raw }}</h2>
+            {% endif %}
+            {% if tabEntry.descrizioneTab %}
+            <p class="abstract">{{ tabEntry.descrizioneTab | nl2br }}</p>
+            {% endif %}
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-sm-3 col-sm-offset-1 col-md-2">
+
+
+            <div class="left_nav">
+              {% for block in tabEntry.bloccoTab %}
+              <div class="left_nav_el{% if loop.first %} current_left_nav_el{% endif %}">
+                <h3>{{ block.titolo }}</h3>
+                <div class="left_nav_el_content">
+                  <div class="row">
+                    <div class="col-sm-6">
+                      {{ block.contenuto }}
+                    </div>
+                    <div class="col-sm-6">
+                      {% set image = block.immagine.first() %}
+                      {% if image %}
+                      <img class="img-responsive" src="{{ image.getUrl() }}" width="{{ image.getWidth() }}" height="{{ image.getHeight() }}" alt="{{ image.title }}">
+                      {% endif %}
+                    </div>
+                  </div>
+                </div>
+              </div>
+              {% endfor %}
+
+
+            </div>
+
+          </div>
+
+          {% set block = tabEntry.bloccoTab.first() %}
+          <div class="left_nav_main_content_container col-sm-6 col-md-offset-1 hidden-xs">
+            <div class="left_nav_main_content">
+              <div class="row">
+                <div class="col-sm-6">
+                  {{ block.contenuto }}
+                </div>
+                <div class="col-sm-6">
+                  {% set image = block.immagine.first() %}
+                  {% if image %}
+                  <img class="img-responsive" src="{{ image.getUrl() }}" width="{{ image.getWidth() }}" height="{{ image.getHeight() }}" alt="{{ image.title }}">
+                  {% endif %}
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+    {% endif %}
+
+  {% elseif block.type == "placeholderCarousel" %}
+    {% if block.refBloccoCarousel | length %}
+      {% set carouselEntry = block.refBloccoCarousel.first() %}
+    {% else %}
+      {% if entry.bloccoCarousel | length %}
+        {% set carouselEntry = entry %}
+      {% endif %}
+    {% endif %}
+    {% if carouselEntry | length %}
+    <section {% if block.idBlocco | length %} id="{{ block.idBlocco }}"{% endif %}class="section-content section-default {% if block.coloreSfondo != 'bianco' %}section-alternate{% endif %}">
+      <div class="container">
+
+        <div class="row">
+          <div class="col-sm-2">
+            {% if carouselEntry.titoloLateraleCarousel %}
+            <h4 class="side-title">{{ carouselEntry.titoloLateraleCarousel | raw }}</h4>
+            {% endif %}
+          </div>
+          <div class="carousel-entry col-sm-8">
+
+              {% for block in carouselEntry.bloccoCarousel %}
+              <div class="carousel-entry-slide">
+                <div class="row">
+                  <div class="col-sm-6 col-sm-push-6">
+                    {% set image = block.immagine.first() %}
+                    {% if image %}
+                    <picture>
+                      {% set imageMobile = block.immagineMobile.first() %}
+                      {% if imageMobile %}
+                      <source media="(max-width: 767px)"
+                              sizes="calc(100vw - 30px)"
+                              srcset="{{ imageMobile.getUrl('entryCarouselMobile') }} 560w">
+                      {% endif %}
+                      <img class="img-responsive" src="{{ image.getUrl() }}" alt="{{ image.title }}">
+                    </picture>
+                    {% endif %}
+                  </div>
+                  <div class="col-sm-6 col-sm-pull-6">
+                    {% if block.titolo %}
+                    <h2>{{ block.titolo | raw }}</h2>
+                    {% endif %}
+                    {{ block.contenuto | shortcodes }}
+                  </div>
+                </div>
+              </div>
+              {% endfor %}
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+    {% endif %}
+
+  {% elseif block.type == "placeholderCasiDiSuccesso" %}
+    {% if entry.casiDiSuccesso | length %}
+    {% set article = entry.casiDiSuccesso.first() %}
+    <section class="section-content section-case">
+      {% set image = article.immaginePrincipale.first() %}
+      <div class="container"{% if image %} style="background-image:url({{ image.getUrl() }})"{% endif %}>
+        <div class="row">
+          <div class="col-xs-6 col-sm-4 col-sm-offset-1">
+            <h2 class="title-big">Casi di successo</h2>
+          </div>
+          <div class="col-xs-6 col-sm-4 col-sm-offset-1 col-lg-3">
+            <div class="blog-meta">
+              {% set category = article.categoriaBlog.first() %}
+              {% if category %}
+              <a href="{{ category.url }}" class="article-category">{{ category.title }}</a>
+              {% endif %}
+              {% set tags = article.tagBlog %}
+              {% if tags | length %}
+              <ul class="article-tags">
+              {% for tag in tags %}
+                  <li>{{ tag.title }}</li>
+              {% endfor %}
+              </ul>
+              {% endif %}
+            </div>
+          </div>
+        </div>
+        <div class="row row-case-top hidden-xs">
+          <div class="col-sm-4 col-sm-offset-6">
+            <h2>{% if article.titoloFormattato %}{{ article.titoloFormattato | raw }}{% else %}{{ article.title }}{% endif %}</h2>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="container">
+
+        <div class="row row-case-content">
+          <div class="col-sm-8 col-sm-offset-2">
+            <h2 class="hidden-sm hidden-md hidden-lg">{% if article.titoloFormattato %}{{ article.titoloFormattato | raw }}{% else %}{{ article.title }}{% endif %}</h2>
+            {% if article.abstract %}
+            <div class="abstract">
+              {{ article.abstract | raw }}
+            </div>
+            <a class="btn" href="{{ article.url }}">Leggi</a>
+            {% endif %}
+          </div>
+        </div>
+
+      </div>
+    </section>
+    {% endif %}
+
+  {# END BLOCKTYPE IF #}
+  {% endif %}
+
+{# END MATRIX LOOP #}
+{% endfor %}
+
+        {% include '_bottom-content.html' %}
+
+      </main>
+
+      {% include '_footer.html' %}
+    {% endminify %}
+  {% endcache %}

@@ -1,0 +1,13 @@
+contentColumnType: text
+fieldGroup: 37d91475-6d3a-472d-a918-fa2854cec239
+handle: htcenanatalizia2019_allergieOIntolleranze
+instructions: 'Hai allergie o intolleranze alimentari? Specifica qui sotto:'
+name: 'Allergie o intolleranze'
+searchable: true
+settings:
+  charLimit: null
+  columnType: text
+  multiline: 1
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

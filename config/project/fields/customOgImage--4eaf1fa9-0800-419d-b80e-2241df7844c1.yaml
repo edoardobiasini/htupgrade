@@ -1,0 +1,23 @@
+contentColumnType: string
+fieldGroup: 6469850b-1d09-4388-8d8c-4a1a1c9ea2ba
+handle: customOgImage
+instructions: ''
+name: 'Custom og image'
+searchable: true
+settings:
+  allowedKinds:
+    - image
+  defaultUploadLocationSource: 'volume:3ec8853a-a014-463e-848d-7da4f8a9bfac'
+  defaultUploadLocationSubpath: ''
+  limit: '1'
+  localizeRelations: false
+  restrictFiles: '1'
+  selectionLabel: ''
+  singleUploadLocationSource: 'volume:3ec8853a-a014-463e-848d-7da4f8a9bfac'
+  singleUploadLocationSubpath: ''
+  sources: '*'
+  useSingleFolder: '1'
+  viewMode: list
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Assets
