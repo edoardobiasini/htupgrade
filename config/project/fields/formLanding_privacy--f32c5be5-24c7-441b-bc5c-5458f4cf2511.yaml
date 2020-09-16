@@ -1,7 +1,7 @@
 contentColumnType: text
 fieldGroup: c187e0e2-1954-48d5-bb83-08e2691733ce
 handle: formLanding_privacy
-instructions: 'Presa visione delle informazioni sul trattamento dei dati (http://www.h-t.it/privacy-policy) consento al trattamento dei dati per:'
+instructions: 'Presa visione delle informazioni sul trattamento dei dati (https://www.h-t.it/privacy-policy) consento al trattamento dei dati per:'
 name: Privacy
 searchable: true
 settings:

@@ -20,7 +20,7 @@ plugins:
       dismiss: ACCETTO
       layout: block
       learn: Leggi
-      learn_more_link: 'http://www.h-t.it/cookie-policy'
+      learn_more_link: 'https://www.h-t.it/cookie-policy'
       message: 'Questo sito fa uso di cookie per migliorare la vostra esperienza online. Proseguendo nella navigazione lo accetti.'
       palette: default
       palette_banner: '#eaf0f3'
