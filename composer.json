@@ -1,6 +1,6 @@
 {
   "require": {
-    "craftcms/cms": "^3.5.0",
+    "craftcms/cms": "3.5.10.1",
     "craftcms/redactor": "2.7.4",
     "nystudio107/craft-minify": "1.2.10",
     "samhernandez/craft-shortcodes": "1.0.4",
