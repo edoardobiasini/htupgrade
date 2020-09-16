@@ -3,7 +3,7 @@
       <main>
 
         <section class="section-content section-hero">
-          {% set image = entry.immaginePrincipale.first() %}
+          {% set image = entry.immaginePrincipale.one() %}
           <div class="container">
 
             {% if image %}
@@ -24,7 +24,7 @@
             <div class="row row-flex">
               <div class="col-xs-6 col-sm-4 col-sm-offset-2">
                 <h2 class="title-big">Blog</h2>
-                {% set category = entry.categoriaBlog.first() %}
+                {% set category = entry.categoriaBlog.one() %}
                 {% if category %}
                 <a href="{{ category.url }}" class="article-category title-big">{{ category.title }}</a>
                 {% endif %}
@@ -150,7 +150,7 @@
                           {{ block.contenuto }}
                         </div>
                         <div class="col-sm-6">
-                          {% set image = block.immagine.first() %}
+                          {% set image = block.immagine.one() %}
                           {% if image %}
                           <img class="img-responsive" src="{{ image.getUrl() }}" width="{{ image.getWidth() }}" height="{{ image.getHeight() }}" alt="{{ image.title }}">
                           {% endif %}
@@ -165,7 +165,7 @@
 
               </div>
 
-              {% set block = entry.bloccoTab.first() %}
+              {% set block = entry.bloccoTab.one() %}
               <div class="left_nav_main_content_container col-sm-6 col-md-offset-1 hidden-xs">
                 <div class="left_nav_main_content">
                   <div class="row">
@@ -173,7 +173,7 @@
                       {{ block.contenuto }}
                     </div>
                     <div class="col-sm-6">
-                      {% set image = block.immagine.first() %}
+                      {% set image = block.immagine.one() %}
                       {% if image %}
                       <img class="img-responsive" src="{{ image.getUrl() }}" width="{{ image.getWidth() }}" height="{{ image.getHeight() }}" alt="{{ image.title }}">
                       {% endif %}
@@ -204,7 +204,7 @@
                 <article class="row">
                   <a href="{{ entry.url }}">
                     <div class="col-sm-3 col-md-5">
-                      {% set image = entry.immagineAnteprima.first() %}
+                      {% set image = entry.immagineAnteprima.one() %}
                       {% if image %}
                       <div class="article-image has-img-cover">
                       <picture>
@@ -218,7 +218,7 @@
                       {% endif %}
                     </div>
                     <div class="col-sm-9 col-md-7 article-abstract">
-                      {% set category = entry.categoriaBlog.first() %}
+                      {% set category = entry.categoriaBlog.one() %}
                       {% if category %}
                       <span class="article-category">{{ category.title }}</span>
                       {% endif %}

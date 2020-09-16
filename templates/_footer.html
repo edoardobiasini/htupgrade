@@ -25,7 +25,7 @@ powered by <a href="http://theuncommonfactory.com/" target="_blank">TUF</a>
             <div class="col-sm-2 footer-social">
               <h4>Follow us</h4>
               <ul>
-                {% for block in social.profiliSocial %}
+                {% for block in social.profiliSocial.all() %}
                     <li><a href="{{ block.urlSocial|e }}" target="_blank">{% if block.iconaSocial %}<i class="fa fa-{{ block.iconaSocial|e }}"></i>{% endif %}{{ block.testoSocial|e }}</a></li>
                 {% endfor %}
               </ul>
@@ -36,7 +36,7 @@ powered by <a href="http://theuncommonfactory.com/" target="_blank">TUF</a>
         </div>
       </footer>
 
-      {% if craft.request.getSegment(1) != 'cmpg' %}
+      {% if craft.app.request.getSegment(1) != 'cmpg' %}
       <div id="modal-newsletter" class="modal fade" tabindex="-1" role="dialog">
         <div class="modal-dialog" role="document">
           <div class="modal-content">
@@ -67,7 +67,7 @@ powered by <a href="http://theuncommonfactory.com/" target="_blank">TUF</a>
       </div><!-- /.modal -->
       {% endif %}
 
-      {% if craft.request.getSegment(1) == 'cmpg' %}
+      {% if craft.app.request.getSegment(1) == 'cmpg' %}
       <div id="modal-privacy" class="modal fade" tabindex="-1" role="dialog">
         <div class="modal-dialog" role="document">
           <div class="modal-content">
@@ -108,6 +108,6 @@ powered by <a href="http://theuncommonfactory.com/" target="_blank">TUF</a>
     });
     </script>
     {% includeJsFile siteUrl ~ "assets/js/scripts.min.js" %}
-    {{ getFootHtml() }}
+    {{ endBody() }}
   </body>
 </html>

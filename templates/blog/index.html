@@ -24,7 +24,7 @@
 
             {% for entry in entries %}
 
-              {% set image = entry.immaginePrincipale.first() %}
+              {% set image = entry.immaginePrincipale.one() %}
               <article class="container">
                 {% if image %}
                 <div class="carousel-blog-main-bg has-img-cover">
@@ -56,7 +56,7 @@
                       {% endfor %}
                       </ul>
                       {% endif %}
-                      {% set category = entry.categoriaBlog.first() %}
+                      {% set category = entry.categoriaBlog.one() %}
                       {% if category %}
                       <a href="{{ category.url }}" class="article-category">{{ category.title }}</a>
                       {% endif %}
@@ -118,9 +118,9 @@
                   </form>
                 </div>
                 {% if category is defined %}
-                  {% set entry = craft.entries.section('blog').relatedTo(category).first() %}
+                  {% set entry = craft.entries.section('blog').relatedTo(category).one() %}
                 {% else %}
-                  {% set entry = craft.entries.section('blog').first() %}
+                  {% set entry = craft.entries.section('blog').one() %}
                 {% endif %}
                 <div class="blog-meta-container col-xs-5 col-sm-2 col-sm-offset-2">
                   <div class="blog-meta">
@@ -132,7 +132,7 @@
                     {% endfor %}
                     </ul>
                     {% endif %}
-                    {% set categoryCarFirst = entry.categoriaBlog.first() %}
+                    {% set categoryCarFirst = entry.categoriaBlog.one() %}
                     {% if categoryCarFirst %}
                     <a href="{{ categoryCarFirst.url }}" class="article-category">{{ categoryCarFirst.title }}</a>
                     {% endif %}
@@ -178,7 +178,7 @@
                     <article class="row">
                       <a href="{{ entry.url }}">
                         <div class="col-sm-3 col-md-5">
-                          {% set image = entry.immagineAnteprima.first() %}
+                          {% set image = entry.immagineAnteprima.one() %}
                           {% if image %}
                           <div class="article-image has-img-cover">
                           <picture>
@@ -192,7 +192,7 @@
                           {% endif %}
                         </div>
                         <div class="col-sm-9 col-md-7 article-abstract">
-                          {% set category = entry.categoriaBlog.first() %}
+                          {% set category = entry.categoriaBlog.one() %}
                           {% if category %}
                           <span class="article-category">{{ category.title }}</span>
                           {% endif %}

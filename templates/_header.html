@@ -23,35 +23,35 @@
           googleMapsApiKey = '{{ mappa.googleMapsApiKey|e }}';
     </script>
     {% set bodyClass = '' %}
-    {% if craft.request.getSegment(1) == false %}
+    {% if craft.app.request.getSegment(1) == false %}
       {% set bodyClass = 'home' %}
-    {% elseif craft.request.getSegment(1) == 'cmpg' %}
+    {% elseif craft.app.request.getSegment(1) == 'cmpg' %}
       {% set bodyClass = 'landing' %}
-    {% elseif craft.request.getSegment(1) == 'eventi' %}
-      {% if craft.request.getSegment(2) == false or craft.request.getSegment(2) == 'categorie' %}
+    {% elseif craft.app.request.getSegment(1) == 'eventi' %}
+      {% if craft.app.request.getSegment(2) == false or craft.app.request.getSegment(2) == 'categorie' %}
         {% set bodyClass = 'blog-page' %}
       {% else %}
         {% set bodyClass = 'event-single' %}
       {% endif %}
-    {% elseif craft.request.getSegment(1) == 'blog' %}
-      {% if craft.request.getSegment(2) == false or craft.request.getSegment(2) == 'categorie' %}
+    {% elseif craft.app.request.getSegment(1) == 'blog' %}
+      {% if craft.app.request.getSegment(2) == false or craft.app.request.getSegment(2) == 'categorie' %}
         {% set bodyClass = 'blog-page' %}
       {% else %}
         {% set bodyClass = 'blog-single' %}
       {% endif %}
-    {% elseif craft.request.getSegment(1) == 'servizi' %}
-      {% if craft.request.getSegment(2) == false %}
+    {% elseif craft.app.request.getSegment(1) == 'servizi' %}
+      {% if craft.app.request.getSegment(2) == false %}
         {% set bodyClass = 'page-services' %}
       {% else %}
         {% set bodyClass = 'page' %}
       {% endif %}
-    {% elseif craft.request.getSegment(1) == 'soluzioni' %}
-      {% if craft.request.getSegment(2) == false %}
+    {% elseif craft.app.request.getSegment(1) == 'soluzioni' %}
+      {% if craft.app.request.getSegment(2) == false %}
         {% set bodyClass = 'page-services' %}
       {% else %}
         {% set bodyClass = 'page' %}
       {% endif %}
-    {% elseif craft.request.getSegment(1) == 'ricerca' %}
+    {% elseif craft.app.request.getSegment(1) == 'ricerca' %}
       {% set bodyClass = 'search-results-page page' %}
     {% else %}
       {% set bodyClass = 'page' %}
@@ -187,7 +187,7 @@ End Google Tag Manager (noscript) -->
               </button>
               <nav id="navbar" class="hidden-xs hidden-sm">
 
-              {% if craft.request.getSegment(1) == false %}
+              {% if craft.app.request.getSegment(1) == false %}
                 {% set mainNav = craft.navigation.nodes('mainMenuHome').all() %}
               {% else %}
                 {% set mainNav = craft.navigation.nodes('mainMenu').all() %}
@@ -215,7 +215,7 @@ End Google Tag Manager (noscript) -->
             </div>
           </div>
 
-          {% if craft.request.getSegment(1) == 'cmpg' %}
+          {% if craft.app.request.getSegment(1) == 'cmpg' %}
           <div class="container hidden-sm hidden-md hidden-lg landing-cta-bar">
             <div class="row">
               <div class="col-xs-5">

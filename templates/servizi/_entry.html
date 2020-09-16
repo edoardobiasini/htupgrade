@@ -7,7 +7,7 @@
         {% include '_breadcrumb.html' %}
 
         <section class="section-content section-hero">
-          {% set image = entry.immaginePrincipale.first() %}
+          {% set image = entry.immaginePrincipale.one() %}
           <div class="container">
             {% if image %}
             <div class="bg-absolute-img has-img-cover">
@@ -58,7 +58,7 @@
       {% if block.formato == 'backgroundRight' %}
 
         <section class="section-content section-default side-bg side-bg-right">
-          {% set image = block.background.first() %}
+          {% set image = block.background.one() %}
           <div class="container"{% if image %} style="background-image:url({{ image.getUrl() }})"{% endif %}>
 
             <div class="row">
@@ -81,7 +81,7 @@
       {% elseif block.formato == 'backgroundLeft' %}
 
         <section class="section-content section-default side-bg">
-          {% set image = block.background.first() %}
+          {% set image = block.background.one() %}
           <div class="container"{% if image %} style="background-image:url({{ image.getUrl() }})"{% endif %}>
 
             <div class="row">
@@ -141,7 +141,7 @@
 
   {% elseif block.type == "placeholderTab" %}
     {% if block.refBloccoTab | length %}
-      {% set tabEntry = block.refBloccoTab.first() %}
+      {% set tabEntry = block.refBloccoTab.one() %}
     {% else %}
       {% if entry.bloccoTab | length %}
         {% set tabEntry = entry %}
@@ -181,7 +181,7 @@
                       {{ block.contenuto }}
                     </div>
                     <div class="col-sm-6">
-                      {% set image = block.immagine.first() %}
+                      {% set image = block.immagine.one() %}
                       {% if image %}
                       <img class="img-responsive" src="{{ image.getUrl() }}" width="{{ image.getWidth() }}" height="{{ image.getHeight() }}" alt="{{ image.title }}">
                       {% endif %}
@@ -196,7 +196,7 @@
 
           </div>
 
-          {% set block = tabEntry.bloccoTab.first() %}
+          {% set block = tabEntry.bloccoTab.one() %}
           <div class="left_nav_main_content_container col-sm-6 col-md-offset-1 hidden-xs">
             <div class="left_nav_main_content">
               <div class="row">
@@ -204,7 +204,7 @@
                   {{ block.contenuto }}
                 </div>
                 <div class="col-sm-6">
-                  {% set image = block.immagine.first() %}
+                  {% set image = block.immagine.one() %}
                   {% if image %}
                   <img class="img-responsive" src="{{ image.getUrl() }}" width="{{ image.getWidth() }}" height="{{ image.getHeight() }}" alt="{{ image.title }}">
                   {% endif %}
@@ -221,7 +221,7 @@
 
   {% elseif block.type == "placeholderCarousel" %}
     {% if block.refBloccoCarousel | length %}
-      {% set carouselEntry = block.refBloccoCarousel.first() %}
+      {% set carouselEntry = block.refBloccoCarousel.one() %}
     {% else %}
       {% if entry.bloccoCarousel | length %}
         {% set carouselEntry = entry %}
@@ -243,10 +243,10 @@
               <div class="carousel-entry-slide">
                 <div class="row">
                   <div class="col-sm-6 col-sm-push-6">
-                    {% set image = block.immagine.first() %}
+                    {% set image = block.immagine.one() %}
                     {% if image %}
                     <picture>
-                      {% set imageMobile = block.immagineMobile.first() %}
+                      {% set imageMobile = block.immagineMobile.one() %}
                       {% if imageMobile %}
                       <source media="(max-width: 767px)"
                               sizes="calc(100vw - 30px)"
@@ -275,9 +275,9 @@
 
   {% elseif block.type == "placeholderCasiDiSuccesso" %}
     {% if entry.casiDiSuccesso | length %}
-    {% set article = entry.casiDiSuccesso.first() %}
+    {% set article = entry.casiDiSuccesso.one() %}
     <section class="section-content section-case">
-      {% set image = article.immaginePrincipale.first() %}
+      {% set image = article.immaginePrincipale.one() %}
       <div class="container"{% if image %} style="background-image:url({{ image.getUrl() }})"{% endif %}>
         <div class="row">
           <div class="col-xs-6 col-sm-4 col-sm-offset-1">
@@ -285,7 +285,7 @@
           </div>
           <div class="col-xs-6 col-sm-4 col-sm-offset-1 col-lg-3">
             <div class="blog-meta">
-              {% set category = article.categoriaBlog.first() %}
+              {% set category = article.categoriaBlog.one() %}
               {% if category %}
               <a href="{{ category.url }}" class="article-category">{{ category.title }}</a>
               {% endif %}

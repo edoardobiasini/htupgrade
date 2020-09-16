@@ -92,7 +92,7 @@
       <!--<canvas class="snow-canvas" speed="3" interaction="true" size="12" count="20" wind-power="-5"
         image="/assets/img/snow.png" width="1366" height="667"></canvas>-->
       {% endif %}
-      {% set image = entry.immaginePrincipale.first() %}
+      {% set image = entry.immaginePrincipale.one() %}
       <div class="container">
         {% if image %}
         <div class="bg-absolute-img has-img-cover">
@@ -206,7 +206,7 @@
           </div>
           <div class="col-sm-8">
             <div class="row row-flex row-flex-bottom title-icon-row">
-              {% set icon = entry.programmaEventoIcona.first() %}
+              {% set icon = entry.programmaEventoIcona.one() %}
               {% if icon %}
               <div class="title-icon-container col-sm-3">
                 <span class="title-icon" style="background-image:url({{ icon.getUrl() }})">
@@ -303,7 +303,7 @@
             <div class="carousel-event">
 
               {% for block in entry.galleryEventoElementi %}
-              {% set image = block.immagine.first() %}
+              {% set image = block.immagine.one() %}
               <div{% if loop.first %} class="carousel-event-first" {% endif %}>
                 <a href="{{ image.getUrl() }}" data-lightbox="event-carousel">
                   <picture>
@@ -316,8 +316,8 @@
 
             {% endfor %}
 
-            {% set block = entry.galleryEventoElementi.first() %}
-            {% set image = block.immagine.first() %}
+            {% set block = entry.galleryEventoElementi.one() %}
+            {% set image = block.immagine.one() %}
             <div class="carousel-event-placeholder">
               <picture>
                 <source media="(max-width: 767px)" sizes="calc(50vw - 20px)" srcset="{{ image.getUrl('galleryThumbnailSmall') }} 195w,
@@ -380,7 +380,7 @@
               <h2>Documentazione</h2>
               <p>&nbsp;</p>
               {% for block in entry.documentiEvento %}
-              {% set file = block.file.first() %}
+              {% set file = block.file.one() %}
               <a href="{{ file.url }}" target="_blank" class="grey-block grey-block-download">
                 <div class="grey-block-inner">
                   <p><span><i class="fa fa-download" aria-hidden="true"></i> {{ file.kind }}

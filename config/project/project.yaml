@@ -1,13 +1,9 @@
-dateModified: 1600158350
+dateModified: 1600168235
 email:
   fromEmail: marketing@h-t.it
   fromName: 'HT High Technology'
   template: null
   transportType: craft\mail\transportadapters\Sendmail
-graphql:
-  publicToken:
-    enabled: false
-    expiryDate: null
 plugins:
   cp-css:
     enabled: '0'

@@ -11,7 +11,7 @@
                 <span>{% if entry.titoloFormattato %}{{ entry.titoloFormattato | raw }}{% else %}{{ entry.title }}{% endif %}
               </div>
               <div class="col-sm-4 text-center hidden-xs">
-                {% set image = entry.loghiLanding.first() %}
+                {% set image = entry.loghiLanding.one() %}
                 {% if image %}
                 <img src="{{ image.getUrl() }}" class="img-responsive" alt="{{ image.title }}">
                 {% endif %}
@@ -32,7 +32,7 @@
                 <div class="slide">
                   <div class="slide-inner">
 
-                    {% set image = entry.immaginePrincipale.first() %}
+                    {% set image = entry.immaginePrincipale.one() %}
                     {% if image %}
                     <div class="slide-img has-img-cover">
                       <picture>
@@ -93,7 +93,7 @@
                 {% endif %}
 
                 <div class="row">
-                  {% set image = block.immagineLaterale.first() %}
+                  {% set image = block.immagineLaterale.one() %}
                   {% if image %}
                   <div class="col-xs-4">
                     <img src="{{ image.getUrl() }}" class="img-responsive" alt="{{ image.title }}">
@@ -167,7 +167,7 @@
         {% elseif block.type == "bloccoImmagine" %}
 
         <section class="section-content section-htacademy">
-          {% set image = block.immagine.first() %}
+          {% set image = block.immagine.one() %}
           <div class="container"{% if image %} style="background-image:url({{ image.getUrl() }})"{% endif %}>
 
             <div class="row row-htacademy-top hidden-xs">

@@ -12,12 +12,12 @@
             <div class="carousel-blog">
 
               {% if category is defined %}
-                {% set entry = craft.entries.section('eventi').relatedTo(category).first() %}
+                {% set entry = craft.entries.section('eventi').relatedTo(category).one() %}
               {% else %}
-                {% set entry = craft.entries.section('eventi').first() %}
+                {% set entry = craft.entries.section('eventi').one() %}
               {% endif %}
 
-              {% set image = entry.immaginePrincipale.first() %}
+              {% set image = entry.immaginePrincipale.one() %}
               <article class="container">
                 {% if image %}
                 <div class="carousel-blog-main-bg has-img-cover">
@@ -41,7 +41,7 @@
                   </div>
                   <div class="col-sm-2 col-sm-offset-2">
                     <div class="blog-meta">
-                      {% set categoryEvFirst = entry.categoriaEvento.first() %}
+                      {% set categoryEvFirst = entry.categoriaEvento.one() %}
                       {% if categoryEvFirst %}
                       <a href="{{ categoryEvFirst.url }}" class="article-category">{{ categoryEvFirst.title }}</a>
                       {% endif %}
@@ -140,7 +140,7 @@
                     <article class="row">
                       <a href="{{ entry.url }}">
                         <div class="col-sm-3 col-md-5">
-                          {% set image = entry.immagineAnteprima.first() %}
+                          {% set image = entry.immagineAnteprima.one() %}
                           {% if image %}
                           <div class="article-image has-img-cover">
                           <picture>
@@ -154,7 +154,7 @@
                           {% endif %}
                         </div>
                         <div class="col-sm-9 col-md-7 article-abstract">
-                          {% set category = entry.categoriaEvento.first() %}
+                          {% set category = entry.categoriaEvento.one() %}
                           {% if category %}
                           <span class="article-category">{{ category.title }}</span>
                           {% endif %}

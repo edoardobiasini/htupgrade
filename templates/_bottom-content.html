@@ -15,7 +15,7 @@
           </div>
         </section>
 
-        {% if craft.request.getSegment(1) != 'cmpg' %}
+        {% if craft.app.request.getSegment(1) != 'cmpg' %}
         <section id="section-contatti" class="section-content section-default">
           <div class="container">
 
@@ -23,7 +23,7 @@
               <div class="col-sm-8 col-sm-offset-2">
 
                 <div class="row row-flex row-flex-bottom title-icon-row">
-                  {% set icon = contatti.formContattiIcona.first() %}
+                  {% set icon = contatti.formContattiIcona.one() %}
                   {% if icon %}
                   <div class="title-icon-container col-sm-3">
                     <span class="title-icon" style="background-image:url({{ icon.getUrl() }})">

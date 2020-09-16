@@ -24,11 +24,11 @@
 
               <div class="carousel-top">
 
-                {% for block in entry.slideshow %}
+                {% for block in entry.slideshow.all() %}
                 <div class="slide">
                   <div class="slide-inner">
 
-                    {% set image = block.immagine.first() %}
+                    {% set image = block.immagine.one() %}
                     {% if image %}
                     <div class="slide-img has-img-cover">
                       <picture>
@@ -65,7 +65,7 @@
 
               </div>
 
-              {% set block = entry.slideshow.first() %}
+              {% set block = entry.slideshow.one() %}
               <div class="carousel-top-caption">
                 <div class="carousel-top-dots col-sm-1 col-sm-offset-10">
                 </div>
@@ -109,7 +109,7 @@
               <div class="col-sm-8">
 
                 <div class="row row-flex row-flex-bottom title-icon-row">
-                  {% set icon = entry.homeIntroIcona.first() %}
+                  {% set icon = entry.homeIntroIcona.one() %}
                   {% if icon %}
                   <div class="title-icon-container col-sm-3">
                     <span class="title-icon" style="background-image:url({{ icon.getUrl() }})">
@@ -167,14 +167,14 @@
               </div>
               <div class="carousel-entry col-sm-8">
 
-                  {% for block in entry.bloccoCarousel %}
+                  {% for block in entry.bloccoCarousel.all() %}
                   <div class="carousel-entry-slide">
                     <div class="row">
                       <div class="col-sm-6 col-sm-push-6">
-                        {% set image = block.immagine.first() %}
+                        {% set image = block.immagine.one() %}
                         {% if image %}
                         <picture>
-                          {% set imageMobile = block.immagineMobile.first() %}
+                          {% set imageMobile = block.immagineMobile.one() %}
                           {% if imageMobile %}
                           <source media="(max-width: 767px)"
                                   sizes="calc(100vw - 30px)"
@@ -212,7 +212,7 @@
               limit: 3,
             }) %}
 
-            {% for entry in entries %}
+            {% for entry in entries.all() %}
 
               {% set image = entry.immaginePrincipale[0] %}
               <article class="container">
@@ -280,7 +280,7 @@
                   <h2>Blog</h2>
                   <a href="{{ siteUrl }}blog" class="hidden-xs">Tutti gli articoli</a>
                 </div>
-                {% set entryFirst = craft.entries.section('blog').with(['tagBlog', 'categoriaBlog']).first() %}
+                {% set entryFirst = craft.entries.section('blog').with(['tagBlog', 'categoriaBlog']).one() %}
                 <div class="blog-meta-container col-xs-5 col-xs-offset-2 col-sm-2 col-sm-offset-2">
                   <div class="blog-meta">
                     {% set tags = entryFirst.tagBlog %}
@@ -320,7 +320,7 @@
               </div>
               <div class="col-sm-8">
 
-              {% for entry in entries %}
+              {% for entry in entries.all() %}
                 <article class="row">
                   <a href="{{ entry.url }}">
                     <div class="col-sm-3 col-md-5">
@@ -365,7 +365,7 @@
         {% endif %}
 
         {% if entry.htAcademy | length %}
-        {% set academyEntry = craft.entries.section('eventi').with(['immaginePrincipale', 'abstract', 'titoloFormattato']).relatedTo(entry.htAcademy).first() %}
+        {% set academyEntry = craft.entries.section('eventi').with(['immaginePrincipale', 'abstract', 'titoloFormattato']).relatedTo(entry.htAcademy).one() %}
           {% if academyEntry | length %}
         <section id="home-htacademy" class="section-content section-htacademy">
           {% set image = academyEntry.immaginePrincipale[0] %}
