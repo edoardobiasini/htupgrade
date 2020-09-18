@@ -1,4 +1,4 @@
-dateModified: 1600168235
+dateModified: 1600433957
 email:
   fromEmail: marketing@h-t.it
   fromName: 'HT High Technology'
@@ -51,6 +51,10 @@ plugins:
     licenseKey: null
     schemaVersion: 1.0.0
     settings: null
+  imager:
+    edition: standard
+    enabled: true
+    schemaVersion: 2.0.0
   minify:
     enabled: '1'
     licenseKey: null

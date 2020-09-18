@@ -1,9 +1,38 @@
+fieldLayouts:
+  d9d2d0ab-288b-4be9-8b2c-b45f158eeeb4:
+    tabs:
+      -
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            id: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\TitleField
+            warning: null
+            width: 100
+        name: Contenuto
+        sortOrder: 1
 handle: uploads
 hasUrls: true
 name: Uploads
 settings:
-  path: uploads/
-  url: /uploads/
+  path: ./uploads/
 sortOrder: 1
 type: craft\volumes\Local
-url: null
+url: /uploads/
